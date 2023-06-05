@@ -4,7 +4,7 @@ from typing import List, Dict
 from matplotlib import pyplot as plt
 
 
-def plot_cities(cities_dict: Dict, test:bool = False) -> None:
+def plot_cities(cities_dict: Dict, test: bool = False) -> None:
     """
     plot with matplotlib the parsed TSP file
     :param test: if testing is True
