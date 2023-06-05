@@ -2,6 +2,9 @@ import re
 from typing import List, Dict
 
 from matplotlib import pyplot as plt
+import scienceplots
+
+plt.style.use(["science"])
 
 
 def plot_cities(cities_dict: Dict, test: bool = False) -> None:
@@ -12,10 +15,11 @@ def plot_cities(cities_dict: Dict, test: bool = False) -> None:
     :return: NADA plot cities coordinates
     """
     plt.clf()
+    plt.figure(dpi=500)
     plt.axis = (0.0, 1.0, 0.0, 1.0)
     sorted_tuples = sorted(cities_dict.values(), key=lambda tup: tup[1])
-    plt.scatter(*zip(*sorted_tuples), s=40, zorder=1)
-    plt.plot(*zip(*cities_dict.values()), 'm--', zorder=0)
+    plt.scatter(*zip(*sorted_tuples), s=8, zorder=1)
+    # plt.plot(*zip(*cities_dict.values()), 'm--', zorder=0)
     if test is True:
         return plt.axis  # for the test
     plt.show()
