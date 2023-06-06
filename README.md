@@ -1,64 +1,23 @@
-# TSPLIB
+# Symmetric traveling salesman problem (TSP)
 
-## benchmark
+## benchmark 测试用例
 
+德国海德堡大学（Heidelberg University）教授Gerhard Reinelt维护的网站[TSPLIB](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/)中包含了TSP问题的benchmark数据。
 
-
-## How to use it
-- command line 
 ```commandline
-parser.py --file <filename> --plot true
-```
-- from python script 
-```python 
-TSPParser(filename="filename", plot_tsp=True)
+gzip -d *.gz
 ```
 
-## What it does
+为EUC_2D类型且城市数小于等于1000的测试用例，共计48个。
 
-feed it with a file like
+## parser 解析器
 
-(***~~cheat~~***)
-```commandline
-NAME: ulysses16.tsp
-TYPE: TSP
-COMMENT: Odyssey of Ulysses (Groetschel/Padberg)
-DIMENSION: 16
-EDGE_WEIGHT_TYPE: GEO
-DISPLAY_DATA_TYPE: COORD_DISPLAY
-NODE_COORD_SECTION
- 1 38.24 20.42
- 2 39.57 26.15
- 3 40.56 25.32
- 4 36.26 23.12
- 5 33.48 10.54
- 6 37.56 12.19
- 7 38.42 13.11
- 8 37.52 20.44
- 9 41.23 9.10
- 10 41.17 13.05
- 11 36.08 -5.21
- 12 38.47 15.13
- 13 38.15 15.35
- 14 37.51 15.17
- 15 35.49 14.32
- 16 39.36 19.56
- EOF
-``` 
- 
-you will end up having a dict like
+读取文本文件，以`Dict({__index__: (__x__, __y__)})`形式存储。
 
-```python 
-{'1': (38.24, 20.42), '2': (39.57, 26.15),
-'3': (40.56, 25.32), '4': (36.26, 23.12),
-'5': (33.48, 10.54), '6': (37.56, 12.19),
-'7': (38.42, 13.11), '8': (37.52, 20.44),
-'9': (41.23, 9.1), '10': (41.17, 13.05),
-'11': (36.08, -5.21), '12': (38.47, 15.13),
-'13': (38.15, 15.35), '14': (37.51, 15.17),
-'15': (35.49, 14.32), '16': (39.36, 19.56)}
- ```
+## algorithm 演算法
 
-***As an addon you plot the cities with matplotlib and the current route based on the order in the initial file***
 
-![](tsp_plot.jpg)
+### 参考资料：
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GiDsjIBOVoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+1. https://youtu.be/GiDsjIBOVoA
+2. 
