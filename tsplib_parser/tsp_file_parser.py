@@ -63,7 +63,8 @@ class TSPParser:
             zero_index = tsp_file_contents.index("NODE_COORD_SECTION") + 1
             for index in range(zero_index, zero_index + cls.dimension):
                 # 编号、横坐标、纵坐标
-                city_coords_parts = re.findall(r"[+-]?\d+(?:\.\d+)?", tsp_file_contents[index].strip())
+                # city_coords_parts = re.findall(r"[+-]?\d+(?:\.\d+)?", tsp_file_contents[index].strip())
+                city_coords_parts = tsp_file_contents[index].strip().split()
                 # tsp_cities_dict[__index__] = (x, y)
                 cls.tsp_cities_dict[int(city_coords_parts[0])] = (
                     float(city_coords_parts[1]),
