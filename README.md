@@ -24,11 +24,17 @@ gzip -d *.gz
 2. 近似算法（邻域搜索、遗传、模拟退火、粒子群算法等），或许有可能在短时间内，给出相当接近最优解的近似解。
 
 - [x] 最近邻算法（Nearest Neighbors Algorithm）
+
 - [ ] 检查“环”与“度”的贪婪算法（Greedy Heuristic Algorithm）
+
 - [ ] 基于“最小生成树”的算法（Nicos Christofides Algorithm）
+
 - [ ] 基于“交换”的邻域优化算法（Random Swapping）：2-opt，3-opt，k-opt
+
 - [ ] 模拟“退火”的拟物优化算法（Simulated Annealing）：绝处逢生。
+
 - [ ] 模拟“蚁群”的拟物优化算法（Ant-Colony Optimization）：概率分布；距离+奖励值/信息素，超参数。
+
 - [ ] 王磊算法：
 
 ### 改进策略实现
