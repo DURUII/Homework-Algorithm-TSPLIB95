@@ -9,7 +9,9 @@ Reinelt维护的网站[TSPLIB](http://comopt.ifi.uni-heidelberg.de/software/TSPL
 gzip -d *.gz
 ```
 
-为EUC_2D类型且城市数小于等于1000的测试用例，共计48个。
+为EUC_2D类型且城市数小于等于1000的测试用例，共计48个。算法的评价指标可以是：
+1. $$ Approximation ratio(\alpha) = \frac{heuristic solution}{optimal solution} $$
+2. 
 
 ## parser 解析器
 
