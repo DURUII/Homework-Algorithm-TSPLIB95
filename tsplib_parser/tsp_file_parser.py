@@ -1,5 +1,6 @@
 import re
 from typing import List, Dict
+import os
 
 from matplotlib import pyplot as plt
 import scienceplots
@@ -7,136 +8,111 @@ import scienceplots
 plt.style.use(["science"])
 
 
-def plot_cities(cities_dict: Dict, test: bool = False) -> None:
-    """
-    plot with matplotlib the parsed TSP file
-    :param test: if testing is True
-    :param cities_dict: {'1': (38.24, 20.42), '2': (39.57, 26.15),...}
-    :return: NADA plot cities coordinates
-    """
-    plt.clf()
-    plt.figure(dpi=500)
-    plt.axis = (0.0, 1.0, 0.0, 1.0)
-    sorted_tuples = sorted(cities_dict.values(), key=lambda tup: tup[1])
-    plt.scatter(*zip(*sorted_tuples), s=8, zorder=1)
-    # plt.plot(*zip(*cities_dict.values()), 'm--', zorder=0)
-    if test is True:
-        return plt.axis  # for the test
-    plt.show()
-
-
-def check_filename_tsp(filename: str) -> bool:
-    """
-        Check if the file provided is a valid TSP file
-        ...ends with .tsp
-    """
-    print(filename)
-    if filename.endswith(".tsp"):
-        return True
-    else:
-        return False
-
-
-def read_tsp_file_contents(filename: str) -> List:
-    """
-    gets the contents of the file into a list
-    :param filename: the filename to read
-    :return: a list like ['NAME: ulysses16.tsp',
-                        'TYPE: TSP COMMENT: Odyssey of Ulysses (Groetschel/Padberg)',
-                        'DIMENSION: 16',
-                        'EDGE_WEIGHT_TYPE: GEO',
-                        'DISPLAY_DATA_TYPE: COORD_DISPLAY',
-                        'NODE_COORD_SECTION',
-                        '1 38.24 20.42',
-                        '2 39.57 26.15',..., 'EOF']
-    """
-    with open(filename) as f:
-        content = [line.strip() for line in f.read().splitlines()]
-        return content
-
-
 class TSPParser:
     """
-    TSP file parser to turn the TSP problem file into a dictionary of type
-    {'1': (38.24, 20.42), '2': (39.57, 26.15),...}
+    将.tsp文件解析为python-dict
 
-    Usage like
-    TSPParser(filename=file_name)
+    静态调用：
+    TSPParser(filename=file_name, plot_tsp=True)
     print(TSPParser.tsp_cities_dict)
     """
+
+    name: str = None
+    dimension: int = 0
     should_plot: bool = False
-    filename: str = None
-    subscribed: bool = False
-    dimension: int = None
-    tsp_file_contents: List = []
+    # .tsp
     tsp_cities_dict: Dict = {}
+    # .opt
+    opt_cities_tour: List = []
 
     @classmethod
-    def __init__(cls, filename: str, plot_tsp: bool) -> None:
-        cls.clear_data()
-        cls.filename = filename
-        cls.should_plot = plot_tsp
-        cls.on_file_selected()
-
-    @classmethod
-    def on_file_selected(cls) -> None:
-        """
-        internal use when instantiating class object
-        :return: NADA goes to open the file
-        """
-        cls.open_tsp_file()
-
-    @classmethod
-    def open_tsp_file(cls) -> None:
-        """
-        if file is tsp will read the contents
-        :return: NADA assign to tsp_file_contents
-        """
-        if not check_filename_tsp(cls.filename):
-            # TODO raise a custom exception
-            print("File is not TSP file")
-        else:
-            cls.tsp_file_contents = read_tsp_file_contents(cls.filename)
-            cls.detect_dimension()
-
-    @classmethod
-    def detect_dimension(cls) -> None:
-        """
-        finds the list element that starts with DIMENSION and gets the int
-        :return: NADA goes to get the dict
-        """
-        for record in cls.tsp_file_contents:
-            if record.startswith("DIMENSION"):
-                parts = record.split(":")
-                cls.dimension = int(parts[1])
-                print(cls.dimension)
-        cls.get_cities_dict()
-
-    @classmethod
-    def get_cities_dict(cls) -> None:
-        """
-        zero index is the index in the contents list where city coordinates starts
-        last index of parser is the zero index + dimension of the file
-        at the end plots if asked
-        :return: NADA assign to tsp_cities_dict dict like {'1': (38.24, 20.42),
-                                                     '2': (39.57, 26.15),...}
-        """
-        zero_index = cls.tsp_file_contents.index("NODE_COORD_SECTION") + 1
-        for index in range(zero_index, zero_index + cls.dimension):
-            parts = cls.tsp_file_contents[index].strip()
-            city_coords_parts = re.findall(r"[+-]?\d+(?:\.\d+)?", parts)
-            print(city_coords_parts)
-            cls.tsp_cities_dict[city_coords_parts[0]] = (float(city_coords_parts[1]), float(city_coords_parts[2]))
-        if cls.should_plot:
-            plot_cities(cls.tsp_cities_dict)
-
-    @classmethod
-    def clear_data(cls) -> None:
-        """
-        re-use the class
-        :return: NADA
-        """
-        cls.filename = ""
-        cls.tsp_cities_dict = {}
-        cls.tsp_file_contents = []
+    def __init__(cls, name: str, plot_tsp: bool = True) -> None:
+        # 静态成员
+        cls.name = name
         cls.dimension = 0
+        cls.should_plot = plot_tsp
+        cls.tsp_cities_dict = {}
+        cls.opt_cities_tour = []
+
+        # 读取.tsp文件
+        cls.load_tsp_file()
+        # 读取.opt.tour文件
+        cls.load_opt_file()
+        # 数据可视化
+        cls.plot()
+
+    @classmethod
+    def load_tsp_file(cls):
+        # .tsp
+        tsp_filename = f"tsplib_benchmark/{cls.name}.tsp"
+        assert os.path.exists(tsp_filename)
+        print(tsp_filename)
+
+        # 逐行读取
+        with open(tsp_filename) as fin:
+            tsp_file_contents = [line.strip() for line in fin.readlines()]
+
+            # DIMENSION 城市数量
+            for record in tsp_file_contents:
+                if record.startswith("DIMENSION"):
+                    parts = record.split(":")
+                    cls.dimension = int(parts[1])
+                    break
+
+            # NODE_COORD_SECTION 城市坐标
+            zero_index = tsp_file_contents.index("NODE_COORD_SECTION") + 1
+            for index in range(zero_index, zero_index + cls.dimension):
+                # 编号、横坐标、纵坐标
+                city_coords_parts = re.findall(r"[+-]?\d+(?:\.\d+)?", tsp_file_contents[index].strip())
+                # tsp_cities_dict[__index__] = (x, y)
+                cls.tsp_cities_dict[int(city_coords_parts[0])] = (
+                    float(city_coords_parts[1]),
+                    float(city_coords_parts[2])
+                )
+
+    @classmethod
+    def load_opt_file(cls):
+        # .opt
+        opt_filename = f"tsplib_benchmark/{cls.name}.opt.tour"
+        if os.path.exists(opt_filename):
+
+            # 逐行读取
+            with open(opt_filename) as fin:
+                opt_file_contents = [line.strip() for line in fin.readlines()]
+
+                # TOUR_SECTION 最优解路径
+                zero_index = opt_file_contents.index("TOUR_SECTION") + 1
+                counter = 0
+                for index in range(zero_index, len(opt_file_contents)):
+                    # rd100.opt.tour
+                    if counter >= cls.dimension:
+                        break
+
+                    for city in opt_file_contents[index].strip().split():
+                        # 编号
+                        cls.opt_cities_tour.append(int(city))
+                        counter += 1
+
+    @classmethod
+    def plot(cls):
+        if cls.should_plot:
+            plt.clf()
+            fig, ax = plt.subplots(layout='constrained', dpi=500)
+
+            if cls.opt_cities_tour:
+                x_data, y_data = [], []
+                for i in range(cls.dimension):
+                    x, y = cls.tsp_cities_dict[cls.opt_cities_tour[i]]
+                    x_data.append(x)
+                    y_data.append(y)
+                x_data.append(x_data[0])
+                y_data.append(y_data[0])
+                ax.plot(x_data, y_data, marker='o', linestyle='--', linewidth=0.75, markersize=2.5)
+                ax.set_title(f"{cls.name}'s optimal tour")
+                plt.savefig(f"tsplib_benchmark/{cls.name}.opt.tour.pdf")
+            else:
+                plt.scatter(*zip(*cls.tsp_cities_dict.values()), s=2.5, zorder=1)
+                ax.set_title(f"{cls.name}")
+                plt.savefig(f"tsplib_benchmark/{cls.name}.pdf")
+
+            plt.show()
