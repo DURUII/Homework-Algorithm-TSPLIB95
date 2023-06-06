@@ -1,4 +1,3 @@
-import re
 from typing import List, Dict
 import os
 
@@ -65,6 +64,7 @@ class TSPParser:
                 # 编号、横坐标、纵坐标
                 # city_coords_parts = re.findall(r"[+-]?\d+(?:\.\d+)?", tsp_file_contents[index].strip())
                 city_coords_parts = tsp_file_contents[index].strip().split()
+
                 # tsp_cities_dict[__index__] = (x, y)
                 cls.tsp_cities_dict[int(city_coords_parts[0])] = (
                     float(city_coords_parts[1]),
@@ -108,12 +108,12 @@ class TSPParser:
                     y_data.append(y)
                 x_data.append(x_data[0])
                 y_data.append(y_data[0])
-                ax.plot(x_data, y_data, marker='o', linestyle='--', linewidth=0.75, markersize=2.5)
+                ax.plot(x_data, y_data, marker='o', linestyle='--', linewidth=0.75, markersize=2)
                 ax.set_title(f"{cls.name}'s optimal tour")
-                plt.savefig(f"tsplib_benchmark/{cls.name}.opt.tour.pdf")
+                # plt.savefig(f"tsplib_benchmark/{cls.name}.opt.tour.pdf")
             else:
                 plt.scatter(*zip(*cls.tsp_cities_dict.values()), s=2.5, zorder=1)
                 ax.set_title(f"{cls.name}")
-                plt.savefig(f"tsplib_benchmark/{cls.name}.pdf")
+                # plt.savefig(f"tsplib_benchmark/{cls.name}.pdf")
 
             plt.show()
