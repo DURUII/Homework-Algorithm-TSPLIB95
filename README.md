@@ -34,7 +34,7 @@ gzip -d *.gz
 1. 完整算法保证给出最优解，但计算时间太长，仅可用于计算较小规模实例；
 2. 近似算法（邻域搜索、遗传、模拟退火、粒子群算法等），或许有可能在短时间内，给出相当接近最优解的近似解。
 
-- [x] 最近邻算法（Nearest Neighbors Algorithm），据报道$$\frac{NN\qqud Heuristic}{1-Tree Lower Bound}=1.25$$
+- [x] 最近邻算法（Nearest Neighbors Algorithm），据报道$$ \frac{NN\qqud Heuristic}{1-Tree Lower Bound}=1.25 $$
 
 - [ ] 检查“环”与“度”的贪婪算法（Greedy Heuristic Algorithm）
 
