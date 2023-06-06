@@ -2,14 +2,14 @@
 
 ## benchmark 测试用例
 
-德国海德堡大学（Heidelberg University）教授Gerhard
-Reinelt维护的网站[TSPLIB](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/)中包含了TSP问题的benchmark数据。
+海德堡大学（Heidelberg University）教授Gerhard
+Reinelt维护的网站[TSPLIB](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/)包含TSP问题的benchmark数据。
 
 ```commandline
 gzip -d *.gz
 ```
 
-为EUC_2D类型且城市数小于等于1000的测试用例，共计48
+为EUC_2D类型且城市数小于等于1000的测试用例，共计48个。
 
 ## parser 解析器
 
