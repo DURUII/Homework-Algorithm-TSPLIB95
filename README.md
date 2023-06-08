@@ -58,8 +58,8 @@ gzip -d *.gz
 
 ![](/assets/images/mst-1.png)
 
-4. 按深搜次序记录回路$`C`$，下探一次，回溯一次，因此$`c\left(C\right)=2\times c\left(T\right)`$。例如，1，2，3，2，4，2，1，5，1，6，1。 
-5. 搭桥（short-cut/bypass）略过重复访问的点（起点终点不删）得到符合问题描述的新回路$`C^\prime`$（最后回到起点），例如，1，2，3，4，5，6，1。 
+4. 按深搜次序记录回路$`C`$，下探一次，回溯一次，因此$`c\left(C\right)=2\times c\left(T\right)`$。例如，1，2，3，2，4，2，1，5，1，6......1。 
+5. 搭桥（short-cut/bypass）略过重复访问的点得到符合问题描述的新回路$`C^\prime`$（最后回到起点），例如，1，2，3，4，5，6......1。 
 
 ![](/assets/images/mst-2.png)
 
