@@ -13,7 +13,7 @@ gzip -d *.gz
 
 ## description 问题描述
 
-🤯旅行商问题是一个典型的NP难度问题，可描述为平面上给定n个点，每两点之间的直线距离是已知的正实数，从某一个起点出发，经过其余点恰好一次，最后回到起点。要求给出一种走法，使得回路的长度最短。
+🤯旅行商问题是一个典型的NP难度问题，可描述为平面上给定n个点，每两点之间的直线距离是已知的正实数，从某一个起点出发，经过其余点恰好一次，最后回到起点。要求给出一种巡回旅行走法，使得回路的长度最短。
 
 1. 旅行商问题的类自然语言描述如下：给定$`n`$个城市，对这$`n`$个城市中的每两个城市来说，从一个城市到另一个城市所走的路程是已知的正实数，其中$`n`$是已知的正整数，$`n \ge 3`$。这$`n`$个城市的全排列共有$`n!`$的阶乘个。每一个这$`n`$个城市的全排列都恰好对应着一种走法：从全排列中的第一个城市走到第二个城市，……，从全排列中的第$`n-1`$个城市走到第$`n`$个城市，从全排列中的第$`n`$个城市回到第一个城市。要求给出一个这$`n`$个城市的全排列$`\sigma`$，使得在$`n!`$个全排列中，全排列$`\sigma`$对应的走法所走的路程是最短的。
 > ▶️符合三角形三条边关系定则
@@ -31,7 +31,7 @@ gzip -d *.gz
 1. 完整算法保证给出最优解，但计算时间太长，仅可用于计算较小规模实例；
 2. 近似算法，或许有可能在短时间内，给出相当接近最优解的近似解。非随机性近似算法包括构建式启发/贪婪算法，克里斯托菲德斯算法；随机性近似算法包括随机局域搜索、模拟退火、遗传算法、粒子群算法等。
 
-🤖️*使用深度学习（Deep Learning）建模配合强化学习（Reinforcement learning）策略，"人工智能"，能不能与近70年来"人类智能"相抗衡？一般认为：深度学习处理`模式识别/特征提取`比较好；深度学习求解`组合优化`问题，至今没有比较好的结果。不过，未来将至，未可知。
+🤖️*使用深度学习（Deep Learning）建模配合强化学习（Reinforcement learning）策略，`人工智能`，能不能与近70年来的`人类智能`相抗衡？一般认为：深度学习处理`模式识别/特征提取`比较好；深度学习求解`组合优化`问题，至今没有比较好的结果。不过，未来将至，未可知。
 
 > The field of Combinatorial Optimization is pushing the limit of deep learning. Traditional solvers ***still*** provide better solutions than learning models. However, traditional solvers have been studied since the 1950s and the interest of applying deep learning to combinatorial optimization has just started. 
 > 
@@ -68,13 +68,15 @@ gzip -d *.gz
 
 ![](/assets/images/mst-1.png)
 
-4. 按深搜次序记录回路$`C`$，下探一次，回溯一次，因此$`c\left(C\right)=2\times c\left(T\right)`$。例如，1，2，3，2，4，2，1，5，1，6......1。 
+4. 按深度优先搜索次序记录回路$`C`$，下探一次，回溯一次，因此$`c\left(C\right)=2\times c\left(T\right)`$。例如，1，2，3，2，4，2，1，5，1，6......1。 
 5. 搭桥（short-cut/bypass）略过重复访问的点得到符合问题描述的新回路$`C^\prime`$（最后回到起点），例如，1，2，3，4，5，6......1。 
+
+> 问题要求商人巡回旅行最后回到起点，省略号前是$`1~n`$的一个排列。
 
 ![](/assets/images/mst-2.png)
 
 6. 证明：
-   - 由三角形三条边关系定则，$`c\left(C^\prime\right)\le C\left(C\right)`$；
+   - 由e、三角形三条边关系定则，$`c\left(C^\prime\right)\le c\left(C\right)`$；
    - 由c，$`c\left(H_G^\ast\right)\geq c\left(H_G^\ast-e\right)\geq c\left(T\right)`$；
    - 由d，$`c\left(C\right)=2\times c\left(T\right)`$；
    - 故$`c\left(C^\prime\right)\le2c\left(H_G^\ast\right)`$；即得证。 
@@ -82,24 +84,34 @@ gzip -d *.gz
 
 ##### 近似比为1.5的算法（1.5-Approximation）
 
-1. 定义：$`S`$代表一系列边（允许重边），$`c\left(S\right)`$代表各边权重（长度）之和。
-2. 定义：$`H_G^\ast`$为无向多重图$`G`$上，长度最短的哈密尔顿回路（Hamiltonian Cycle），途中经过所有点且只经过一次。
-3. 构造最小生成树$`T`$，根据最小权生成树定义，$`c\left(H_G^\ast\right)\geq c\left(H_G^\ast-e\right)\geq c\left(T\right)`$。
-4. 按深搜次序记录回路$`C`$，下探一次，回溯一次，因此$`c\left(C\right)=2\times c\left(T\right)`$。例如，1，2，3，2，4，2，1，5，1，6......1。 
-5. 搭桥（short-cut/bypass）略过重复访问的点得到符合问题描述的新回路$`C^\prime`$（最后回到起点），例如，1，2，3，4，5，6......1。
-6. 证明：
-   - 由三角形三条边关系定则，$`c\left(C^\prime\right)\le C\left(C\right)`$；
-   - 由c，$`c\left(H_G^\ast\right)\geq c\left(H_G^\ast-e\right)\geq c\left(T\right)`$；
-   - 由d，$`c\left(C\right)=2\times c\left(T\right)`$；
-   - 故$`c\left(C^\prime\right)\le2c\left(H_G^\ast\right)`$；即得证。 
-   - 因此，该近似算法所得解，最多也不会超过最优解的2倍。
+> 仍基于最小生成树，想方设法减小“每边下探一次，回溯一次”带来的额外开销。
+> 
+> `一笔画`、`不重边`地遍历所有顶点，可以将问题转换成`欧拉回路`问题。无向图存在欧拉回路的充要条件为：该图为连通图，且所有顶点度数均为偶数。
+> 
+> 倘若`奇度数`顶点为偶数个（证明见下），那么可以通过将其两两匹配，为每一个顶点都`附赠`一个度，这样便可以满足`顶点度数均为偶数`条件。
 
-1. 构造最小生成树T（Minimum Spanning Tree）；
-2. 分离在T上度数为奇数的点S（根据握手定理，S顶点数为偶数）；
-3. 构造点集S在原完全图上的最小完美匹配M；
-4. 将M和T的边集取并，构造多重图G（此时每个顶点均为偶数度）；
-5. 生成G的欧拉回路（一笔画，符合无向图存在欧拉回路的充要条件）；
-6. 选取捷径，跳过重复顶点（符合三角形三条边关系定则）。
+1. 定义：$`S`$代表一系列边（允许重边），$`c\left(S\right)代表各边权重（长度）之和。
+2. 定义：$`H_G^\ast`$为无向多重图$`G上，长度最短的哈密尔顿回路（Hamiltonian Cycle），即途中经过所有点且只经过一次。
+3. 定义：假设$`S`$为无向多重图$`G上的导出子图，在$`S`$上长度最短的哈密尔顿回路记为$`H_S^\ast`$。根据三角形三边关系定则易证，$`c\left(H_S^\ast\right)\le c\left(H_G^\ast\right)`$。
+4. 构造最小生成树$`T`$，根据最小权生成树定义，$`c\left(H_G^\ast\right)\geq c\left(H_G^\ast-e\right)\geq c\left(T\right)`$。
+5. 分离在$`T`$上度数为奇数的点，生成导出子图$`S`$（根据握手定理，给定无向图$`G=\left(V,E\right)，一条边贡献2度，故有$`\Sigma degG\left(v\right)=2\left|E\right|`$；除开度数为偶数的顶点所贡献的度数，推论可知，度数为奇数顶点数有偶数个）；
+6. 构造$`S`$的最小权完美匹配$`M`$，构造多重图$`G^\prime=T\ \cup M`$（此时每个顶点均为偶数度，故存在欧拉回路）；
+
+![](assets/images/Euler.png)
+
+7. 生成$`G^\prime`$的欧拉回路$`C`$，$`c\left(C\right)=c\left(T\right)+c\left(M\right)`$;
+8. 搭桥（short-cut/bypass）略过重复访问的点（起点终点不删）得到符合问题描述的新回路$`C^\prime`$（最后回到起点）。
+9. 证明：
+	- 由e、三角形三边关系定则，$`c\left(C^\prime\right)\le c\left(C\right)`$；
+	- 由d，$`c\left(H_G^\ast\right)\geq c\left(H_G^\ast-e\right)\geq c\left(T\right)`$；
+	- 由g，$`c\left(C\right)=c\left(T\right)+c\left(M\right)`$；
+    - 由f、c，$`c\left(M\right)+c\left(M\right)\le c\left(M1\right)+c\left(M2\right)=c\left(H_S^\ast\right)\le c\left(H_G^\ast\right)`$。
+    - 故$`c\left(C^\prime\right)\le c\left(T\right)+c\left(M\right)\le c\left(H_G^\ast\right)+\frac{1}{2}c\left(H_G^\ast\right)`$；即得证。
+
+![](assets/images/match.png)
+
+	
+
 
 
 #### 🦶基于“交换”的邻域优化算法（Random Swapping）：2-opt，3-opt，k-opt
@@ -124,5 +136,5 @@ gzip -d *.gz
 3. 王磊,尹爱华."求解二维矩形Packing问题的一种优美度枚举算法." 中国科学:信息科学 45.09(2015):1127-1140.
 4. [The Traveling Salesman Problem: When Good Enough Beats Perfect](https://youtu.be/GiDsjIBOVoA)
 5. [MIT Approximation Algorithms: Traveling Salesman Problem](https://youtu.be/zM5MW5NKZJg)
-6. [算法进阶课——模拟退火](https://www.acwing.com/activity/content/32/)
-7. 
+6. [AcWing算法进阶课 - 模拟退火](https://www.acwing.com/activity/content/32/)
+7. [Prof.Bresson - Learning to Solve the Traveling Salesman Problem](https://www.bilibili.com/video/BV13R4y1W7sh/)
