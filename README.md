@@ -115,7 +115,7 @@ gzip -d *.gz
 ##### 邻域结构
 解空间中的一个巡回旅行路线直接或间接对应一个全排列$`\sigma=\left(\sigma\left(1\right),\ldots,\sigma\left(n\right)\right)）`$。将其视作$`n`$维空间中的一个点，其邻域常常定义为$`\sigma`$对换和移动后转化成的$`\sigma^\prime`$。此外Cores提出的2-opt扰动也很经典。
 
-![](https://upload.wikimedia.org/wikipedia/commons/f/f2/Showing_a_step_of_the_two-opt_heuristic.png)
+![](assets/images/opt-2.png)
 
 ##### 跳坑思想
 处理TSP问题的常见思路之一是：先使用非随机性启发算法获得一个相对合理的解，再进行后处理，使用万用启发式算法跳出局部最优，以期待结果有所提升。这仿佛王磊老师经常说的，“如果你期末总评已经满绩了，就要见贤思齐，到更有希望的区域继续提高。”
