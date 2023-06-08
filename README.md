@@ -54,11 +54,11 @@ gzip -d *.gz
 
 1. 定义：$`S`$代表一系列边（允许重边），$`c\left(S\right)`$代表各边权重（长度）之和。
 2. 定义：$`H_G^\ast`$为无向多重图$`G`$上，长度最短的哈密尔顿回路（Hamiltonian Cycle），即途中经过所有点且只经过一次。
-3. 构造最小生成树$`T，根据最小权生成树定义，$`c\left(H_G^\ast\right)\geq c\left(H_G^\ast-e\right)\geq c\left(T\right)`$。 
+3. 构造最小生成树$`T`$，根据最小权生成树定义，$`c\left(H_G^\ast\right)\geq c\left(H_G^\ast-e\right)\geq c\left(T\right)`$。 
 
 ![](/assets/images/mst-1.png)
 
-4. 按深搜次序记录回路$`C，下探一次，回溯一次，因此$`c\left(C\right)=2\times c\left(T\right)`$。例如，1，2，3，2，4，2，1，5，1，6，1。 
+4. 按深搜次序记录回路$`C`$，下探一次，回溯一次，因此$`c\left(C\right)=2\times c\left(T\right)`$。例如，1，2，3，2，4，2，1，5，1，6，1。 
 5. 搭桥（short-cut/bypass）略过重复访问的点（起点终点不删）得到符合问题描述的新回路$`C^\prime`$（最后回到起点），例如，1，2，3，4，5，6，1。 
 
 ![](/assets/images/mst-2.png)
