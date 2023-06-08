@@ -1,4 +1,4 @@
-# Symmetric traveling salesman problem (TSP)
+# Traditional Algorithms for Symmetric Traveling Salesman Problem (TSP)
 
 ## benchmark 测试用例
 
@@ -26,25 +26,35 @@ gzip -d *.gz
 
 ## algorithm 演算法
 
-### fundamental 基石算法实现
-
-🧄求解旅行商问题的算法可分为两类：完整算法和近似算法。
+🧄求解旅行商问题的算法设计可分为两类：完整算法和近似算法。
 
 1. 完整算法保证给出最优解，但计算时间太长，仅可用于计算较小规模实例；
 2. 近似算法，或许有可能在短时间内，给出相当接近最优解的近似解。非随机性近似算法包括构建式启发/贪婪算法，克里斯托菲德斯算法；随机性近似算法包括随机局域搜索、模拟退火、遗传算法、粒子群算法等。
 
-#### 构建式启发/贪婪算法（Constructive heuristics）
+🤖️*使用深度学习（Deep Learning）建模配合强化学习（Reinforcement learning）策略，"人工智能"，能不能与近70年来"人类智能"相抗衡？一般认为：深度学习处理`模式识别/特征提取`比较好；深度学习求解`组合优化`问题，至今没有比较好的结果。不过，未来将至，未可知。
+
+> The field of Combinatorial Optimization is pushing the limit of deep learning. Traditional solvers ***still*** provide better solutions than learning models. However, traditional solvers have been studied since the 1950s and the interest of applying deep learning to combinatorial optimization has just started. 
+> 
+> ——*The Transformer Network for the Traveling Salesman Problem*
+
+> Specifically, taking the traveling salesman problem as the testbed problem, the performance of the solvers is assessed in five aspects, i.e., effectiveness, efficiency, stability, scalability, and generalization ability. Our results show that the solvers learned by NCO approaches, in general, ***still fall short*** of traditional solvers in nearly all these aspects. A potential benefit of NCO solvers would be their superior time and energy efficiency for small-size problem instances when sufficient training instances are available.  
+> 
+> —— *How Good Is Neural Combinatorial Optimization? A Systematic Evaluation on the Traveling Salesman Problem*
+
+### fundamental 基石算法实现
+
+#### 🏠构建式启发/贪婪算法（Constructive heuristics）
 
 🍵主要是逐步插入点（边），最后得到一个包含所有城市的回路。例如：
 + 最近邻点算法：首先选择一个城市作为起点，然后用贪心法，每步均选择距离当前所在城市最近的未访问城市，最后回到起点。
 + 用贪心法选择符合要求的长度最短的边加入边集，直至边集构成一个哈密尔顿回路。要求如下：添加该边后，无法形成长度小于城市（顶点）数目的环，也无法形成“某城市（顶点）的度大于2”的格局。
 + “王磊”基本算法：首先生成一个3城市回路，然后依照一定次序，用贪心法将未访问城市插入回路，选择部分回路长度最短的动作，最后，得到包含所有城市的回路。
 
-#### 克里斯托菲德斯算法（Christofides–Serdyukov algorithm）
+#### 🌲克里斯托菲德斯算法（Christofides–Serdyukov algorithm）
 
 👍可证明，最差情况下，该近似算法所得回路长度不会超过最优回路长度的**1.5**倍。
 
-> 🥁对于近似算法求最小值问题，设 $`Opt`$ 是最优解，$`x`$ 表示某算法给出的一个解，一般规定，$`Opt\le x\ \le\alpha\times Opt`$，$`\alpha`$记为该算法的近似比，作为评价算法优劣的一项可行指标。 
+> 🥁对于近似算法求最小值问题，设 $`Opt`$ 是最优解，$`x`$ 表示某算法给出的一个解，一般规定，$`Opt\le x\ \le\alpha\times Opt`$，$`\alpha`$记为该算法的近似比，作为评价算法优劣的指标之一。 
 > 
 > 🈚️拟物仿生万用启发算法（又称元启发算法，metaheuristic），虽然有可能得出比较好的近似解，但往往不涉及在最差情况下的效率证明。
 
@@ -53,7 +63,7 @@ gzip -d *.gz
 ##### 近似比为2的算法（2-Approximation）
 
 1. 定义：$`S`$代表一系列边（允许重边），$`c\left(S\right)`$代表各边权重（长度）之和。
-2. 定义：$`H_G^\ast`$为无向多重图$`G`$上，长度最短的哈密尔顿回路（Hamiltonian Cycle），即途中经过所有点且只经过一次。
+2. 定义：$`H_G^\ast`$为无向多重图$`G`$上，长度最短的哈密尔顿回路（Hamiltonian Cycle），途中经过所有点且只经过一次。
 3. 构造最小生成树$`T`$，根据最小权生成树定义，$`c\left(H_G^\ast\right)\geq c\left(H_G^\ast-e\right)\geq c\left(T\right)`$。 
 
 ![](/assets/images/mst-1.png)
@@ -68,10 +78,21 @@ gzip -d *.gz
    - 由c，$`c\left(H_G^\ast\right)\geq c\left(H_G^\ast-e\right)\geq c\left(T\right)`$；
    - 由d，$`c\left(C\right)=2\times c\left(T\right)`$；
    - 故$`c\left(C^\prime\right)\le2c\left(H_G^\ast\right)`$；即得证。 
-   - 因此，该近似算法所得解不会最优解的2倍。
-
+   - 因此，该近似算法所得解，最多也不会超过最优解的2倍。
 
 ##### 近似比为1.5的算法（1.5-Approximation）
+
+1. 定义：$`S`$代表一系列边（允许重边），$`c\left(S\right)`$代表各边权重（长度）之和。
+2. 定义：$`H_G^\ast`$为无向多重图$`G`$上，长度最短的哈密尔顿回路（Hamiltonian Cycle），途中经过所有点且只经过一次。
+3. 构造最小生成树$`T`$，根据最小权生成树定义，$`c\left(H_G^\ast\right)\geq c\left(H_G^\ast-e\right)\geq c\left(T\right)`$。
+4. 按深搜次序记录回路$`C`$，下探一次，回溯一次，因此$`c\left(C\right)=2\times c\left(T\right)`$。例如，1，2，3，2，4，2，1，5，1，6......1。 
+5. 搭桥（short-cut/bypass）略过重复访问的点得到符合问题描述的新回路$`C^\prime`$（最后回到起点），例如，1，2，3，4，5，6......1。
+6. 证明：
+   - 由三角形三条边关系定则，$`c\left(C^\prime\right)\le C\left(C\right)`$；
+   - 由c，$`c\left(H_G^\ast\right)\geq c\left(H_G^\ast-e\right)\geq c\left(T\right)`$；
+   - 由d，$`c\left(C\right)=2\times c\left(T\right)`$；
+   - 故$`c\left(C^\prime\right)\le2c\left(H_G^\ast\right)`$；即得证。 
+   - 因此，该近似算法所得解，最多也不会超过最优解的2倍。
 
 1. 构造最小生成树T（Minimum Spanning Tree）；
 2. 分离在T上度数为奇数的点S（根据握手定理，S顶点数为偶数）；
@@ -80,15 +101,12 @@ gzip -d *.gz
 5. 生成G的欧拉回路（一笔画，符合无向图存在欧拉回路的充要条件）；
 6. 选取捷径，跳过重复顶点（符合三角形三条边关系定则）。
 
-- [ ] 🏠构建式启发/贪婪算法（Constructive heuristics）：主要是逐步插入点（边），最后得到一个包含所有城市的回路。
 
-- [ ] 🌲克里斯托菲德斯算法（Christofides–Serdyukov algorithm）：可证明，最差情况下，该近似算法所得回路长度不会超过最优回路长度的1.5倍。
+#### 🦶基于“交换”的邻域优化算法（Random Swapping）：2-opt，3-opt，k-opt
 
-- [ ] 🦶基于“交换”的邻域优化算法（Random Swapping）：2-opt，3-opt，k-opt
+#### 🔥模拟“退火”的拟物优化算法（Simulated Annealing）：绝处逢生。
 
-- [ ] 🔥模拟“退火”的拟物优化算法（Simulated Annealing）：绝处逢生。
-
-- [ ] 🐜模拟“蚁群”的拟物优化算法（Ant-Colony Optimization）：概率分布；距离+奖励值/信息素，超参数。
+#### 🐜模拟“蚁群”的拟物优化算法（Ant-Colony Optimization）：概率分布；距离+奖励值/信息素，超参数。
 
 
 ### proposed strategy 改进策略实现
