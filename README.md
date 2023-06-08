@@ -2,18 +2,16 @@
 
 ## description 问题描述
 
-旅行商问题是一个典型的NP难度问题，易于描述却难于求解。
+🤯旅行商问题是一个典型的NP难度问题，易于描述却难于求解。
 
 1. 旅行商问题的类自然语言描述如下：给定$`n`$个城市，对这$`n`$个城市中的每两个城市来说，从一个城市到另一个城市所走的路程是已知的正实数，其中$`n`$是已知的正整数，$`n \ge 3`$。这$`n`$个城市的全排列共有$`n!`$的阶乘个。每一个这$`n`$个城市的全排列都恰好对应着一种走法：从全排列中的第一个城市走到第二个城市，……，从全排列中的第$`n-1`$个城市走到第$`n`$个城市，从全排列中的第$`n`$个城市回到第一个城市。要求给出一个这$`n`$个城市的全排列$`\sigma`$，使得在$`n!`$个全排列中，全排列$`\sigma`$对应的走法所走的路程是最短的。
-> 符合三角形三条边关系定则
+> ▶️符合三角形三条边关系定则
 > 
-> 严格来讲，由于起点任意、顺逆时针等价，问题复杂度为$`\frac{\left(n-1\right)!}{2}`$
+> ⬇️严格来讲，由于起点任意、顺逆时针等价，问题复杂度为$`\frac{\left(n-1\right)!}{2}`$
 
 2. 旅行商问题的形式化描述：给定一个有向完全图$`G=\left(V,A\right)`$，其中集合$`V=v_1,\ldots,v_n`$是顶点集合，每个顶点代表一个城市，n是顶点数（$`n\ge 3`$），集合$`E=\left(v_i,v_j\right)|v_i,v_j\in V,v_i\neq v_j`$是有向边集合。 $`d_{ij}`$是有向边$`\left(v_i,v_j\right)`$的长度，$`d_{ij}`$是已知的正实数，其中$`\left(v_i,v_j\right)\in E`$。集合$`\Sigma`$是顶点全排列的集合，共有$`n!`$元素。$`\sigma`$是所有顶点的一个全排列，$`\sigma=\left(\sigma\left(1\right),\ldots,\sigma\left(n\right)\right)`$，$`\sigma\in\Sigma`$， $`\sigma\left(i\right)\in V`$，$`1\le i\ \le n`$。 $`\sigma`$对应着一条遍历所有顶点的回路：从顶点$`\sigma(1)`$走到顶点$`\sigma(2)`$，……，从顶点$`\sigma(n-1)`$走到顶点$`\sigma(n)`$，从顶点$`\sigma(n)`$回到顶点$`\sigma(1)`$。全排列$`\sigma`$所对应的回路的长度记为$`H(\sigma)`$，$`H(\sigma)=d_{\sigma(1) \sigma(2)} + ... + d_{\sigma(n-1) \sigma(n)} + d_{\sigma(n) \sigma(1)}`$。目标是给出所有顶点的一个全排列$`\sigma^*`$，使得$`H(\sigma^*)= \underset{\sigma \in \Sigma}{\min} (H(\sigma))`$。
 
-> 每一对顶点$`v_i`$ 和 $`v_j`$来说，都有$`d_{ij} = d_{ji}`$成立，那么称问题是对称的（Symmetric traveling salesman problem）；
-> 
-> 否则称问题是非对称的（Asymmetric traveling salesman problem）。
+> 🪞每一对顶点$`v_i`$ 和 $`v_j`$来说，都有$`d_{ij} = d_{ji}`$成立，那么称问题是对称的（Symmetric traveling salesman problem）； 否则称问题是非对称的（Asymmetric traveling salesman problem）。
 
 ## benchmark 测试用例
 
@@ -39,19 +37,22 @@ gzip -d *.gz
 1. 完整算法保证给出最优解，但计算时间太长，仅可用于计算较小规模实例；
 2. 近似算法，或许有可能在短时间内，给出相当接近最优解的近似解。非随机性近似算法包括构建式启发/贪婪算法，克里斯托菲德斯算法；随机性近似算法包括随机局域搜索、模拟退火、遗传算法、粒子群算法等。
 
-对于近似算法求最小值问题，设$`Opt`$是最优解，x表示某算法给出的一个解，一般规定，$`Opt\le x\ \le\alpha\times Opt`$，$`\alpha`$记为该算法的近似比，可用于评价算法优劣。拟物仿生万用启发算法（又称元启发算法，metaheuristic），虽然有可能得出比较好的近似解，但往往不涉及在最差情况下的效率证明。基于“最小生成树”的经典非随机性近似算法有两种，分别符合2和1.5的近似比。
+> 对于近似算法求最小值问题，设$`Opt`$是最优解，x表示某算法给出的一个解，一般规定，$`Opt\le x\ \le\alpha\times Opt`$，$`\alpha`$记为该算法的近似比，可用于评价算法优劣。 
+> 
+> 拟物仿生万用启发算法（又称元启发算法，metaheuristic），虽然有可能得出比较好的近似解，但往往不涉及在最差情况下的效率证明。
 
-- [ ] 构建式启发/贪婪算法（Constructive heuristics）：主要是逐步插入点（边），最后得到一个包含所有城市的回路。
+基于“最小生成树”的经典非随机性近似算法有两种，分别符合`2`和`1.5`的近似比。
 
-- [ ] 克里斯托菲德斯算法（Christofides–Serdyukov algorithm）：可证明，最差情况下，该近似算法所得回路长度不会超过最优回路长度的1.5倍。
+- [ ] 🏠构建式启发/贪婪算法（Constructive heuristics）：主要是逐步插入点（边），最后得到一个包含所有城市的回路。
 
-- [ ] 基于“交换”的邻域优化算法（Random Swapping）：2-opt，3-opt，k-opt
+- [ ] 🌲克里斯托菲德斯算法（Christofides–Serdyukov algorithm）：可证明，最差情况下，该近似算法所得回路长度不会超过最优回路长度的1.5倍。
 
-- [ ] 模拟“退火”的拟物优化算法（Simulated Annealing）：绝处逢生。
+- [ ] 🦶基于“交换”的邻域优化算法（Random Swapping）：2-opt，3-opt，k-opt
 
-- [ ] 模拟“蚁群”的拟物优化算法（Ant-Colony Optimization）：概率分布；距离+奖励值/信息素，超参数。
+- [ ] 🔥模拟“退火”的拟物优化算法（Simulated Annealing）：绝处逢生。
 
-- [ ] 王磊算法：
+- [ ] 🐜模拟“蚁群”的拟物优化算法（Ant-Colony Optimization）：概率分布；距离+奖励值/信息素，超参数。
+
 
 ### 改进策略实现
 
