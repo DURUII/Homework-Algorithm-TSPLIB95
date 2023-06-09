@@ -23,24 +23,6 @@ class TSPParser:
             cls.plot_graph()
 
     @classmethod
-    def length_of_a_tour(cls, permutation: List[int], leaderboard=True) -> int:
-        length = 0
-        for i in range(1, len(permutation)):
-            src, dst = permutation[i - 1], permutation[i]
-            length += cls.G.edges[src, dst]["weight"]
-        # return to the first city of the arrangement
-        src, dst = permutation[-1], permutation[0]
-        length += cls.G.edges[src, dst]["weight"]
-
-        # TODO: all the boilerplate for the best solution are not needed elsewhere
-        if leaderboard and length < TSPParser.G.graph["x_tour_length"]:
-            print(length)
-            TSPParser.G.graph["x_tour_length"] = length
-            TSPParser.G.graph["x_tour"] = permutation
-
-        return length
-
-    @classmethod
     def load_tsp_file(cls):
         # __benchmark__.tsp
         lines = read_lines(filepath=f"tsplib_benchmark/{cls.G.graph['benchmark']}.tsp")
@@ -89,14 +71,32 @@ class TSPParser:
             print(f"{timestamp()} - {cls.G.graph['benchmark']} -> opt: {opt_tour_length}")
 
     @classmethod
-    def boss_info(cls, alg_label: str):
+    def boss_info(cls, alg_label: str, visualize=False):
         print(f"{timestamp()} - {cls.G.graph['benchmark']} -> alg: {cls.G.graph['x_tour_length']}")
-        fig, ax = plt.subplots(layout='constrained', dpi=500)
-        plot_tsp_tour(ax, random_color(), cls.G, cls.G.graph["x_tour"])
+        if visualize:
+            fig, ax = plt.subplots(layout='constrained', dpi=500)
+            plot_tsp_tour(ax, "C0", cls.G, cls.G.graph["x_tour"])
+            uuid = f"{cls.G.graph['benchmark']}'s {alg_label} result - {cls.G.graph['x_tour_length']}"
+            ax.set_title(uuid)
+            plt.savefig(uuid)
 
-        uuid = f"{cls.G.graph['benchmark']}'s {alg_label} result - {cls.G.graph['x_tour_length']}"
-        ax.set_title(uuid)
-        plt.savefig(uuid)
+    @classmethod
+    def length_of_a_tour(cls, permutation: List[int], leaderboard=True) -> int:
+        length = 0
+        for i in range(1, len(permutation)):
+            src, dst = permutation[i - 1], permutation[i]
+            length += cls.G.edges[src, dst]["weight"]
+        # return to the first city of the arrangement
+        src, dst = permutation[-1], permutation[0]
+        length += cls.G.edges[src, dst]["weight"]
+
+        # TODO: all the boilerplate for the best solution are not needed elsewhere
+        if leaderboard and length < TSPParser.G.graph["x_tour_length"]:
+            print(timestamp(), length)
+            TSPParser.G.graph["x_tour_length"] = length
+            TSPParser.G.graph["x_tour"] = permutation
+
+        return length
 
     @classmethod
     def plot_graph(cls):
