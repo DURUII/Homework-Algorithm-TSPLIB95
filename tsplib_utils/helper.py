@@ -53,7 +53,7 @@ def plot_tsp_tour(ax: plt.Axes, color: str, G: nx.Graph, permutation: List[int])
         x, y = G.nodes[index]["loc"]
         xs.append(x)
         ys.append(y)
-    xs.append(G.nodes[1]["loc"][0])
-    ys.append(G.nodes[1]["loc"][1])
-
+    xs.append(G.nodes[permutation[1]]["loc"][0])
+    ys.append(G.nodes[permutation[1]]["loc"][1])
+    print(xs)
     ax.plot(xs, ys, color=color, marker='o', linestyle='-', linewidth=0.6, markersize=2)
