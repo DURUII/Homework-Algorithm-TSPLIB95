@@ -34,10 +34,10 @@ def length_of_a_tour(G: nx.Graph, permutation: List[int]) -> int:
     length = 0
     for i in range(1, len(permutation)):
         src, dst = permutation[i - 1], permutation[i]
-        length += G.edges[src, dst]["d"]
+        length += G.edges[src, dst]["weight"]
     # return to the first city of the arrangement
     src, dst = permutation[-1], permutation[0]
-    length += G.edges[src, dst]["d"]
+    length += G.edges[src, dst]["weight"]
     return length
 
 
@@ -56,4 +56,4 @@ def plot_tsp_tour(ax: plt.Axes, color: str, G: nx.Graph, permutation: List[int])
     xs.append(G.nodes[1]["loc"][0])
     ys.append(G.nodes[1]["loc"][1])
 
-    ax.plot(xs, ys, color=color, marker='o', linestyle='-', linewidth=0.6, markersize=0.1)
+    ax.plot(xs, ys, color=color, marker='o', linestyle='-', linewidth=0.6, markersize=2)
