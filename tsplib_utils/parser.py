@@ -1,11 +1,8 @@
 import math
 
 import networkx as nx
-from matplotlib import pyplot as plt
 
 from tsplib_utils.helper import *
-
-import scienceplots
 
 plt.style.use(["science"])
 
@@ -24,6 +21,24 @@ class TSPParser:
         cls.load_opt_file()
         if visualize:
             cls.plot_graph()
+
+    @classmethod
+    def length_of_a_tour(cls, permutation: List[int], leaderboard=True) -> int:
+        length = 0
+        for i in range(1, len(permutation)):
+            src, dst = permutation[i - 1], permutation[i]
+            length += cls.G.edges[src, dst]["weight"]
+        # return to the first city of the arrangement
+        src, dst = permutation[-1], permutation[0]
+        length += cls.G.edges[src, dst]["weight"]
+
+        # TODO: all the boilerplate for the best solution are not needed elsewhere
+        if leaderboard and length < TSPParser.G.graph["x_tour_length"]:
+            print(length)
+            TSPParser.G.graph["x_tour_length"] = length
+            TSPParser.G.graph["x_tour"] = permutation
+
+        return length
 
     @classmethod
     def load_tsp_file(cls):
@@ -67,22 +82,21 @@ class TSPParser:
                     opt_tour.append(int(node_index))
                     counter += 1
 
-            opt_tour_length = length_of_a_tour(cls.G, opt_tour)
+            opt_tour_length = cls.length_of_a_tour(opt_tour, leaderboard=False)
             cls.G.graph["opt_tour"], cls.G.graph["opt_tour_length"] = opt_tour, opt_tour_length
             # FIXME all optimal solutions in euc_2d but tsp225, are consistent with the reported value
             # http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/STSP.html
-            print(f"{cls.G.graph['benchmark']} -> {opt_tour_length}")
+            print(f"{timestamp()} - {cls.G.graph['benchmark']} -> opt: {opt_tour_length}")
 
     @classmethod
-    def set_a_tour(cls, a_tour: List[int], a_tour_length: int = -1):
-        if a_tour_length == -1:
-            a_tour_length = length_of_a_tour(cls.G, a_tour)
+    def boss_info(cls, alg_label: str):
+        print(f"{timestamp()} - {cls.G.graph['benchmark']} -> alg: {cls.G.graph['x_tour_length']}")
+        fig, ax = plt.subplots(layout='constrained', dpi=500)
+        plot_tsp_tour(ax, random_color(), cls.G, cls.G.graph["x_tour"])
 
-        if a_tour_length < cls.G.graph["x_tour_length"]:
-            cls.G.graph["x_tour"] = a_tour
-            cls.G.graph["x_tour_length"] = a_tour_length
-
-        cls.plot_graph()
+        uuid = f"{cls.G.graph['benchmark']}'s {alg_label} result - {cls.G.graph['x_tour_length']}"
+        ax.set_title(uuid)
+        plt.savefig(uuid)
 
     @classmethod
     def plot_graph(cls):
@@ -107,11 +121,11 @@ class TSPParser:
         if cls.G.graph["opt_tour"]:
             plot_tsp_tour(ax, color, cls.G, cls.G.graph["opt_tour"])
             ax.set_title(f"{cls.G.graph['benchmark']}'s optimal tour - {cls.G.graph['opt_tour_length']}")
+            # plt.savefig(f"{cls.G.graph['benchmark']}'s optimal tour - {cls.G.graph['opt_tour_length']}")
 
         if cls.G.graph["x_tour"]:
             ax = axes[1]
             plot_tsp_tour(ax, random_color(), cls.G, cls.G.graph["x_tour"])
-            ax.set_title(f"{cls.G.graph['benchmark']}'s experiment result - {cls.G.graph['x_tour_length']}")
+            ax.set_title(f"{cls.G.graph['benchmark']}'s best result - {cls.G.graph['x_tour_length']}")
 
-        plt.savefig("2.png", dpi=800)
         plt.show()
