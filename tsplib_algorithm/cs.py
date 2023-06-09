@@ -60,7 +60,7 @@ def visualize_procedure(G: nx.Graph,
     plot_tsp_tour(ax, "C0", G, bypass)
     uuid = f"{G.graph['benchmark']}'s procedure and experiment result - {TSPParser.length_of_a_tour(bypass)}"
     ax.set_title(uuid)
-    plt.savefig(f"{uuid}")
+    # plt.savefig(f"{uuid}")
     plt.show()
 
 
