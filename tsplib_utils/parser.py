@@ -1,3 +1,5 @@
+import math
+
 import networkx as nx
 from matplotlib import pyplot as plt
 
@@ -10,13 +12,14 @@ plt.style.use(["science"])
 
 class TSPParser:
     # single source of data
+    # for outsiders, G -> read only if not necessary
     G: nx.Graph = None
 
     @classmethod
     def __init__(cls, benchmark: str, visualize: bool = True) -> None:
         cls.G = nx.Graph(benchmark=benchmark,
                          opt_tour=[], opt_tour_length=0,
-                         x_tour=[], x_tour_length=0)
+                         x_tour=[], x_tour_length=math.inf)
         cls.load_tsp_file()
         cls.load_opt_file()
         if visualize:
@@ -42,7 +45,7 @@ class TSPParser:
                 x1, y1 = cls.G.nodes[i]["loc"]
                 x2, y2 = cls.G.nodes[j]["loc"]
                 # N.B. EUC_2D: 用勾股定理算出两点（城市）间距离后，四舍五入取整
-                cls.G.add_edge(i, j, d=round_distance(x1, y1, x2, y2))
+                cls.G.add_edge(i, j, weight=round_distance(x1, y1, x2, y2))
 
     @classmethod
     def load_opt_file(cls):
@@ -71,12 +74,15 @@ class TSPParser:
             print(f"{cls.G.graph['benchmark']} -> {opt_tour_length}")
 
     @classmethod
-    def set_a_tour(cls, x_tour: List[int], x_tour_length: int = -1):
-        cls.G.graph["x_tour"] = x_tour
-        if x_tour_length != -1:
-            cls.G.graph["x_tour_length"] = x_tour_length
-        else:
-            cls.G.graph["x_tour_length"] = length_of_a_tour(x_tour)
+    def set_a_tour(cls, a_tour: List[int], a_tour_length: int = -1):
+        if a_tour_length == -1:
+            a_tour_length = length_of_a_tour(a_tour)
+
+        if a_tour_length < cls.G.graph["x_tour_length"]:
+            cls.G.graph["x_tour"] = a_tour
+            cls.G.graph["x_tour_length"] = a_tour_length
+
+        cls.plot_graph()
 
     @classmethod
     def plot_graph(cls):
