@@ -1,6 +1,7 @@
 import math
 import os
 import random
+import time
 from typing import List
 
 import networkx as nx
@@ -30,15 +31,8 @@ def round_distance(x1: float, y1: float, x2: float, y2: float) -> int:
     return int(round(math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2))))
 
 
-def length_of_a_tour(G: nx.Graph, permutation: List[int]) -> int:
-    length = 0
-    for i in range(1, len(permutation)):
-        src, dst = permutation[i - 1], permutation[i]
-        length += G.edges[src, dst]["weight"]
-    # return to the first city of the arrangement
-    src, dst = permutation[-1], permutation[0]
-    length += G.edges[src, dst]["weight"]
-    return length
+def timestamp():
+    return time.asctime(time.localtime(time.time()))
 
 
 def random_color():
@@ -55,5 +49,4 @@ def plot_tsp_tour(ax: plt.Axes, color: str, G: nx.Graph, permutation: List[int])
         ys.append(y)
     xs.append(G.nodes[permutation[1]]["loc"][0])
     ys.append(G.nodes[permutation[1]]["loc"][1])
-    print(xs)
     ax.plot(xs, ys, color=color, marker='o', linestyle='-', linewidth=0.6, markersize=2)
