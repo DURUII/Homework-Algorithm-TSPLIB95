@@ -76,7 +76,7 @@ class TSPParser:
     @classmethod
     def set_a_tour(cls, a_tour: List[int], a_tour_length: int = -1):
         if a_tour_length == -1:
-            a_tour_length = length_of_a_tour(a_tour)
+            a_tour_length = length_of_a_tour(cls.G, a_tour)
 
         if a_tour_length < cls.G.graph["x_tour_length"]:
             cls.G.graph["x_tour"] = a_tour
@@ -113,4 +113,5 @@ class TSPParser:
             plot_tsp_tour(ax, random_color(), cls.G, cls.G.graph["x_tour"])
             ax.set_title(f"{cls.G.graph['benchmark']}'s experiment result - {cls.G.graph['x_tour_length']}")
 
+        plt.savefig("2.png", dpi=800)
         plt.show()
