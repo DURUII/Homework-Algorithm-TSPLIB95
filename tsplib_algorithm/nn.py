@@ -1,10 +1,11 @@
-from typing import List, Dict
+import time
+from typing import List, Dict, Set
 
 import networkx as nx
 from operator import itemgetter
 
 from tsplib_algorithm.opt import two_opt
-from tsplib_utils.helper import length_of_a_tour
+from tsplib_utils.parser import TSPParser
 
 
 def neighbors(graph, node):
@@ -31,16 +32,22 @@ def nearest_neighbor(G: nx.Graph, intermediate_step: List[int]) -> (List[int], i
                 break
 
     # final chessboard
-    return tour_permutation, length_of_a_tour(G, tour_permutation)
+    return tour_permutation, TSPParser.length_of_a_tour(tour_permutation)
 
 
-def do_nearest_neighbor(G: nx.Graph, opt=False) -> (Dict[List[int], int]):
-    tour2length = {}
-    # start at a particular city
+def do_nearest_neighbor(G: nx.Graph, opt=True, lim=0.4) -> List[List[int]]:
+    length2tour = dict({})
+
+    # n.n algorithm
     for starter in G.nodes(data=False):
         local_best_tour, local_min_length = nearest_neighbor(G, [starter])
-        tour2length[local_best_tour] = local_min_length
-        if opt:
-            opt_local_best_tour, opt_local_min_length = two_opt(G, local_best_tour)
-            tour2length[opt_local_best_tour] = opt_local_min_length
-    return tour2length
+        length2tour[local_min_length] = local_best_tour
+
+    # 2-opt with time limits
+    if opt:
+        lengths = sorted(list(length2tour.keys()))
+        index = 0
+        tic = time.perf_counter()
+        while time.perf_counter() - tic < lim:
+            two_opt(length2tour[lengths[index]])
+            index += 1
