@@ -72,7 +72,7 @@ class TSPParser:
 
     @classmethod
     def boss_info(cls, alg_label: str, visualize=False):
-        print(f"{timestamp()} - {cls.G.graph['benchmark']} -> alg: {cls.G.graph['x_tour_length']}")
+        print(f"{timestamp()} - {cls.G.graph['benchmark']} -> {alg_label}: {cls.G.graph['x_tour_length']}")
         if visualize:
             fig, ax = plt.subplots(layout='constrained', dpi=500)
             plot_tsp_tour(ax, "C0", cls.G, cls.G.graph["x_tour"])
