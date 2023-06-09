@@ -141,7 +141,7 @@ gzip -d *.gz
 
 ### proposed strategy 算法策略设计
 
-步骤一：使用1.3.1中三种构建式启发/贪婪算法、1.3.2克里斯托菲德斯算法计算一系列候选巡回旅行路线。假设集合中共有m条候选路线，第$`i`$,$`\ \left(1\le i\le m\right)`$条路线的回路长度为$`c\left(i\right)`$，以 $`P\left(i\right)=\frac{e^{-c\left(i\right)}}{\sum_{j=0}^{m}e^{-c\left(i\right)}}`$的概率选择该路线作为初始格局。
+步骤一：使用1.3.1中前两种构建式启发/贪婪算法、1.3.2克里斯托菲德斯算法计算一系列候选巡回旅行路线。假设集合中共有m条候选路线，第$`i`$,$`\ \left(1\le i\le m\right)`$条路线的回路长度为$`c\left(i\right)`$，以 $`P\left(i\right)=\frac{e^{-c\left(i\right)}}{\sum_{j=0}^{m}e^{-c\left(i\right)}}`$的概率选择该路线作为初始格局。
 步骤二：依照模拟退火算法通用步骤，执行有限次邻域搜索，概率跳坑。
 步骤一、步骤二终止启动若干次。
 
@@ -155,3 +155,4 @@ gzip -d *.gz
 6. [AcWing算法进阶课 - 模拟退火](https://www.acwing.com/activity/content/32/)
 7. [Prof.Bresson - Learning to Solve the Traveling Salesman Problem](https://www.bilibili.com/video/BV13R4y1W7sh/)
 8. [维基百科 - Travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
+9. [NetworkX Documentation](https://networkx.org/documentation/stable/reference/introduction.html)
