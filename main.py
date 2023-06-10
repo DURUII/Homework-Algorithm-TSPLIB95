@@ -20,7 +20,8 @@ if __name__ == '__main__':
     with open("expr", "w") as fout:
         for name in names:
             expr = []
-            for _ in range(10):
+            for i in range(10):
+                # print(i)
                 TSPParser(name, True)
                 step_1_1 = do_nearest_neighbor(TSPParser.G, opt=True)
                 TSPParser.boss_info("opt-nearest-neighbor")
@@ -29,7 +30,7 @@ if __name__ == '__main__':
                 TSPParser.boss_info("opt-christofides")
 
                 promising_length2tour = {**step_1_1, **step_1_2}
-                do_stimulated_annealing(promising_length2tour)
+                do_stimulated_annealing(promising_length2tour, lim=50)
                 expr.append(TSPParser.boss_info("opt-stimulated_annealing"))
             expr = np.array(expr)
             fout.write(f"{name} {np.min(expr)} {np.mean(expr)}")
