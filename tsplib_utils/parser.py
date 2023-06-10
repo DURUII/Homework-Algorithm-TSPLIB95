@@ -71,7 +71,7 @@ class TSPParser:
             print(f"{timestamp()} - {cls.G.graph['benchmark']} -> opt: {opt_tour_length}")
 
     @classmethod
-    def boss_info(cls, alg_label: str, visualize=False) -> int:
+    def boss_info(cls, alg_label: str, visualize=False) -> (List[int], int):
         print(f"{timestamp()} - {cls.G.graph['benchmark']} -> {alg_label}: {cls.G.graph['x_tour_length']}")
         if visualize:
             fig, ax = plt.subplots(layout='constrained', dpi=500)
@@ -79,7 +79,7 @@ class TSPParser:
             uuid = f"{cls.G.graph['benchmark']}'s {alg_label} result - {cls.G.graph['x_tour_length']}"
             ax.set_title(uuid)
             plt.savefig(uuid)
-        return cls.G.graph["x_tour_length"]
+        return cls.G.graph["x_tour"], cls.G.graph["x_tour_length"]
 
     @classmethod
     def length_of_a_tour(cls, permutation: List[int], leaderboard=True) -> int:
