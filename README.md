@@ -9,7 +9,7 @@ Reinelt维护的网站[TSPLIB](http://comopt.ifi.uni-heidelberg.de/software/TSPL
 gzip -d *.gz
 ```
 
-🧮为EUC_2D类型且城市数小于等于1000的测试用例，共计48个。
+🧮为EUC_2D类型（两点间距离须四舍五入取整）且城市数小于等于1000的测试用例，共计48个。
 
 ## description 问题描述
 
