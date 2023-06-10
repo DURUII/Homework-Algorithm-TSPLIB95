@@ -17,7 +17,7 @@ if __name__ == '__main__':
     with open("tsplib_benchmark/euc_2d", "r") as fin:
         names = [line.strip() for line in fin.readlines()]
 
-    with open("expr", "w") as fout:
+    with open("experiment.txt", "w") as fout:
         for name in names:
             expr = []
             for i in range(10):
@@ -33,4 +33,4 @@ if __name__ == '__main__':
                 do_stimulated_annealing(promising_length2tour, lim=50)
                 expr.append(TSPParser.boss_info("opt-stimulated_annealing"))
             expr = np.array(expr)
-            fout.write(f"{name} {np.min(expr)} {np.mean(expr)}")
+            fout.write(f"{name} {np.min(expr)} {np.mean(expr)}\n")
