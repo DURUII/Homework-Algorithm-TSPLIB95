@@ -68,11 +68,15 @@ class TSPParser:
             cls.G.graph["opt_tour"], cls.G.graph["opt_tour_length"] = opt_tour, opt_tour_length
             # FIXME all optimal solutions in euc_2d but tsp225, are consistent with the reported value
             # http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/STSP.html
-            print(f"{timestamp()} - {cls.G.graph['benchmark']} -> opt: {opt_tour_length}")
+            with open("log.txt", "w+") as fout:
+                fout.write(f"{timestamp()} - {cls.G.graph['benchmark']} -> opt: {opt_tour_length}")
 
     @classmethod
     def boss_info(cls, alg_label: str, visualize=False) -> (List[int], int):
-        print(f"{timestamp()} - {cls.G.graph['benchmark']} -> {alg_label}: {cls.G.graph['x_tour_length']}")
+        # print(f"{timestamp()} - {cls.G.graph['benchmark']} -> {alg_label}: {cls.G.graph['x_tour_length']}")
+        with open("log.txt", "w+") as fout:
+            fout.write(f"{timestamp()} - {cls.G.graph['benchmark']} -> {alg_label}: {cls.G.graph['x_tour_length']}")
+
         if visualize:
             fig, ax = plt.subplots(layout='constrained', dpi=500)
             plot_tsp_tour(ax, "C0", cls.G, cls.G.graph["x_tour"])
