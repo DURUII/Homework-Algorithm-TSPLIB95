@@ -23,8 +23,8 @@ if __name__ == '__main__':
         tours, costs = [], []
 
         for i in range(10):
-            with open("log.txt", "w+") as fout:
-                fout.write(f"###### {i + 1} of {name}[{index + 1}/{len(names)}]")
+            with open("log.txt", "a") as fout:
+                fout.write(f"###### {i + 1} of {name}[{index + 1}/{len(names)}]\n")
 
             TSPParser(name, False)
             step_1_1 = do_nearest_neighbor(TSPParser.G, opt=True)
@@ -42,11 +42,11 @@ if __name__ == '__main__':
         costs = np.array(costs)
 
         # logger
-        with open("log.txt", "w+") as fout:
+        with open("log.txt", "a") as fout:
             fout.write(f"--->>> {name} {int(np.min(costs))} {int(np.mean(costs))}\n")
 
         # sheet
-        with open("assets/experiment.txt", "w+") as fout:
+        with open("experiment.txt", "a") as fout:
             fout.write(f"{name} {int(np.min(costs))} {int(np.mean(costs))}\n")
 
         fig, axes = plt.subplots(2, 5, figsize=(22, 6.5), layout='constrained')
