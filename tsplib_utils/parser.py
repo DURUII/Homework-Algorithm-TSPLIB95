@@ -93,7 +93,7 @@ class TSPParser:
 
         # TODO: all the boilerplate for the best solution are not needed elsewhere
         if leaderboard and length < TSPParser.G.graph["x_tour_length"]:
-            # print(timestamp(), length)
+            print(timestamp(), length)
             TSPParser.G.graph["x_tour_length"] = length
             TSPParser.G.graph["x_tour"] = permutation
 
