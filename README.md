@@ -157,10 +157,15 @@ gzip -d *.gz
 
 ### experimental setup 实验设置
 
-德国海德堡大学（Heidelberg University）教授Gerhard Reinelt维护的网站TSPLIB（http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/）中包含了TSP问题的benchmark数据。在Apple M1的个人微型计算机上，本文在EUC_2D类型且城市数小于等于1000中，选取全部48个benchmark测试用例。对每个问题实例计算10次，表给出了这些计算的统计结果。对于最近邻2-opt优化设置停机时间为0.5秒，对于模拟退火设置停机时间为120秒，初始温度10e6，终止温度10e-6，衰减系数0.99。
+算法用Python3.9编程实现；测试编码同步进行。
+
+在3.30GHz的AMD-Ryzen 9-6900HS个人微型计算机上，本文选取在EUC_2D类型且城市数小于等于1000中全部48个benchmark测试用例。
+
+对每个问题实例计算10次，对于最近邻2-opt优化设置停机时间为0.5秒，对于模拟退火设置停机时间为50秒，初始温度10e6，终止温度10e-6，衰减系数0.99。
 
 ### experimental results 实验结论
 
+用48个来自TSPLIB的问题实例进行测试，给出了其中个实例的最优解：进步空间巨大。
 
 
 ## Reference 参考资料
