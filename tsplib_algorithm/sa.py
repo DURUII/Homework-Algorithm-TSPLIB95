@@ -71,7 +71,7 @@ def anneal(permutation: List[int], temperature=10e6, eps=10e-6, alpha=0.99):
         temperature *= alpha
 
 
-def do_stimulated_annealing(promising_length2tour: Dict[int, List[int]], lim=30):
+def do_stimulated_annealing(promising_length2tour: Dict[int, List[int]], lim=120):
     lengths = sorted(list(promising_length2tour.keys()))
     index = 0
     tic = time.perf_counter()
