@@ -13,7 +13,7 @@ from tsplib_utils.parser import TSPParser
 
 def perturb(permutation: List[int]) -> List[int]:
     perturbed = permutation[:]
-    operation = random.choice(["insert", "chunk_end_insert", "switch"])
+    operation = random.choice(["insert", "switch"])
     if operation == "insert":
         # which to remove
         i = random.randint(0, len(perturbed) - 1)
@@ -39,7 +39,7 @@ def perturb(permutation: List[int]) -> List[int]:
     return perturbed
 
 
-def anneal(permutation: List[int], temperature=10e5, eps=10e-5, alpha=0.99):
+def anneal(permutation: List[int], temperature=10e6, eps=10e-6, alpha=0.99):
     permutation = permutation[:]
 
     while temperature > eps:
@@ -50,17 +50,19 @@ def anneal(permutation: List[int], temperature=10e5, eps=10e-5, alpha=0.99):
 
         delta = E1 - E0
 
+        # print(-delta / temperature)
         if random.random() < np.exp(-delta / temperature):
             permutation = novel_permutation
         temperature *= alpha
 
-        two_opt(permutation)
+        # two_opt(permutation)
 
 
-def do_stimulated_annealing(promising_length2tour: Dict[int, List[int]], lim=math.inf):
+def do_stimulated_annealing(promising_length2tour: Dict[int, List[int]], lim=180):
     lengths = sorted(list(promising_length2tour.keys()))
     index = 0
     tic = time.perf_counter()
-    while time.perf_counter() - tic < lim:
+    while index < len(lengths) and time.perf_counter() - tic < lim:
+        print(f"{index}/{len(lengths)}")
         anneal(promising_length2tour[lengths[index]])
         index += 1
