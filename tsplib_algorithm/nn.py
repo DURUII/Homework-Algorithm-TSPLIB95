@@ -4,7 +4,7 @@ from typing import List, Dict, Set
 import networkx as nx
 from operator import itemgetter
 
-from tsplib_algorithm.opt import two_opt
+from tsplib_algorithm.opt import do_two_opt
 from tsplib_utils.parser import TSPParser
 
 
@@ -35,7 +35,7 @@ def nearest_neighbor(G: nx.Graph, intermediate_step: List[int]) -> (List[int], i
     return tour_permutation, TSPParser.length_of_a_tour(tour_permutation)
 
 
-def do_nearest_neighbor(G: nx.Graph, opt=True, lim=0.4) -> Dict[int, List[int]]:
+def do_nearest_neighbor(G: nx.Graph, opt=True, lim=0.5) -> Dict[int, List[int]]:
     length2tour = dict({})
 
     # n.n algorithm
@@ -49,7 +49,7 @@ def do_nearest_neighbor(G: nx.Graph, opt=True, lim=0.4) -> Dict[int, List[int]]:
         index = 0
         tic = time.perf_counter()
         while time.perf_counter() - tic < lim:
-            opt_local_best_tour, opt_local_min_length = two_opt(length2tour[lengths[index]])
+            opt_local_best_tour, opt_local_min_length = do_two_opt(length2tour[lengths[index]])
             length2tour[opt_local_min_length] = opt_local_best_tour
             index += 1
     return length2tour

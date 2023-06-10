@@ -7,14 +7,21 @@ from typing import List, Dict
 import networkx as nx
 import random
 
-from tsplib_algorithm.opt import two_opt
+from tsplib_algorithm.opt import do_two_opt
 from tsplib_utils.parser import TSPParser
 
 
-def perturb(permutation: List[int]) -> List[int]:
+def perturb(permutation: List[int], option=None) -> List[int]:
     perturbed = permutation[:]
-    operation = random.choice(["insert", "switch"])
-    if operation == "insert":
+    if option is None:
+        op = random.choice(["insert", "insert",
+                            "switch", "switch", "switch", "switch", "switch",
+                            "2_opt", "2_opt", "2_opt",
+                            "chunk_end_insert"])
+    else:
+        op = option
+
+    if op == "insert":
         # which to remove
         i = random.randint(0, len(perturbed) - 1)
         n = perturbed.pop(i)
@@ -22,14 +29,21 @@ def perturb(permutation: List[int]) -> List[int]:
         j = random.randint(0, len(perturbed) + 1)
         perturbed.insert(j, n)
 
-    elif operation == "chunk_end_insert":
+    elif op == "chunk_end_insert":
         # [from, to)
         f = random.randint(0, len(perturbed) // 2)
         t = f + random.randint(1, len(perturbed) // 2)
         # chunk end insert
         perturbed = perturbed[:f] + perturbed[t:] + perturbed[f:t]
 
-    elif operation == "switch":
+    elif op == "2_opt":
+        i = random.randint(0, len(perturbed) - 3)
+        j = random.randint(i + 2, len(perturbed) - 1)
+        temp = perturbed[:]
+        temp[i + 1:j + 1] = temp[j:i:-1]
+        perturbed = temp
+
+    elif op == "switch":
         i = random.randint(0, len(perturbed) - 1)
         j = random.randint(0, len(perturbed) - 1)
         perturbed[i], perturbed[j] = perturbed[j], perturbed[i]
@@ -40,7 +54,7 @@ def perturb(permutation: List[int]) -> List[int]:
 
 
 def anneal(permutation: List[int], temperature=10e6, eps=10e-6, alpha=0.99):
-    permutation = permutation[:]
+    permutation = perturb(permutation)
 
     while temperature > eps:
         E0 = TSPParser.length_of_a_tour(permutation)
@@ -50,19 +64,18 @@ def anneal(permutation: List[int], temperature=10e6, eps=10e-6, alpha=0.99):
 
         delta = E1 - E0
 
-        # print(-delta / temperature)
-        if random.random() < np.exp(-delta / temperature):
+        # FIXME RuntimeWarning: overflow encountered in exp
+        if delta < 0 or random.random() < np.exp(-delta / temperature):
             permutation = novel_permutation
+
         temperature *= alpha
 
-        # two_opt(permutation)
 
-
-def do_stimulated_annealing(promising_length2tour: Dict[int, List[int]], lim=180):
+def do_stimulated_annealing(promising_length2tour: Dict[int, List[int]], lim=30):
     lengths = sorted(list(promising_length2tour.keys()))
     index = 0
     tic = time.perf_counter()
     while index < len(lengths) and time.perf_counter() - tic < lim:
-        print(f"{index}/{len(lengths)}")
+        # print(f"{index}/{len(lengths)}")
         anneal(promising_length2tour[lengths[index]])
         index += 1

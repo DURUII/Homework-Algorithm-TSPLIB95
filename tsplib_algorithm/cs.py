@@ -3,7 +3,7 @@ from typing import List, Dict, Set
 import networkx as nx
 from matplotlib import pyplot as plt
 
-from tsplib_algorithm.opt import two_opt
+from tsplib_algorithm.opt import do_two_opt
 from tsplib_utils.helper import plot_tsp_tour
 from tsplib_utils.parser import TSPParser
 
@@ -106,7 +106,7 @@ def do_christofides_serdyukov(G: nx.Graph, visualize=True, opt=True) -> Dict[int
     local_best_tour, local_min_length = shortcut, TSPParser.length_of_a_tour(shortcut)
     length2tour[local_min_length] = local_best_tour
     if opt:
-        opt_local_best_tour, opt_local_min_length = two_opt(shortcut)
+        opt_local_best_tour, opt_local_min_length = do_two_opt(shortcut)
         length2tour[opt_local_min_length] = opt_local_best_tour
 
     return length2tour

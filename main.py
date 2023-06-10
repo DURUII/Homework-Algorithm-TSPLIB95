@@ -17,7 +17,7 @@ if __name__ == '__main__':
         names = [line.strip() for line in fin.readlines()]
         TSPParser(names[0], True)
 
-        step_1_1 = do_nearest_neighbor(TSPParser.G, opt=True, lim=0.4)
+        step_1_1 = do_nearest_neighbor(TSPParser.G, opt=True)
         TSPParser.boss_info("opt-nearest-neighbor")
 
         step_1_2 = do_christofides_serdyukov(TSPParser.G, opt=True, visualize=False)
