@@ -126,8 +126,7 @@ gzip -d *.gz
 
 ##### 邻域结构
 
-解空间中的一个巡回旅行路线直接或间接对应一个全排列$`\sigma=\left(\sigma\left(1\right),\ldots,\sigma\left(n\right)\right)）`
-$。将其视作$`n`$维空间中的一个点，其邻域常常定义为$`\sigma`$对换和移动后转化成的$`\sigma^\prime`$。此外Cores提出的2-opt扰动也很经典。
+解空间中的一个巡回旅行路线直接或间接对应一个全排列$`\sigma=\left(\sigma\left(1\right),\ldots,\sigma\left(n\right)\right)）`$。将其视作$`n`$维空间中的一个点，其邻域常常定义为$`\sigma`$对换和移动后转化成的$`\sigma^\prime`$。此外Cores提出的2-opt扰动也很经典。
 
 ![](assets/images/opt-2.png)
 
