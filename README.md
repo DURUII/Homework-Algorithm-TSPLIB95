@@ -117,7 +117,7 @@ gzip -d *.gz
     - 由d，$`c\left(H_G^\ast\right)\geq c\left(H_G^\ast-e\right)\geq c\left(T\right)`$；
     - 由g，$`c\left(C\right)=c\left(T\right)+c\left(M\right)`$；
     - 由f、c，$`c\left(M\right)+c\left(M\right)\le c\left(M1\right)+c\left(M2\right)=c\left(H_S^\ast\right)\le c\left(H_G^\ast\right)`$。
-    - 故$`c\left(C^\prime\right)\le c\left(T\right)+c\left(M\right)\le c\left(H_G^\ast\right)+\frac{1}{2}c\left(H_G^\ast\right)`
+    - 故$`c\left(C^\prime\right)\le c\left(T\right)+c\left(M\right)\le c\left(H_G^\ast\right)+\frac{1}{2}c\left(H_G^\ast\right)`$
    $；即得证。
 
 ![](assets/images/match.png)
