@@ -1,6 +1,6 @@
 # Traditional Algorithms for Symmetric Traveling Salesman Problem with Average Relative Error Rate 4.38%
 
-## benchmark 测试用例
+## Benchmark 测试用例
 
 ⏱️海德堡大学（Heidelberg University）教授Gerhard Reinelt维护的网站[TSPLIB](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/)包含TSP问题的benchmark数据。
 
@@ -10,7 +10,7 @@ gzip -d *.gz
 
 🧮为EUC_2D类型（两点间距离须四舍五入取整）且城市数小于等于1000的测试用例，共计48个。
 
-## description 问题描述
+## Description 问题描述
 
 🤯旅行商问题是一个典型的NP难度问题，可描述为平面上给定n个点，每两点之间的直线距离是已知的正实数，从某一个起点出发，经过其余点恰好一次，最后回到起点。要求给出一种巡回旅行走法，使得回路的长度最短。
 
@@ -24,7 +24,7 @@ gzip -d *.gz
 
 > 🪞每一对顶点$`v_i`$ 和 $`v_j`$来说，都有$`d_{ij} = d_{ji}`$成立，那么称问题是对称的（Symmetric traveling salesman problem）； 否则称问题是非对称的（Asymmetric traveling salesman problem）。
 
-## algorithm 演算法
+## Algorithm 演算法
 
 🧄求解旅行商问题的算法设计可分为两类：完整算法和近似算法。
 
@@ -48,7 +48,7 @@ gzip -d *.gz
 >
 > —— *How Good Is Neural Combinatorial Optimization? A Systematic Evaluation on the Traveling Salesman Problem*
 
-### fundamental 基石算法实现
+### Fundamentals 基石算法实现
 
 #### 🏠构建式启发/贪婪算法（Constructive heuristics）
 
@@ -158,7 +158,7 @@ $。将其视作$`n`$维空间中的一个点，其邻域常常定义为$`\sigma
 
 上述通用步骤重置启动，若干次。其中，E代表巡回旅行路线长度。
 
-## proposed strategy 算法策略设计
+## Proposed Strategy 算法策略设计
 
 步骤一：使用1.3.1最近邻、1.3.2克里斯托菲德斯算法计算巡回旅行路线。
 > 受《求解二维矩形Packing问题的一种优美度枚举算法》的启发，对于最近邻而言，进行如下改进：我们在生成的所有路线中，取前m条进行2-opt随机化改进（这是一种非随机型优化算法），如果超过指定时间T，该步骤停机。
@@ -181,7 +181,7 @@ $。将其视作$`n`$维空间中的一个点，其邻域常常定义为$`\sigma
 > 
 > 一种可能的原因是，初始状态选择不当，导致最后没有跳出步骤一提供的“局部”最优解。但是，我认为，步骤一的“局部”和步骤二的“局部”并不完全一致。需要进一步验证，超参数、邻域、运行时间也是影响因素。
 
-## experimental setup 实验设置
+## Experimental Setup 实验设置
 
 本文选取在EUC_2D类型（两点间距离须四舍五入取整）且城市数小于等于1000中全部48个benchmark测试用例。
 在Apple M1 Chip个人微型计算机上，对每个实例计算10次，表给出了统计结果。
@@ -190,7 +190,7 @@ $。将其视作$`n`$维空间中的一个点，其邻域常常定义为$`\sigma
 - 模拟退火停机时间设为5秒（10次共计50秒），初始温度10e5，终止温度10e-5，衰减系数0.97
 
 
-## thinking on experimental results 结果反思
+## Thinking on Experimental Results 结果反思
 
 当不知道问题的最优解时，可仅使用单位时间内的最后结果衡量算法优劣；相反，可以等到获得相对误差低于某特定数值时的时间长短衡量。本次实验采用前者。
 
@@ -201,7 +201,7 @@ $。将其视作$`n`$维空间中的一个点，其邻域常常定义为$`\sigma
 精妙的通用元启发式算法和人类智慧设计的启发式算法一直相互推动着彼此的边界。从实验结果来看，期待；当然，设计邻域结构、精调超参数、延长停机时间或许一个可能结果改进方向。初始状态的选择与超参数配合，或许也是具有一定影响力的因素之一。此外，符合直觉的邻域，应在全排列对应的路线的长度、图形上差异不能太大，点对换、插入是否高效，也值得探讨，应当分析现有解与最优解的细微差距。
 
 
-## Reference 参考资料
+## References 参考资料
 
 1. 王磊-求解旅行商问题的拟物拟人算法研究计算结果，2023年6月
 2. 王磊.求解工件车间调度问题的一种高效近似算法.2006.华中科技大学,PhD dissertation.
