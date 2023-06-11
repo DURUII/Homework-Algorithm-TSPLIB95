@@ -11,6 +11,7 @@ from tsplib_utils.parser import TSPParser
 def neighbors(graph, node):
     # https://stackoverflow.com/questions/70168343/find-k-nearest-neighbors-of-a-node-in-a-networkx-graph
     assert 1 <= node <= graph.number_of_nodes()
+
     return list(map(itemgetter(1),
                     sorted([(e[2]['weight'], e[1])
                             for e in graph.edges(node, data=True)])[:]))
@@ -52,4 +53,5 @@ def do_nearest_neighbor(G: nx.Graph, opt=True, lim=0.5) -> Dict[int, List[int]]:
             opt_local_best_tour, opt_local_min_length = do_two_opt(length2tour[lengths[index]])
             length2tour[opt_local_min_length] = opt_local_best_tour
             index += 1
+
     return length2tour

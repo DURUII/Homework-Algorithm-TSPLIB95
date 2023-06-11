@@ -18,23 +18,26 @@ if __name__ == '__main__':
     with open("tsplib_benchmark/euc_2d", "r") as fin:
         names = [line.strip() for line in fin.readlines()]
 
-    for index in range(len(names)):
+    for index in range(46, len(names)):
         name = names[index]
         tours, costs = [], []
+
+        TSPParser(name, False)
+        zero = []
+
+        # FIXME maybe n.n and c.s(without randomness) should not be placed IN THE 10-LOOP
+        do_nearest_neighbor(TSPParser.G, opt=True)
+        zero.append(TSPParser.boss_info("opt-nearest-neighbor")[0])
+
+        do_christofides_serdyukov(TSPParser.G, opt=True, visualize=False)
+        zero.append(TSPParser.boss_info("opt-christofides")[0])
 
         for i in range(10):
             with open("log.txt", "a") as fout:
                 fout.write(f"###### {i + 1} of {name}[{index + 1}/{len(names)}]\n")
 
-            TSPParser(name, False)
-            step_1_1 = do_nearest_neighbor(TSPParser.G, opt=True)
-            TSPParser.boss_info("opt-nearest-neighbor")
-
-            step_1_2 = do_christofides_serdyukov(TSPParser.G, opt=True, visualize=False)
-            TSPParser.boss_info("opt-christofides")
-
-            promising_length2tour = {**step_1_1, **step_1_2}
-            do_stimulated_annealing(promising_length2tour, lim=50)
+            # FIXME rare further improvement
+            do_stimulated_annealing(zero, lim=5)
             tour, cost = TSPParser.boss_info("opt-stimulated_annealing")
             tours.append(tour)
             costs.append(cost)
@@ -43,11 +46,11 @@ if __name__ == '__main__':
 
         # logger
         with open("log.txt", "a") as fout:
-            fout.write(f"--->>> {name} {int(np.min(costs))} {int(np.mean(costs))}\n")
+            fout.write(f"--->>> {name} {int(np.min(costs))} {float(np.mean(costs))}\n")
 
         # sheet
         with open("experiment.txt", "a") as fout:
-            fout.write(f"{name} {int(np.min(costs))} {int(np.mean(costs))}\n")
+            fout.write(f"{name} {int(np.min(costs))} {float(np.mean(costs))}\n")
 
         fig, axes = plt.subplots(2, 5, figsize=(22, 6.5), layout='constrained')
         for i in range(2):

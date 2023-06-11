@@ -3,11 +3,8 @@ from typing import List
 from tsplib_utils.parser import TSPParser
 
 
+# ref: https://stackoverflow.com/questions/53275314/2-opt-algorithm-to-solve-the-travelling-salesman-problem-in-python
 def do_two_opt(permutation: List[int]) -> (List[int], int):
-    """
-    ref:
-    https://stackoverflow.com/questions/53275314/2-opt-algorithm-to-solve-the-travelling-salesman-problem-in-python
-    """
     tour = permutation[:]
     min_length = TSPParser.length_of_a_tour(tour)
 

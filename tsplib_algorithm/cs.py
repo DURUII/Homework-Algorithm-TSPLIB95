@@ -13,7 +13,7 @@ def visualize_procedure(G: nx.Graph,
                         odd_vertices: Set[int],
                         matching,
                         G_prime: nx.Graph,
-                        bypass: List[int]):
+                        bypass: List[int]) -> None:
     fig, axes = plt.subplots(2, 2, figsize=(8.5, 6.5), layout='constrained', dpi=500)
 
     # Find MST T of Graph
