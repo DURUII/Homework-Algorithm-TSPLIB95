@@ -16,7 +16,7 @@ def perturb(permutation: List[int], option=None) -> List[int]:
     if option is None:
         op = random.choice(["3_opt" for _ in range(10)]
                            + ["2_opt" for _ in range(8)]
-                           + ["switch", "insert"])
+                           + ["switch", "insert", "permutation-transform"])
     else:
         op = option
 
@@ -73,7 +73,8 @@ def perturb(permutation: List[int], option=None) -> List[int]:
             perturbed[i], perturbed[j] = perturbed[j], perturbed[i]
 
     else:
-        assert False
+        i = random.randint(1, len(permutation) - 1)
+        perturbed = perturbed[i:] + perturbed[:i]
 
     return perturbed
 
