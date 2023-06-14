@@ -32,7 +32,7 @@ def round_distance(x1: float, y1: float, x2: float, y2: float) -> int:
 
 
 def timestamp():
-    return time.asctime(time.localtime(time.time()))
+    return time.strftime("%Y-%m-%d %X", time.localtime())
 
 
 def random_color():

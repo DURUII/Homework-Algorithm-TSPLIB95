@@ -1,0 +1,2093 @@
+###### 1 of a280[1/48]
+Sat Jun 10 18:44:21 2023 - a280 -> opt: 2579
+Sat Jun 10 18:44:55 2023 - a280 -> opt-nearest-neighbor: 2710
+Sat Jun 10 18:45:12 2023 - a280 -> opt-christofides: 2699
+Sat Jun 10 18:45:17 2023 - a280 -> opt-stimulated_annealing: 2699
+###### 2 of a280[1/48]
+Sat Jun 10 18:45:17 2023 - a280 -> opt: 2579
+Sat Jun 10 18:45:51 2023 - a280 -> opt-nearest-neighbor: 2710
+Sat Jun 10 18:46:07 2023 - a280 -> opt-christofides: 2699
+Sat Jun 10 18:46:12 2023 - a280 -> opt-stimulated_annealing: 2699
+###### 3 of a280[1/48]
+Sat Jun 10 18:46:12 2023 - a280 -> opt: 2579
+Sat Jun 10 18:46:46 2023 - a280 -> opt-nearest-neighbor: 2710
+Sat Jun 10 18:47:03 2023 - a280 -> opt-christofides: 2699
+Sat Jun 10 18:47:08 2023 - a280 -> opt-stimulated_annealing: 2699
+###### 4 of a280[1/48]
+Sat Jun 10 18:47:09 2023 - a280 -> opt: 2579
+Sat Jun 10 18:47:42 2023 - a280 -> opt-nearest-neighbor: 2710
+Sat Jun 10 18:47:59 2023 - a280 -> opt-christofides: 2699
+Sat Jun 10 18:48:04 2023 - a280 -> opt-stimulated_annealing: 2699
+###### 5 of a280[1/48]
+Sat Jun 10 18:48:04 2023 - a280 -> opt: 2579
+Sat Jun 10 18:48:39 2023 - a280 -> opt-nearest-neighbor: 2710
+Sat Jun 10 18:48:56 2023 - a280 -> opt-christofides: 2699
+Sat Jun 10 18:49:01 2023 - a280 -> opt-stimulated_annealing: 2699
+###### 6 of a280[1/48]
+Sat Jun 10 18:49:01 2023 - a280 -> opt: 2579
+Sat Jun 10 18:49:35 2023 - a280 -> opt-nearest-neighbor: 2710
+Sat Jun 10 18:49:52 2023 - a280 -> opt-christofides: 2699
+Sat Jun 10 18:49:57 2023 - a280 -> opt-stimulated_annealing: 2699
+###### 7 of a280[1/48]
+Sat Jun 10 18:49:57 2023 - a280 -> opt: 2579
+Sat Jun 10 18:50:32 2023 - a280 -> opt-nearest-neighbor: 2710
+Sat Jun 10 18:50:49 2023 - a280 -> opt-christofides: 2699
+Sat Jun 10 18:50:54 2023 - a280 -> opt-stimulated_annealing: 2699
+###### 8 of a280[1/48]
+Sat Jun 10 18:50:54 2023 - a280 -> opt: 2579
+Sat Jun 10 18:51:28 2023 - a280 -> opt-nearest-neighbor: 2710
+Sat Jun 10 18:51:46 2023 - a280 -> opt-christofides: 2699
+Sat Jun 10 18:51:51 2023 - a280 -> opt-stimulated_annealing: 2699
+###### 9 of a280[1/48]
+Sat Jun 10 18:51:51 2023 - a280 -> opt: 2579
+Sat Jun 10 18:52:25 2023 - a280 -> opt-nearest-neighbor: 2710
+Sat Jun 10 18:52:43 2023 - a280 -> opt-christofides: 2699
+Sat Jun 10 18:52:48 2023 - a280 -> opt-stimulated_annealing: 2699
+###### 10 of a280[1/48]
+Sat Jun 10 18:52:48 2023 - a280 -> opt: 2579
+Sat Jun 10 18:53:22 2023 - a280 -> opt-nearest-neighbor: 2710
+Sat Jun 10 18:53:39 2023 - a280 -> opt-christofides: 2699
+Sat Jun 10 18:53:44 2023 - a280 -> opt-stimulated_annealing: 2699
+--->>> a280 2699 2699.0
+###### 1 of berlin52[2/48]
+Sat Jun 10 18:53:49 2023 - berlin52 -> opt: 7542
+Sat Jun 10 18:53:50 2023 - berlin52 -> opt-nearest-neighbor: 7542
+Sat Jun 10 18:53:50 2023 - berlin52 -> opt-christofides: 7542
+Sat Jun 10 18:53:55 2023 - berlin52 -> opt-stimulated_annealing: 7542
+###### 2 of berlin52[2/48]
+Sat Jun 10 18:53:55 2023 - berlin52 -> opt: 7542
+Sat Jun 10 18:53:55 2023 - berlin52 -> opt-nearest-neighbor: 7542
+Sat Jun 10 18:53:55 2023 - berlin52 -> opt-christofides: 7542
+Sat Jun 10 18:54:00 2023 - berlin52 -> opt-stimulated_annealing: 7542
+###### 3 of berlin52[2/48]
+Sat Jun 10 18:54:00 2023 - berlin52 -> opt: 7542
+Sat Jun 10 18:54:01 2023 - berlin52 -> opt-nearest-neighbor: 7542
+Sat Jun 10 18:54:01 2023 - berlin52 -> opt-christofides: 7542
+Sat Jun 10 18:54:06 2023 - berlin52 -> opt-stimulated_annealing: 7542
+###### 4 of berlin52[2/48]
+Sat Jun 10 18:54:06 2023 - berlin52 -> opt: 7542
+Sat Jun 10 18:54:07 2023 - berlin52 -> opt-nearest-neighbor: 7542
+Sat Jun 10 18:54:07 2023 - berlin52 -> opt-christofides: 7542
+Sat Jun 10 18:54:12 2023 - berlin52 -> opt-stimulated_annealing: 7542
+###### 5 of berlin52[2/48]
+Sat Jun 10 18:54:12 2023 - berlin52 -> opt: 7542
+Sat Jun 10 18:54:13 2023 - berlin52 -> opt-nearest-neighbor: 7542
+Sat Jun 10 18:54:13 2023 - berlin52 -> opt-christofides: 7542
+Sat Jun 10 18:54:18 2023 - berlin52 -> opt-stimulated_annealing: 7542
+###### 6 of berlin52[2/48]
+Sat Jun 10 18:54:18 2023 - berlin52 -> opt: 7542
+Sat Jun 10 18:54:18 2023 - berlin52 -> opt-nearest-neighbor: 7542
+Sat Jun 10 18:54:18 2023 - berlin52 -> opt-christofides: 7542
+Sat Jun 10 18:54:23 2023 - berlin52 -> opt-stimulated_annealing: 7542
+###### 7 of berlin52[2/48]
+Sat Jun 10 18:54:23 2023 - berlin52 -> opt: 7542
+Sat Jun 10 18:54:24 2023 - berlin52 -> opt-nearest-neighbor: 7542
+Sat Jun 10 18:54:24 2023 - berlin52 -> opt-christofides: 7542
+Sat Jun 10 18:54:29 2023 - berlin52 -> opt-stimulated_annealing: 7542
+###### 8 of berlin52[2/48]
+Sat Jun 10 18:54:29 2023 - berlin52 -> opt: 7542
+Sat Jun 10 18:54:30 2023 - berlin52 -> opt-nearest-neighbor: 7542
+Sat Jun 10 18:54:30 2023 - berlin52 -> opt-christofides: 7542
+Sat Jun 10 18:54:35 2023 - berlin52 -> opt-stimulated_annealing: 7542
+###### 9 of berlin52[2/48]
+Sat Jun 10 18:54:35 2023 - berlin52 -> opt: 7542
+Sat Jun 10 18:54:35 2023 - berlin52 -> opt-nearest-neighbor: 7542
+Sat Jun 10 18:54:35 2023 - berlin52 -> opt-christofides: 7542
+Sat Jun 10 18:54:40 2023 - berlin52 -> opt-stimulated_annealing: 7542
+###### 10 of berlin52[2/48]
+Sat Jun 10 18:54:40 2023 - berlin52 -> opt: 7542
+Sat Jun 10 18:54:41 2023 - berlin52 -> opt-nearest-neighbor: 7542
+Sat Jun 10 18:54:41 2023 - berlin52 -> opt-christofides: 7542
+Sat Jun 10 18:54:46 2023 - berlin52 -> opt-stimulated_annealing: 7542
+--->>> berlin52 7542 7542.0
+###### 1 of bier127[3/48]
+Sat Jun 10 18:54:53 2023 - bier127 -> opt-nearest-neighbor: 127211
+Sat Jun 10 18:54:55 2023 - bier127 -> opt-christofides: 127211
+Sat Jun 10 18:55:00 2023 - bier127 -> opt-stimulated_annealing: 127211
+###### 2 of bier127[3/48]
+Sat Jun 10 18:55:02 2023 - bier127 -> opt-nearest-neighbor: 127211
+Sat Jun 10 18:55:04 2023 - bier127 -> opt-christofides: 127211
+Sat Jun 10 18:55:09 2023 - bier127 -> opt-stimulated_annealing: 127211
+###### 3 of bier127[3/48]
+Sat Jun 10 18:55:12 2023 - bier127 -> opt-nearest-neighbor: 127211
+Sat Jun 10 18:55:13 2023 - bier127 -> opt-christofides: 127211
+Sat Jun 10 18:55:18 2023 - bier127 -> opt-stimulated_annealing: 127211
+###### 4 of bier127[3/48]
+Sat Jun 10 18:55:21 2023 - bier127 -> opt-nearest-neighbor: 127211
+Sat Jun 10 18:55:22 2023 - bier127 -> opt-christofides: 127211
+Sat Jun 10 18:55:27 2023 - bier127 -> opt-stimulated_annealing: 127211
+###### 5 of bier127[3/48]
+Sat Jun 10 18:55:30 2023 - bier127 -> opt-nearest-neighbor: 127211
+Sat Jun 10 18:55:32 2023 - bier127 -> opt-christofides: 127211
+Sat Jun 10 18:55:37 2023 - bier127 -> opt-stimulated_annealing: 127211
+###### 6 of bier127[3/48]
+Sat Jun 10 18:55:39 2023 - bier127 -> opt-nearest-neighbor: 127211
+Sat Jun 10 18:55:41 2023 - bier127 -> opt-christofides: 127211
+Sat Jun 10 18:55:46 2023 - bier127 -> opt-stimulated_annealing: 127211
+###### 7 of bier127[3/48]
+Sat Jun 10 18:55:49 2023 - bier127 -> opt-nearest-neighbor: 127211
+Sat Jun 10 18:55:50 2023 - bier127 -> opt-christofides: 127211
+Sat Jun 10 18:55:55 2023 - bier127 -> opt-stimulated_annealing: 127211
+###### 8 of bier127[3/48]
+Sat Jun 10 18:55:58 2023 - bier127 -> opt-nearest-neighbor: 127211
+Sat Jun 10 18:55:59 2023 - bier127 -> opt-christofides: 127211
+Sat Jun 10 18:56:04 2023 - bier127 -> opt-stimulated_annealing: 127211
+###### 9 of bier127[3/48]
+Sat Jun 10 18:56:07 2023 - bier127 -> opt-nearest-neighbor: 127211
+Sat Jun 10 18:56:09 2023 - bier127 -> opt-christofides: 127211
+Sat Jun 10 18:56:14 2023 - bier127 -> opt-stimulated_annealing: 127211
+###### 10 of bier127[3/48]
+Sat Jun 10 18:56:16 2023 - bier127 -> opt-nearest-neighbor: 127211
+Sat Jun 10 18:56:18 2023 - bier127 -> opt-christofides: 127211
+Sat Jun 10 18:56:23 2023 - bier127 -> opt-stimulated_annealing: 127211
+--->>> bier127 127211 127211.0
+###### 1 of ch130[4/48]
+Sat Jun 10 18:56:27 2023 - ch130 -> opt: 6110
+Sat Jun 10 18:56:31 2023 - ch130 -> opt-nearest-neighbor: 6478
+Sat Jun 10 18:56:32 2023 - ch130 -> opt-christofides: 6269
+Sat Jun 10 18:56:37 2023 - ch130 -> opt-stimulated_annealing: 6269
+###### 2 of ch130[4/48]
+Sat Jun 10 18:56:38 2023 - ch130 -> opt: 6110
+Sat Jun 10 18:56:41 2023 - ch130 -> opt-nearest-neighbor: 6478
+Sat Jun 10 18:56:43 2023 - ch130 -> opt-christofides: 6269
+Sat Jun 10 18:56:48 2023 - ch130 -> opt-stimulated_annealing: 6269
+###### 3 of ch130[4/48]
+Sat Jun 10 18:56:48 2023 - ch130 -> opt: 6110
+Sat Jun 10 18:56:51 2023 - ch130 -> opt-nearest-neighbor: 6478
+Sat Jun 10 18:56:53 2023 - ch130 -> opt-christofides: 6269
+Sat Jun 10 18:56:58 2023 - ch130 -> opt-stimulated_annealing: 6269
+###### 4 of ch130[4/48]
+Sat Jun 10 18:56:58 2023 - ch130 -> opt: 6110
+Sat Jun 10 18:57:01 2023 - ch130 -> opt-nearest-neighbor: 6478
+Sat Jun 10 18:57:03 2023 - ch130 -> opt-christofides: 6269
+Sat Jun 10 18:57:08 2023 - ch130 -> opt-stimulated_annealing: 6269
+###### 5 of ch130[4/48]
+Sat Jun 10 18:57:08 2023 - ch130 -> opt: 6110
+Sat Jun 10 18:57:11 2023 - ch130 -> opt-nearest-neighbor: 6478
+Sat Jun 10 18:57:13 2023 - ch130 -> opt-christofides: 6269
+Sat Jun 10 18:57:18 2023 - ch130 -> opt-stimulated_annealing: 6269
+###### 6 of ch130[4/48]
+Sat Jun 10 18:57:18 2023 - ch130 -> opt: 6110
+Sat Jun 10 18:57:21 2023 - ch130 -> opt-nearest-neighbor: 6478
+Sat Jun 10 18:57:23 2023 - ch130 -> opt-christofides: 6269
+Sat Jun 10 18:57:28 2023 - ch130 -> opt-stimulated_annealing: 6269
+###### 7 of ch130[4/48]
+Sat Jun 10 18:57:28 2023 - ch130 -> opt: 6110
+Sat Jun 10 18:57:32 2023 - ch130 -> opt-nearest-neighbor: 6478
+Sat Jun 10 18:57:33 2023 - ch130 -> opt-christofides: 6269
+Sat Jun 10 18:57:38 2023 - ch130 -> opt-stimulated_annealing: 6269
+###### 8 of ch130[4/48]
+Sat Jun 10 18:57:38 2023 - ch130 -> opt: 6110
+Sat Jun 10 18:57:42 2023 - ch130 -> opt-nearest-neighbor: 6478
+Sat Jun 10 18:57:43 2023 - ch130 -> opt-christofides: 6269
+Sat Jun 10 18:57:48 2023 - ch130 -> opt-stimulated_annealing: 6269
+###### 9 of ch130[4/48]
+Sat Jun 10 18:57:48 2023 - ch130 -> opt: 6110
+Sat Jun 10 18:57:52 2023 - ch130 -> opt-nearest-neighbor: 6478
+Sat Jun 10 18:57:54 2023 - ch130 -> opt-christofides: 6269
+Sat Jun 10 18:57:59 2023 - ch130 -> opt-stimulated_annealing: 6269
+###### 10 of ch130[4/48]
+Sat Jun 10 18:57:59 2023 - ch130 -> opt: 6110
+Sat Jun 10 18:58:02 2023 - ch130 -> opt-nearest-neighbor: 6478
+Sat Jun 10 18:58:04 2023 - ch130 -> opt-christofides: 6269
+Sat Jun 10 18:58:09 2023 - ch130 -> opt-stimulated_annealing: 6269
+--->>> ch130 6269 6269.0
+###### 1 of ch150[5/48]
+Sat Jun 10 18:58:13 2023 - ch150 -> opt: 6528
+Sat Jun 10 18:58:17 2023 - ch150 -> opt-nearest-neighbor: 6765
+Sat Jun 10 18:58:19 2023 - ch150 -> opt-christofides: 6744
+Sat Jun 10 18:58:24 2023 - ch150 -> opt-stimulated_annealing: 6744
+###### 2 of ch150[5/48]
+Sat Jun 10 18:58:24 2023 - ch150 -> opt: 6528
+Sat Jun 10 18:58:28 2023 - ch150 -> opt-nearest-neighbor: 6765
+Sat Jun 10 18:58:30 2023 - ch150 -> opt-christofides: 6744
+Sat Jun 10 18:58:35 2023 - ch150 -> opt-stimulated_annealing: 6744
+###### 3 of ch150[5/48]
+Sat Jun 10 18:58:35 2023 - ch150 -> opt: 6528
+Sat Jun 10 18:58:39 2023 - ch150 -> opt-nearest-neighbor: 6765
+Sat Jun 10 18:58:41 2023 - ch150 -> opt-christofides: 6744
+Sat Jun 10 18:58:46 2023 - ch150 -> opt-stimulated_annealing: 6744
+###### 4 of ch150[5/48]
+Sat Jun 10 18:58:46 2023 - ch150 -> opt: 6528
+Sat Jun 10 18:58:50 2023 - ch150 -> opt-nearest-neighbor: 6765
+Sat Jun 10 18:58:53 2023 - ch150 -> opt-christofides: 6744
+Sat Jun 10 18:58:58 2023 - ch150 -> opt-stimulated_annealing: 6744
+###### 5 of ch150[5/48]
+Sat Jun 10 18:58:58 2023 - ch150 -> opt: 6528
+Sat Jun 10 18:59:01 2023 - ch150 -> opt-nearest-neighbor: 6765
+Sat Jun 10 18:59:04 2023 - ch150 -> opt-christofides: 6744
+Sat Jun 10 18:59:09 2023 - ch150 -> opt-stimulated_annealing: 6744
+###### 6 of ch150[5/48]
+Sat Jun 10 18:59:09 2023 - ch150 -> opt: 6528
+Sat Jun 10 18:59:12 2023 - ch150 -> opt-nearest-neighbor: 6765
+Sat Jun 10 18:59:15 2023 - ch150 -> opt-christofides: 6744
+Sat Jun 10 18:59:20 2023 - ch150 -> opt-stimulated_annealing: 6744
+###### 7 of ch150[5/48]
+Sat Jun 10 18:59:20 2023 - ch150 -> opt: 6528
+Sat Jun 10 18:59:24 2023 - ch150 -> opt-nearest-neighbor: 6765
+Sat Jun 10 18:59:27 2023 - ch150 -> opt-christofides: 6744
+Sat Jun 10 18:59:32 2023 - ch150 -> opt-stimulated_annealing: 6744
+###### 8 of ch150[5/48]
+Sat Jun 10 18:59:32 2023 - ch150 -> opt: 6528
+Sat Jun 10 18:59:35 2023 - ch150 -> opt-nearest-neighbor: 6765
+Sat Jun 10 18:59:38 2023 - ch150 -> opt-christofides: 6744
+Sat Jun 10 18:59:43 2023 - ch150 -> opt-stimulated_annealing: 6744
+###### 9 of ch150[5/48]
+Sat Jun 10 18:59:43 2023 - ch150 -> opt: 6528
+Sat Jun 10 18:59:47 2023 - ch150 -> opt-nearest-neighbor: 6765
+Sat Jun 10 18:59:49 2023 - ch150 -> opt-christofides: 6744
+Sat Jun 10 18:59:54 2023 - ch150 -> opt-stimulated_annealing: 6744
+###### 10 of ch150[5/48]
+Sat Jun 10 18:59:54 2023 - ch150 -> opt: 6528
+Sat Jun 10 18:59:58 2023 - ch150 -> opt-nearest-neighbor: 6765
+Sat Jun 10 19:00:01 2023 - ch150 -> opt-christofides: 6744
+Sat Jun 10 19:00:06 2023 - ch150 -> opt-stimulated_annealing: 6744
+--->>> ch150 6744 6744.0
+###### 1 of d198[6/48]
+Sat Jun 10 19:00:21 2023 - d198 -> opt-nearest-neighbor: 16046
+Sat Jun 10 19:00:29 2023 - d198 -> opt-christofides: 16046
+Sat Jun 10 19:00:34 2023 - d198 -> opt-stimulated_annealing: 16046
+###### 2 of d198[6/48]
+Sat Jun 10 19:00:44 2023 - d198 -> opt-nearest-neighbor: 16046
+Sat Jun 10 19:00:53 2023 - d198 -> opt-christofides: 16046
+Sat Jun 10 19:00:58 2023 - d198 -> opt-stimulated_annealing: 16046
+###### 3 of d198[6/48]
+Sat Jun 10 19:01:08 2023 - d198 -> opt-nearest-neighbor: 16046
+Sat Jun 10 19:01:16 2023 - d198 -> opt-christofides: 16046
+Sat Jun 10 19:01:21 2023 - d198 -> opt-stimulated_annealing: 16046
+###### 4 of d198[6/48]
+Sat Jun 10 19:01:32 2023 - d198 -> opt-nearest-neighbor: 16046
+Sat Jun 10 19:01:40 2023 - d198 -> opt-christofides: 16046
+Sat Jun 10 19:01:45 2023 - d198 -> opt-stimulated_annealing: 16046
+###### 5 of d198[6/48]
+Sat Jun 10 19:01:56 2023 - d198 -> opt-nearest-neighbor: 16046
+Sat Jun 10 19:02:04 2023 - d198 -> opt-christofides: 16046
+Sat Jun 10 19:02:09 2023 - d198 -> opt-stimulated_annealing: 16046
+###### 6 of d198[6/48]
+Sat Jun 10 19:02:19 2023 - d198 -> opt-nearest-neighbor: 16046
+Sat Jun 10 19:02:27 2023 - d198 -> opt-christofides: 16046
+Sat Jun 10 19:02:32 2023 - d198 -> opt-stimulated_annealing: 16046
+###### 7 of d198[6/48]
+Sat Jun 10 19:02:42 2023 - d198 -> opt-nearest-neighbor: 16046
+Sat Jun 10 19:02:50 2023 - d198 -> opt-christofides: 16046
+Sat Jun 10 19:02:55 2023 - d198 -> opt-stimulated_annealing: 16046
+###### 8 of d198[6/48]
+Sat Jun 10 19:03:06 2023 - d198 -> opt-nearest-neighbor: 16046
+Sat Jun 10 19:03:14 2023 - d198 -> opt-christofides: 16046
+Sat Jun 10 19:03:19 2023 - d198 -> opt-stimulated_annealing: 16046
+###### 9 of d198[6/48]
+Sat Jun 10 19:03:29 2023 - d198 -> opt-nearest-neighbor: 16046
+Sat Jun 10 19:03:38 2023 - d198 -> opt-christofides: 16046
+Sat Jun 10 19:03:43 2023 - d198 -> opt-stimulated_annealing: 16046
+###### 10 of d198[6/48]
+Sat Jun 10 19:03:53 2023 - d198 -> opt-nearest-neighbor: 16046
+Sat Jun 10 19:04:01 2023 - d198 -> opt-christofides: 16046
+Sat Jun 10 19:04:06 2023 - d198 -> opt-stimulated_annealing: 16046
+--->>> d198 16046 16046.0
+###### 1 of d493[7/48]
+Sat Jun 10 19:06:28 2023 - d493 -> opt-nearest-neighbor: 37646
+Sat Jun 10 19:09:43 2023 - d493 -> opt-christofides: 36993
+Sat Jun 10 19:09:48 2023 - d493 -> opt-stimulated_annealing: 36993
+###### 2 of d493[7/48]
+Sat Jun 10 19:12:06 2023 - d493 -> opt-nearest-neighbor: 37646
+Sat Jun 10 19:15:22 2023 - d493 -> opt-christofides: 36993
+Sat Jun 10 19:15:27 2023 - d493 -> opt-stimulated_annealing: 36993
+###### 3 of d493[7/48]
+Sat Jun 10 19:17:44 2023 - d493 -> opt-nearest-neighbor: 37646
+Sat Jun 10 19:20:57 2023 - d493 -> opt-christofides: 36993
+Sat Jun 10 19:21:02 2023 - d493 -> opt-stimulated_annealing: 36993
+###### 4 of d493[7/48]
+Sat Jun 10 19:23:18 2023 - d493 -> opt-nearest-neighbor: 37646
+Sat Jun 10 19:26:38 2023 - d493 -> opt-christofides: 36993
+Sat Jun 10 19:26:43 2023 - d493 -> opt-stimulated_annealing: 36993
+###### 5 of d493[7/48]
+Sat Jun 10 19:29:04 2023 - d493 -> opt-nearest-neighbor: 37646
+Sat Jun 10 19:32:20 2023 - d493 -> opt-christofides: 36993
+Sat Jun 10 19:32:25 2023 - d493 -> opt-stimulated_annealing: 36993
+###### 6 of d493[7/48]
+Sat Jun 10 19:34:46 2023 - d493 -> opt-nearest-neighbor: 37646
+Sat Jun 10 19:38:03 2023 - d493 -> opt-christofides: 36993
+Sat Jun 10 19:38:08 2023 - d493 -> opt-stimulated_annealing: 36993
+###### 7 of d493[7/48]
+Sat Jun 10 19:40:23 2023 - d493 -> opt-nearest-neighbor: 37646
+Sat Jun 10 19:43:35 2023 - d493 -> opt-christofides: 36993
+Sat Jun 10 19:43:40 2023 - d493 -> opt-stimulated_annealing: 36993
+###### 8 of d493[7/48]
+Sat Jun 10 19:45:54 2023 - d493 -> opt-nearest-neighbor: 37646
+Sat Jun 10 19:49:06 2023 - d493 -> opt-christofides: 36993
+Sat Jun 10 19:49:11 2023 - d493 -> opt-stimulated_annealing: 36993
+###### 9 of d493[7/48]
+Sat Jun 10 19:51:26 2023 - d493 -> opt-nearest-neighbor: 37646
+Sat Jun 10 19:54:38 2023 - d493 -> opt-christofides: 36993
+Sat Jun 10 19:54:44 2023 - d493 -> opt-stimulated_annealing: 36993
+###### 10 of d493[7/48]
+Sat Jun 10 19:56:58 2023 - d493 -> opt-nearest-neighbor: 37646
+Sat Jun 10 20:00:11 2023 - d493 -> opt-christofides: 36993
+Sat Jun 10 20:00:17 2023 - d493 -> opt-stimulated_annealing: 36993
+--->>> d493 36993 36993.0
+###### 1 of d657[8/48]
+Sat Jun 10 20:09:36 2023 - d657 -> opt-nearest-neighbor: 52559
+Sat Jun 10 20:16:02 2023 - d657 -> opt-christofides: 51766
+Sat Jun 10 20:16:08 2023 - d657 -> opt-stimulated_annealing: 51766
+###### 2 of d657[8/48]
+Sat Jun 10 20:25:21 2023 - d657 -> opt-nearest-neighbor: 52559
+Sat Jun 10 20:31:46 2023 - d657 -> opt-christofides: 51766
+Sat Jun 10 20:31:51 2023 - d657 -> opt-stimulated_annealing: 51766
+###### 3 of d657[8/48]
+Sat Jun 10 20:40:55 2023 - d657 -> opt-nearest-neighbor: 52559
+Sat Jun 10 20:47:20 2023 - d657 -> opt-christofides: 51766
+Sat Jun 10 20:47:25 2023 - d657 -> opt-stimulated_annealing: 51766
+###### 4 of d657[8/48]
+Sat Jun 10 20:56:30 2023 - d657 -> opt-nearest-neighbor: 52559
+Sat Jun 10 21:02:55 2023 - d657 -> opt-christofides: 51766
+Sat Jun 10 21:03:01 2023 - d657 -> opt-stimulated_annealing: 51766
+###### 5 of d657[8/48]
+Sat Jun 10 21:12:09 2023 - d657 -> opt-nearest-neighbor: 52559
+Sat Jun 10 21:18:34 2023 - d657 -> opt-christofides: 51766
+Sat Jun 10 21:18:39 2023 - d657 -> opt-stimulated_annealing: 51766
+###### 6 of d657[8/48]
+Sat Jun 10 21:27:49 2023 - d657 -> opt-nearest-neighbor: 52559
+Sat Jun 10 21:34:36 2023 - d657 -> opt-christofides: 51766
+Sat Jun 10 21:34:42 2023 - d657 -> opt-stimulated_annealing: 51766
+###### 7 of d657[8/48]
+Sat Jun 10 21:44:06 2023 - d657 -> opt-nearest-neighbor: 52559
+Sat Jun 10 21:50:32 2023 - d657 -> opt-christofides: 51766
+Sat Jun 10 21:50:37 2023 - d657 -> opt-stimulated_annealing: 51766
+###### 8 of d657[8/48]
+Sat Jun 10 21:59:40 2023 - d657 -> opt-nearest-neighbor: 52559
+Sat Jun 10 22:06:01 2023 - d657 -> opt-christofides: 51766
+Sat Jun 10 22:06:07 2023 - d657 -> opt-stimulated_annealing: 51766
+###### 9 of d657[8/48]
+Sat Jun 10 22:15:12 2023 - d657 -> opt-nearest-neighbor: 52559
+Sat Jun 10 22:21:41 2023 - d657 -> opt-christofides: 51766
+Sat Jun 10 22:21:46 2023 - d657 -> opt-stimulated_annealing: 51766
+###### 10 of d657[8/48]
+Sat Jun 10 22:30:58 2023 - d657 -> opt-nearest-neighbor: 52559
+Sat Jun 10 22:37:22 2023 - d657 -> opt-christofides: 51766
+Sat Jun 10 22:37:27 2023 - d657 -> opt-stimulated_annealing: 51766
+--->>> d657 51766 51766.0
+###### 1 of eil51[9/48]
+Sat Jun 10 22:37:32 2023 - eil51 -> opt: 426
+Sat Jun 10 22:37:33 2023 - eil51 -> opt-nearest-neighbor: 435
+Sat Jun 10 22:37:33 2023 - eil51 -> opt-christofides: 435
+Sat Jun 10 22:37:38 2023 - eil51 -> opt-stimulated_annealing: 435
+###### 2 of eil51[9/48]
+Sat Jun 10 22:37:38 2023 - eil51 -> opt: 426
+Sat Jun 10 22:37:38 2023 - eil51 -> opt-nearest-neighbor: 435
+Sat Jun 10 22:37:38 2023 - eil51 -> opt-christofides: 435
+Sat Jun 10 22:37:43 2023 - eil51 -> opt-stimulated_annealing: 435
+###### 3 of eil51[9/48]
+Sat Jun 10 22:37:43 2023 - eil51 -> opt: 426
+Sat Jun 10 22:37:44 2023 - eil51 -> opt-nearest-neighbor: 435
+Sat Jun 10 22:37:44 2023 - eil51 -> opt-christofides: 435
+Sat Jun 10 22:37:49 2023 - eil51 -> opt-stimulated_annealing: 435
+###### 4 of eil51[9/48]
+Sat Jun 10 22:37:49 2023 - eil51 -> opt: 426
+Sat Jun 10 22:37:50 2023 - eil51 -> opt-nearest-neighbor: 435
+Sat Jun 10 22:37:50 2023 - eil51 -> opt-christofides: 435
+Sat Jun 10 22:37:55 2023 - eil51 -> opt-stimulated_annealing: 435
+###### 5 of eil51[9/48]
+Sat Jun 10 22:37:55 2023 - eil51 -> opt: 426
+Sat Jun 10 22:37:55 2023 - eil51 -> opt-nearest-neighbor: 435
+Sat Jun 10 22:37:55 2023 - eil51 -> opt-christofides: 435
+Sat Jun 10 22:38:00 2023 - eil51 -> opt-stimulated_annealing: 434
+###### 6 of eil51[9/48]
+Sat Jun 10 22:38:00 2023 - eil51 -> opt: 426
+Sat Jun 10 22:38:01 2023 - eil51 -> opt-nearest-neighbor: 435
+Sat Jun 10 22:38:01 2023 - eil51 -> opt-christofides: 435
+Sat Jun 10 22:38:06 2023 - eil51 -> opt-stimulated_annealing: 435
+###### 7 of eil51[9/48]
+Sat Jun 10 22:38:06 2023 - eil51 -> opt: 426
+Sat Jun 10 22:38:07 2023 - eil51 -> opt-nearest-neighbor: 435
+Sat Jun 10 22:38:07 2023 - eil51 -> opt-christofides: 435
+Sat Jun 10 22:38:12 2023 - eil51 -> opt-stimulated_annealing: 435
+###### 8 of eil51[9/48]
+Sat Jun 10 22:38:12 2023 - eil51 -> opt: 426
+Sat Jun 10 22:38:12 2023 - eil51 -> opt-nearest-neighbor: 435
+Sat Jun 10 22:38:12 2023 - eil51 -> opt-christofides: 435
+Sat Jun 10 22:38:17 2023 - eil51 -> opt-stimulated_annealing: 435
+###### 9 of eil51[9/48]
+Sat Jun 10 22:38:17 2023 - eil51 -> opt: 426
+Sat Jun 10 22:38:18 2023 - eil51 -> opt-nearest-neighbor: 435
+Sat Jun 10 22:38:18 2023 - eil51 -> opt-christofides: 435
+Sat Jun 10 22:38:23 2023 - eil51 -> opt-stimulated_annealing: 435
+###### 10 of eil51[9/48]
+Sat Jun 10 22:38:23 2023 - eil51 -> opt: 426
+Sat Jun 10 22:38:24 2023 - eil51 -> opt-nearest-neighbor: 435
+Sat Jun 10 22:38:24 2023 - eil51 -> opt-christofides: 435
+Sat Jun 10 22:38:29 2023 - eil51 -> opt-stimulated_annealing: 435
+--->>> eil51 434 434.9
+###### 1 of eil76[10/48]
+Sat Jun 10 22:38:33 2023 - eil76 -> opt: 538
+Sat Jun 10 22:38:34 2023 - eil76 -> opt-nearest-neighbor: 562
+Sat Jun 10 22:38:35 2023 - eil76 -> opt-christofides: 562
+Sat Jun 10 22:38:40 2023 - eil76 -> opt-stimulated_annealing: 562
+###### 2 of eil76[10/48]
+Sat Jun 10 22:38:40 2023 - eil76 -> opt: 538
+Sat Jun 10 22:38:41 2023 - eil76 -> opt-nearest-neighbor: 562
+Sat Jun 10 22:38:41 2023 - eil76 -> opt-christofides: 562
+Sat Jun 10 22:38:46 2023 - eil76 -> opt-stimulated_annealing: 562
+###### 3 of eil76[10/48]
+Sat Jun 10 22:38:46 2023 - eil76 -> opt: 538
+Sat Jun 10 22:38:47 2023 - eil76 -> opt-nearest-neighbor: 562
+Sat Jun 10 22:38:47 2023 - eil76 -> opt-christofides: 562
+Sat Jun 10 22:38:52 2023 - eil76 -> opt-stimulated_annealing: 562
+###### 4 of eil76[10/48]
+Sat Jun 10 22:38:52 2023 - eil76 -> opt: 538
+Sat Jun 10 22:38:53 2023 - eil76 -> opt-nearest-neighbor: 562
+Sat Jun 10 22:38:53 2023 - eil76 -> opt-christofides: 562
+Sat Jun 10 22:38:58 2023 - eil76 -> opt-stimulated_annealing: 562
+###### 5 of eil76[10/48]
+Sat Jun 10 22:38:58 2023 - eil76 -> opt: 538
+Sat Jun 10 22:38:59 2023 - eil76 -> opt-nearest-neighbor: 562
+Sat Jun 10 22:39:00 2023 - eil76 -> opt-christofides: 562
+Sat Jun 10 22:39:05 2023 - eil76 -> opt-stimulated_annealing: 562
+###### 6 of eil76[10/48]
+Sat Jun 10 22:39:05 2023 - eil76 -> opt: 538
+Sat Jun 10 22:39:05 2023 - eil76 -> opt-nearest-neighbor: 562
+Sat Jun 10 22:39:06 2023 - eil76 -> opt-christofides: 562
+Sat Jun 10 22:39:11 2023 - eil76 -> opt-stimulated_annealing: 562
+###### 7 of eil76[10/48]
+Sat Jun 10 22:39:11 2023 - eil76 -> opt: 538
+Sat Jun 10 22:39:12 2023 - eil76 -> opt-nearest-neighbor: 562
+Sat Jun 10 22:39:12 2023 - eil76 -> opt-christofides: 562
+Sat Jun 10 22:39:17 2023 - eil76 -> opt-stimulated_annealing: 562
+###### 8 of eil76[10/48]
+Sat Jun 10 22:39:17 2023 - eil76 -> opt: 538
+Sat Jun 10 22:39:18 2023 - eil76 -> opt-nearest-neighbor: 562
+Sat Jun 10 22:39:18 2023 - eil76 -> opt-christofides: 562
+Sat Jun 10 22:39:23 2023 - eil76 -> opt-stimulated_annealing: 562
+###### 9 of eil76[10/48]
+Sat Jun 10 22:39:23 2023 - eil76 -> opt: 538
+Sat Jun 10 22:39:24 2023 - eil76 -> opt-nearest-neighbor: 562
+Sat Jun 10 22:39:24 2023 - eil76 -> opt-christofides: 562
+Sat Jun 10 22:39:29 2023 - eil76 -> opt-stimulated_annealing: 562
+###### 10 of eil76[10/48]
+Sat Jun 10 22:39:29 2023 - eil76 -> opt: 538
+Sat Jun 10 22:39:30 2023 - eil76 -> opt-nearest-neighbor: 562
+Sat Jun 10 22:39:31 2023 - eil76 -> opt-christofides: 562
+Sat Jun 10 22:39:36 2023 - eil76 -> opt-stimulated_annealing: 562
+--->>> eil76 562 562.0
+###### 1 of eil101[11/48]
+Sat Jun 10 22:39:40 2023 - eil101 -> opt: 629
+Sat Jun 10 22:39:41 2023 - eil101 -> opt-nearest-neighbor: 659
+Sat Jun 10 22:39:42 2023 - eil101 -> opt-christofides: 659
+Sat Jun 10 22:39:47 2023 - eil101 -> opt-stimulated_annealing: 659
+###### 2 of eil101[11/48]
+Sat Jun 10 22:39:47 2023 - eil101 -> opt: 629
+Sat Jun 10 22:39:48 2023 - eil101 -> opt-nearest-neighbor: 659
+Sat Jun 10 22:39:49 2023 - eil101 -> opt-christofides: 659
+Sat Jun 10 22:39:54 2023 - eil101 -> opt-stimulated_annealing: 659
+###### 3 of eil101[11/48]
+Sat Jun 10 22:39:54 2023 - eil101 -> opt: 629
+Sat Jun 10 22:39:55 2023 - eil101 -> opt-nearest-neighbor: 659
+Sat Jun 10 22:39:56 2023 - eil101 -> opt-christofides: 659
+Sat Jun 10 22:40:01 2023 - eil101 -> opt-stimulated_annealing: 659
+###### 4 of eil101[11/48]
+Sat Jun 10 22:40:01 2023 - eil101 -> opt: 629
+Sat Jun 10 22:40:02 2023 - eil101 -> opt-nearest-neighbor: 659
+Sat Jun 10 22:40:03 2023 - eil101 -> opt-christofides: 659
+Sat Jun 10 22:40:08 2023 - eil101 -> opt-stimulated_annealing: 659
+###### 5 of eil101[11/48]
+Sat Jun 10 22:40:08 2023 - eil101 -> opt: 629
+Sat Jun 10 22:40:09 2023 - eil101 -> opt-nearest-neighbor: 659
+Sat Jun 10 22:40:10 2023 - eil101 -> opt-christofides: 659
+Sat Jun 10 22:40:15 2023 - eil101 -> opt-stimulated_annealing: 659
+###### 6 of eil101[11/48]
+Sat Jun 10 22:40:15 2023 - eil101 -> opt: 629
+Sat Jun 10 22:40:16 2023 - eil101 -> opt-nearest-neighbor: 659
+Sat Jun 10 22:40:16 2023 - eil101 -> opt-christofides: 659
+Sat Jun 10 22:40:21 2023 - eil101 -> opt-stimulated_annealing: 659
+###### 7 of eil101[11/48]
+Sat Jun 10 22:40:21 2023 - eil101 -> opt: 629
+Sat Jun 10 22:40:23 2023 - eil101 -> opt-nearest-neighbor: 659
+Sat Jun 10 22:40:23 2023 - eil101 -> opt-christofides: 659
+Sat Jun 10 22:40:28 2023 - eil101 -> opt-stimulated_annealing: 659
+###### 8 of eil101[11/48]
+Sat Jun 10 22:40:28 2023 - eil101 -> opt: 629
+Sat Jun 10 22:40:29 2023 - eil101 -> opt-nearest-neighbor: 659
+Sat Jun 10 22:40:30 2023 - eil101 -> opt-christofides: 659
+Sat Jun 10 22:40:35 2023 - eil101 -> opt-stimulated_annealing: 659
+###### 9 of eil101[11/48]
+Sat Jun 10 22:40:35 2023 - eil101 -> opt: 629
+Sat Jun 10 22:40:36 2023 - eil101 -> opt-nearest-neighbor: 659
+Sat Jun 10 22:40:37 2023 - eil101 -> opt-christofides: 659
+Sat Jun 10 22:40:42 2023 - eil101 -> opt-stimulated_annealing: 659
+###### 10 of eil101[11/48]
+Sat Jun 10 22:40:42 2023 - eil101 -> opt: 629
+Sat Jun 10 22:40:43 2023 - eil101 -> opt-nearest-neighbor: 659
+Sat Jun 10 22:40:44 2023 - eil101 -> opt-christofides: 659
+Sat Jun 10 22:40:49 2023 - eil101 -> opt-stimulated_annealing: 659
+--->>> eil101 659 659.0
+###### 1 of fl417[12/48]
+Sat Jun 10 22:42:31 2023 - fl417 -> opt-nearest-neighbor: 12449
+Sat Jun 10 22:43:46 2023 - fl417 -> opt-christofides: 12449
+Sat Jun 10 22:43:51 2023 - fl417 -> opt-stimulated_annealing: 12449
+###### 2 of fl417[12/48]
+Sat Jun 10 22:45:28 2023 - fl417 -> opt-nearest-neighbor: 12449
+Sat Jun 10 22:46:46 2023 - fl417 -> opt-christofides: 12449
+Sat Jun 10 22:46:51 2023 - fl417 -> opt-stimulated_annealing: 12449
+###### 3 of fl417[12/48]
+Sat Jun 10 22:48:28 2023 - fl417 -> opt-nearest-neighbor: 12449
+Sat Jun 10 22:49:46 2023 - fl417 -> opt-christofides: 12449
+Sat Jun 10 22:49:51 2023 - fl417 -> opt-stimulated_annealing: 12449
+###### 4 of fl417[12/48]
+Sat Jun 10 22:51:31 2023 - fl417 -> opt-nearest-neighbor: 12449
+Sat Jun 10 22:52:48 2023 - fl417 -> opt-christofides: 12449
+Sat Jun 10 22:52:53 2023 - fl417 -> opt-stimulated_annealing: 12449
+###### 5 of fl417[12/48]
+Sat Jun 10 22:54:31 2023 - fl417 -> opt-nearest-neighbor: 12449
+Sat Jun 10 22:55:48 2023 - fl417 -> opt-christofides: 12449
+Sat Jun 10 22:55:53 2023 - fl417 -> opt-stimulated_annealing: 12449
+###### 6 of fl417[12/48]
+Sat Jun 10 22:57:31 2023 - fl417 -> opt-nearest-neighbor: 12449
+Sat Jun 10 22:58:46 2023 - fl417 -> opt-christofides: 12449
+Sat Jun 10 22:58:51 2023 - fl417 -> opt-stimulated_annealing: 12449
+###### 7 of fl417[12/48]
+Sat Jun 10 23:00:28 2023 - fl417 -> opt-nearest-neighbor: 12449
+Sat Jun 10 23:01:44 2023 - fl417 -> opt-christofides: 12449
+Sat Jun 10 23:01:49 2023 - fl417 -> opt-stimulated_annealing: 12449
+###### 8 of fl417[12/48]
+Sat Jun 10 23:03:26 2023 - fl417 -> opt-nearest-neighbor: 12449
+Sat Jun 10 23:04:41 2023 - fl417 -> opt-christofides: 12449
+Sat Jun 10 23:04:46 2023 - fl417 -> opt-stimulated_annealing: 12449
+###### 9 of fl417[12/48]
+Sat Jun 10 23:06:23 2023 - fl417 -> opt-nearest-neighbor: 12449
+Sat Jun 10 23:07:40 2023 - fl417 -> opt-christofides: 12449
+Sat Jun 10 23:07:45 2023 - fl417 -> opt-stimulated_annealing: 12449
+###### 10 of fl417[12/48]
+Sat Jun 10 23:09:22 2023 - fl417 -> opt-nearest-neighbor: 12449
+Sat Jun 10 23:10:36 2023 - fl417 -> opt-christofides: 12449
+Sat Jun 10 23:10:42 2023 - fl417 -> opt-stimulated_annealing: 12449
+--->>> fl417 12449 12449.0
+###### 1 of gil262[13/48]
+Sat Jun 10 23:11:10 2023 - gil262 -> opt-nearest-neighbor: 2581
+Sat Jun 10 23:11:33 2023 - gil262 -> opt-christofides: 2576
+Sat Jun 10 23:11:38 2023 - gil262 -> opt-stimulated_annealing: 2576
+###### 2 of gil262[13/48]
+Sat Jun 10 23:12:03 2023 - gil262 -> opt-nearest-neighbor: 2581
+Sat Jun 10 23:12:26 2023 - gil262 -> opt-christofides: 2576
+Sat Jun 10 23:12:31 2023 - gil262 -> opt-stimulated_annealing: 2576
+###### 3 of gil262[13/48]
+Sat Jun 10 23:12:55 2023 - gil262 -> opt-nearest-neighbor: 2581
+Sat Jun 10 23:13:18 2023 - gil262 -> opt-christofides: 2576
+Sat Jun 10 23:13:23 2023 - gil262 -> opt-stimulated_annealing: 2576
+###### 4 of gil262[13/48]
+Sat Jun 10 23:13:46 2023 - gil262 -> opt-nearest-neighbor: 2581
+Sat Jun 10 23:14:09 2023 - gil262 -> opt-christofides: 2576
+Sat Jun 10 23:14:14 2023 - gil262 -> opt-stimulated_annealing: 2576
+###### 5 of gil262[13/48]
+Sat Jun 10 23:14:38 2023 - gil262 -> opt-nearest-neighbor: 2581
+Sat Jun 10 23:15:01 2023 - gil262 -> opt-christofides: 2576
+Sat Jun 10 23:15:07 2023 - gil262 -> opt-stimulated_annealing: 2576
+###### 6 of gil262[13/48]
+Sat Jun 10 23:15:30 2023 - gil262 -> opt-nearest-neighbor: 2581
+Sat Jun 10 23:15:53 2023 - gil262 -> opt-christofides: 2576
+Sat Jun 10 23:15:58 2023 - gil262 -> opt-stimulated_annealing: 2576
+###### 7 of gil262[13/48]
+Sat Jun 10 23:16:22 2023 - gil262 -> opt-nearest-neighbor: 2581
+Sat Jun 10 23:16:44 2023 - gil262 -> opt-christofides: 2576
+Sat Jun 10 23:16:49 2023 - gil262 -> opt-stimulated_annealing: 2576
+###### 8 of gil262[13/48]
+Sat Jun 10 23:17:13 2023 - gil262 -> opt-nearest-neighbor: 2581
+Sat Jun 10 23:17:36 2023 - gil262 -> opt-christofides: 2576
+Sat Jun 10 23:17:42 2023 - gil262 -> opt-stimulated_annealing: 2576
+###### 9 of gil262[13/48]
+Sat Jun 10 23:18:05 2023 - gil262 -> opt-nearest-neighbor: 2581
+Sat Jun 10 23:18:28 2023 - gil262 -> opt-christofides: 2576
+Sat Jun 10 23:18:33 2023 - gil262 -> opt-stimulated_annealing: 2576
+###### 10 of gil262[13/48]
+Sat Jun 10 23:18:57 2023 - gil262 -> opt-nearest-neighbor: 2581
+Sat Jun 10 23:19:20 2023 - gil262 -> opt-christofides: 2576
+Sat Jun 10 23:19:25 2023 - gil262 -> opt-stimulated_annealing: 2576
+--->>> gil262 2576 2576.0
+###### 1 of kroA100[14/48]
+Sat Jun 10 23:19:30 2023 - kroA100 -> opt: 21282
+Sat Jun 10 23:19:32 2023 - kroA100 -> opt-nearest-neighbor: 21748
+Sat Jun 10 23:19:33 2023 - kroA100 -> opt-christofides: 21748
+Sat Jun 10 23:19:38 2023 - kroA100 -> opt-stimulated_annealing: 21748
+###### 2 of kroA100[14/48]
+Sat Jun 10 23:19:38 2023 - kroA100 -> opt: 21282
+Sat Jun 10 23:19:39 2023 - kroA100 -> opt-nearest-neighbor: 21748
+Sat Jun 10 23:19:40 2023 - kroA100 -> opt-christofides: 21748
+Sat Jun 10 23:19:45 2023 - kroA100 -> opt-stimulated_annealing: 21748
+###### 3 of kroA100[14/48]
+Sat Jun 10 23:19:45 2023 - kroA100 -> opt: 21282
+Sat Jun 10 23:19:46 2023 - kroA100 -> opt-nearest-neighbor: 21748
+Sat Jun 10 23:19:47 2023 - kroA100 -> opt-christofides: 21748
+Sat Jun 10 23:19:53 2023 - kroA100 -> opt-stimulated_annealing: 21748
+###### 4 of kroA100[14/48]
+Sat Jun 10 23:19:53 2023 - kroA100 -> opt: 21282
+Sat Jun 10 23:19:54 2023 - kroA100 -> opt-nearest-neighbor: 21748
+Sat Jun 10 23:19:55 2023 - kroA100 -> opt-christofides: 21748
+Sat Jun 10 23:20:00 2023 - kroA100 -> opt-stimulated_annealing: 21748
+###### 5 of kroA100[14/48]
+Sat Jun 10 23:20:00 2023 - kroA100 -> opt: 21282
+Sat Jun 10 23:20:01 2023 - kroA100 -> opt-nearest-neighbor: 21748
+Sat Jun 10 23:20:02 2023 - kroA100 -> opt-christofides: 21748
+Sat Jun 10 23:20:07 2023 - kroA100 -> opt-stimulated_annealing: 21748
+###### 6 of kroA100[14/48]
+Sat Jun 10 23:20:07 2023 - kroA100 -> opt: 21282
+Sat Jun 10 23:20:09 2023 - kroA100 -> opt-nearest-neighbor: 21748
+Sat Jun 10 23:20:09 2023 - kroA100 -> opt-christofides: 21748
+Sat Jun 10 23:20:15 2023 - kroA100 -> opt-stimulated_annealing: 21748
+###### 7 of kroA100[14/48]
+Sat Jun 10 23:20:15 2023 - kroA100 -> opt: 21282
+Sat Jun 10 23:20:16 2023 - kroA100 -> opt-nearest-neighbor: 21748
+Sat Jun 10 23:20:17 2023 - kroA100 -> opt-christofides: 21748
+Sat Jun 10 23:20:22 2023 - kroA100 -> opt-stimulated_annealing: 21748
+###### 8 of kroA100[14/48]
+Sat Jun 10 23:20:22 2023 - kroA100 -> opt: 21282
+Sat Jun 10 23:20:23 2023 - kroA100 -> opt-nearest-neighbor: 21748
+Sat Jun 10 23:20:24 2023 - kroA100 -> opt-christofides: 21748
+Sat Jun 10 23:20:29 2023 - kroA100 -> opt-stimulated_annealing: 21748
+###### 9 of kroA100[14/48]
+Sat Jun 10 23:20:29 2023 - kroA100 -> opt: 21282
+Sat Jun 10 23:20:31 2023 - kroA100 -> opt-nearest-neighbor: 21748
+Sat Jun 10 23:20:32 2023 - kroA100 -> opt-christofides: 21748
+Sat Jun 10 23:20:37 2023 - kroA100 -> opt-stimulated_annealing: 21748
+###### 10 of kroA100[14/48]
+Sat Jun 10 23:20:37 2023 - kroA100 -> opt: 21282
+Sat Jun 10 23:20:38 2023 - kroA100 -> opt-nearest-neighbor: 21748
+Sat Jun 10 23:20:39 2023 - kroA100 -> opt-christofides: 21748
+Sat Jun 10 23:20:44 2023 - kroA100 -> opt-stimulated_annealing: 21748
+--->>> kroA100 21748 21748.0
+###### 1 of kroB100[15/48]
+Sat Jun 10 23:20:50 2023 - kroB100 -> opt-nearest-neighbor: 23340
+Sat Jun 10 23:20:51 2023 - kroB100 -> opt-christofides: 23152
+Sat Jun 10 23:20:56 2023 - kroB100 -> opt-stimulated_annealing: 23152
+###### 2 of kroB100[15/48]
+Sat Jun 10 23:20:57 2023 - kroB100 -> opt-nearest-neighbor: 23340
+Sat Jun 10 23:20:57 2023 - kroB100 -> opt-christofides: 23152
+Sat Jun 10 23:21:02 2023 - kroB100 -> opt-stimulated_annealing: 23152
+###### 3 of kroB100[15/48]
+Sat Jun 10 23:21:03 2023 - kroB100 -> opt-nearest-neighbor: 23340
+Sat Jun 10 23:21:04 2023 - kroB100 -> opt-christofides: 23152
+Sat Jun 10 23:21:09 2023 - kroB100 -> opt-stimulated_annealing: 23152
+###### 4 of kroB100[15/48]
+Sat Jun 10 23:21:10 2023 - kroB100 -> opt-nearest-neighbor: 23340
+Sat Jun 10 23:21:11 2023 - kroB100 -> opt-christofides: 23152
+Sat Jun 10 23:21:16 2023 - kroB100 -> opt-stimulated_annealing: 23152
+###### 5 of kroB100[15/48]
+Sat Jun 10 23:21:17 2023 - kroB100 -> opt-nearest-neighbor: 23340
+Sat Jun 10 23:21:18 2023 - kroB100 -> opt-christofides: 23152
+Sat Jun 10 23:21:23 2023 - kroB100 -> opt-stimulated_annealing: 23152
+###### 6 of kroB100[15/48]
+Sat Jun 10 23:21:24 2023 - kroB100 -> opt-nearest-neighbor: 23340
+Sat Jun 10 23:21:25 2023 - kroB100 -> opt-christofides: 23152
+Sat Jun 10 23:21:30 2023 - kroB100 -> opt-stimulated_annealing: 23152
+###### 7 of kroB100[15/48]
+Sat Jun 10 23:21:31 2023 - kroB100 -> opt-nearest-neighbor: 23340
+Sat Jun 10 23:21:31 2023 - kroB100 -> opt-christofides: 23152
+Sat Jun 10 23:21:37 2023 - kroB100 -> opt-stimulated_annealing: 23152
+###### 8 of kroB100[15/48]
+Sat Jun 10 23:21:38 2023 - kroB100 -> opt-nearest-neighbor: 23340
+Sat Jun 10 23:21:38 2023 - kroB100 -> opt-christofides: 23152
+Sat Jun 10 23:21:43 2023 - kroB100 -> opt-stimulated_annealing: 23152
+###### 9 of kroB100[15/48]
+Sat Jun 10 23:21:44 2023 - kroB100 -> opt-nearest-neighbor: 23340
+Sat Jun 10 23:21:45 2023 - kroB100 -> opt-christofides: 23152
+Sat Jun 10 23:21:50 2023 - kroB100 -> opt-stimulated_annealing: 23152
+###### 10 of kroB100[15/48]
+Sat Jun 10 23:21:51 2023 - kroB100 -> opt-nearest-neighbor: 23340
+Sat Jun 10 23:21:52 2023 - kroB100 -> opt-christofides: 23152
+Sat Jun 10 23:21:57 2023 - kroB100 -> opt-stimulated_annealing: 23152
+--->>> kroB100 23152 23152.0
+###### 1 of kroC100[16/48]
+Sat Jun 10 23:22:02 2023 - kroC100 -> opt: 20749
+Sat Jun 10 23:22:03 2023 - kroC100 -> opt-nearest-neighbor: 21947
+Sat Jun 10 23:22:04 2023 - kroC100 -> opt-christofides: 21825
+Sat Jun 10 23:22:09 2023 - kroC100 -> opt-stimulated_annealing: 21825
+###### 2 of kroC100[16/48]
+Sat Jun 10 23:22:09 2023 - kroC100 -> opt: 20749
+Sat Jun 10 23:22:10 2023 - kroC100 -> opt-nearest-neighbor: 21947
+Sat Jun 10 23:22:12 2023 - kroC100 -> opt-christofides: 21825
+Sat Jun 10 23:22:17 2023 - kroC100 -> opt-stimulated_annealing: 21825
+###### 3 of kroC100[16/48]
+Sat Jun 10 23:22:17 2023 - kroC100 -> opt: 20749
+Sat Jun 10 23:22:18 2023 - kroC100 -> opt-nearest-neighbor: 21947
+Sat Jun 10 23:22:19 2023 - kroC100 -> opt-christofides: 21825
+Sat Jun 10 23:22:24 2023 - kroC100 -> opt-stimulated_annealing: 21825
+###### 4 of kroC100[16/48]
+Sat Jun 10 23:22:24 2023 - kroC100 -> opt: 20749
+Sat Jun 10 23:22:25 2023 - kroC100 -> opt-nearest-neighbor: 21947
+Sat Jun 10 23:22:27 2023 - kroC100 -> opt-christofides: 21825
+Sat Jun 10 23:22:32 2023 - kroC100 -> opt-stimulated_annealing: 21825
+###### 5 of kroC100[16/48]
+Sat Jun 10 23:22:32 2023 - kroC100 -> opt: 20749
+Sat Jun 10 23:22:33 2023 - kroC100 -> opt-nearest-neighbor: 21947
+Sat Jun 10 23:22:34 2023 - kroC100 -> opt-christofides: 21825
+Sat Jun 10 23:22:39 2023 - kroC100 -> opt-stimulated_annealing: 21825
+###### 6 of kroC100[16/48]
+Sat Jun 10 23:22:39 2023 - kroC100 -> opt: 20749
+Sat Jun 10 23:22:40 2023 - kroC100 -> opt-nearest-neighbor: 21947
+Sat Jun 10 23:22:42 2023 - kroC100 -> opt-christofides: 21825
+Sat Jun 10 23:22:47 2023 - kroC100 -> opt-stimulated_annealing: 21825
+###### 7 of kroC100[16/48]
+Sat Jun 10 23:22:47 2023 - kroC100 -> opt: 20749
+Sat Jun 10 23:22:48 2023 - kroC100 -> opt-nearest-neighbor: 21947
+Sat Jun 10 23:22:49 2023 - kroC100 -> opt-christofides: 21825
+Sat Jun 10 23:22:54 2023 - kroC100 -> opt-stimulated_annealing: 21825
+###### 8 of kroC100[16/48]
+Sat Jun 10 23:22:54 2023 - kroC100 -> opt: 20749
+Sat Jun 10 23:22:55 2023 - kroC100 -> opt-nearest-neighbor: 21947
+Sat Jun 10 23:22:57 2023 - kroC100 -> opt-christofides: 21825
+Sat Jun 10 23:23:02 2023 - kroC100 -> opt-stimulated_annealing: 21825
+###### 9 of kroC100[16/48]
+Sat Jun 10 23:23:02 2023 - kroC100 -> opt: 20749
+Sat Jun 10 23:23:03 2023 - kroC100 -> opt-nearest-neighbor: 21947
+Sat Jun 10 23:23:04 2023 - kroC100 -> opt-christofides: 21825
+Sat Jun 10 23:23:09 2023 - kroC100 -> opt-stimulated_annealing: 21825
+###### 10 of kroC100[16/48]
+Sat Jun 10 23:23:09 2023 - kroC100 -> opt: 20749
+Sat Jun 10 23:23:11 2023 - kroC100 -> opt-nearest-neighbor: 21947
+Sat Jun 10 23:23:12 2023 - kroC100 -> opt-christofides: 21825
+Sat Jun 10 23:23:17 2023 - kroC100 -> opt-stimulated_annealing: 21825
+--->>> kroC100 21825 21825.0
+###### 1 of kroD100[17/48]
+Sat Jun 10 23:23:22 2023 - kroD100 -> opt: 21294
+Sat Jun 10 23:23:23 2023 - kroD100 -> opt-nearest-neighbor: 23518
+Sat Jun 10 23:23:23 2023 - kroD100 -> opt-christofides: 22370
+Sat Jun 10 23:23:28 2023 - kroD100 -> opt-stimulated_annealing: 22370
+###### 2 of kroD100[17/48]
+Sat Jun 10 23:23:28 2023 - kroD100 -> opt: 21294
+Sat Jun 10 23:23:29 2023 - kroD100 -> opt-nearest-neighbor: 23518
+Sat Jun 10 23:23:30 2023 - kroD100 -> opt-christofides: 22370
+Sat Jun 10 23:23:35 2023 - kroD100 -> opt-stimulated_annealing: 22370
+###### 3 of kroD100[17/48]
+Sat Jun 10 23:23:35 2023 - kroD100 -> opt: 21294
+Sat Jun 10 23:23:36 2023 - kroD100 -> opt-nearest-neighbor: 23518
+Sat Jun 10 23:23:37 2023 - kroD100 -> opt-christofides: 22370
+Sat Jun 10 23:23:42 2023 - kroD100 -> opt-stimulated_annealing: 22370
+###### 4 of kroD100[17/48]
+Sat Jun 10 23:23:42 2023 - kroD100 -> opt: 21294
+Sat Jun 10 23:23:43 2023 - kroD100 -> opt-nearest-neighbor: 23518
+Sat Jun 10 23:23:44 2023 - kroD100 -> opt-christofides: 22370
+Sat Jun 10 23:23:49 2023 - kroD100 -> opt-stimulated_annealing: 22370
+###### 5 of kroD100[17/48]
+Sat Jun 10 23:23:49 2023 - kroD100 -> opt: 21294
+Sat Jun 10 23:23:50 2023 - kroD100 -> opt-nearest-neighbor: 23518
+Sat Jun 10 23:23:51 2023 - kroD100 -> opt-christofides: 22370
+Sat Jun 10 23:23:56 2023 - kroD100 -> opt-stimulated_annealing: 22357
+###### 6 of kroD100[17/48]
+Sat Jun 10 23:23:56 2023 - kroD100 -> opt: 21294
+Sat Jun 10 23:23:57 2023 - kroD100 -> opt-nearest-neighbor: 23518
+Sat Jun 10 23:23:58 2023 - kroD100 -> opt-christofides: 22370
+Sat Jun 10 23:24:03 2023 - kroD100 -> opt-stimulated_annealing: 22370
+###### 7 of kroD100[17/48]
+Sat Jun 10 23:24:03 2023 - kroD100 -> opt: 21294
+Sat Jun 10 23:24:04 2023 - kroD100 -> opt-nearest-neighbor: 23518
+Sat Jun 10 23:24:05 2023 - kroD100 -> opt-christofides: 22370
+Sat Jun 10 23:24:10 2023 - kroD100 -> opt-stimulated_annealing: 22370
+###### 8 of kroD100[17/48]
+Sat Jun 10 23:24:10 2023 - kroD100 -> opt: 21294
+Sat Jun 10 23:24:11 2023 - kroD100 -> opt-nearest-neighbor: 23518
+Sat Jun 10 23:24:11 2023 - kroD100 -> opt-christofides: 22370
+Sat Jun 10 23:24:16 2023 - kroD100 -> opt-stimulated_annealing: 22370
+###### 9 of kroD100[17/48]
+Sat Jun 10 23:24:16 2023 - kroD100 -> opt: 21294
+Sat Jun 10 23:24:18 2023 - kroD100 -> opt-nearest-neighbor: 23518
+Sat Jun 10 23:24:18 2023 - kroD100 -> opt-christofides: 22370
+Sat Jun 10 23:24:23 2023 - kroD100 -> opt-stimulated_annealing: 22370
+###### 10 of kroD100[17/48]
+Sat Jun 10 23:24:23 2023 - kroD100 -> opt: 21294
+Sat Jun 10 23:24:24 2023 - kroD100 -> opt-nearest-neighbor: 23518
+Sat Jun 10 23:24:25 2023 - kroD100 -> opt-christofides: 22370
+Sat Jun 10 23:24:30 2023 - kroD100 -> opt-stimulated_annealing: 22370
+--->>> kroD100 22357 22368.7
+###### 1 of kroE100[18/48]
+Sat Jun 10 23:24:36 2023 - kroE100 -> opt-nearest-neighbor: 22689
+Sat Jun 10 23:24:37 2023 - kroE100 -> opt-christofides: 22689
+Sat Jun 10 23:24:42 2023 - kroE100 -> opt-stimulated_annealing: 22689
+###### 2 of kroE100[18/48]
+Sat Jun 10 23:24:43 2023 - kroE100 -> opt-nearest-neighbor: 22689
+Sat Jun 10 23:24:43 2023 - kroE100 -> opt-christofides: 22689
+Sat Jun 10 23:24:49 2023 - kroE100 -> opt-stimulated_annealing: 22689
+###### 3 of kroE100[18/48]
+Sat Jun 10 23:24:50 2023 - kroE100 -> opt-nearest-neighbor: 22689
+Sat Jun 10 23:24:50 2023 - kroE100 -> opt-christofides: 22689
+Sat Jun 10 23:24:55 2023 - kroE100 -> opt-stimulated_annealing: 22689
+###### 4 of kroE100[18/48]
+Sat Jun 10 23:24:56 2023 - kroE100 -> opt-nearest-neighbor: 22689
+Sat Jun 10 23:24:57 2023 - kroE100 -> opt-christofides: 22689
+Sat Jun 10 23:25:02 2023 - kroE100 -> opt-stimulated_annealing: 22689
+###### 5 of kroE100[18/48]
+Sat Jun 10 23:25:03 2023 - kroE100 -> opt-nearest-neighbor: 22689
+Sat Jun 10 23:25:04 2023 - kroE100 -> opt-christofides: 22689
+Sat Jun 10 23:25:09 2023 - kroE100 -> opt-stimulated_annealing: 22689
+###### 6 of kroE100[18/48]
+Sat Jun 10 23:25:10 2023 - kroE100 -> opt-nearest-neighbor: 22689
+Sat Jun 10 23:25:11 2023 - kroE100 -> opt-christofides: 22689
+Sat Jun 10 23:25:16 2023 - kroE100 -> opt-stimulated_annealing: 22689
+###### 7 of kroE100[18/48]
+Sat Jun 10 23:25:17 2023 - kroE100 -> opt-nearest-neighbor: 22689
+Sat Jun 10 23:25:18 2023 - kroE100 -> opt-christofides: 22689
+Sat Jun 10 23:25:23 2023 - kroE100 -> opt-stimulated_annealing: 22689
+###### 8 of kroE100[18/48]
+Sat Jun 10 23:25:24 2023 - kroE100 -> opt-nearest-neighbor: 22689
+Sat Jun 10 23:25:25 2023 - kroE100 -> opt-christofides: 22689
+Sat Jun 10 23:25:30 2023 - kroE100 -> opt-stimulated_annealing: 22689
+###### 9 of kroE100[18/48]
+Sat Jun 10 23:25:31 2023 - kroE100 -> opt-nearest-neighbor: 22689
+Sat Jun 10 23:25:32 2023 - kroE100 -> opt-christofides: 22689
+Sat Jun 10 23:25:37 2023 - kroE100 -> opt-stimulated_annealing: 22689
+###### 10 of kroE100[18/48]
+Sat Jun 10 23:25:38 2023 - kroE100 -> opt-nearest-neighbor: 22689
+Sat Jun 10 23:25:38 2023 - kroE100 -> opt-christofides: 22689
+Sat Jun 10 23:25:43 2023 - kroE100 -> opt-stimulated_annealing: 22689
+--->>> kroE100 22689 22689.0
+###### 1 of kroA150[19/48]
+Sat Jun 10 23:25:52 2023 - kroA150 -> opt-nearest-neighbor: 28948
+Sat Jun 10 23:25:54 2023 - kroA150 -> opt-christofides: 28112
+Sat Jun 10 23:26:00 2023 - kroA150 -> opt-stimulated_annealing: 28112
+###### 2 of kroA150[19/48]
+Sat Jun 10 23:26:03 2023 - kroA150 -> opt-nearest-neighbor: 28948
+Sat Jun 10 23:26:06 2023 - kroA150 -> opt-christofides: 28112
+Sat Jun 10 23:26:11 2023 - kroA150 -> opt-stimulated_annealing: 28112
+###### 3 of kroA150[19/48]
+Sat Jun 10 23:26:15 2023 - kroA150 -> opt-nearest-neighbor: 28948
+Sat Jun 10 23:26:17 2023 - kroA150 -> opt-christofides: 28112
+Sat Jun 10 23:26:22 2023 - kroA150 -> opt-stimulated_annealing: 28112
+###### 4 of kroA150[19/48]
+Sat Jun 10 23:26:26 2023 - kroA150 -> opt-nearest-neighbor: 28948
+Sat Jun 10 23:26:28 2023 - kroA150 -> opt-christofides: 28112
+Sat Jun 10 23:26:33 2023 - kroA150 -> opt-stimulated_annealing: 28112
+###### 5 of kroA150[19/48]
+Sat Jun 10 23:26:37 2023 - kroA150 -> opt-nearest-neighbor: 28948
+Sat Jun 10 23:26:39 2023 - kroA150 -> opt-christofides: 28112
+Sat Jun 10 23:26:45 2023 - kroA150 -> opt-stimulated_annealing: 28112
+###### 6 of kroA150[19/48]
+Sat Jun 10 23:26:48 2023 - kroA150 -> opt-nearest-neighbor: 28948
+Sat Jun 10 23:26:51 2023 - kroA150 -> opt-christofides: 28112
+Sat Jun 10 23:26:56 2023 - kroA150 -> opt-stimulated_annealing: 28112
+###### 7 of kroA150[19/48]
+Sat Jun 10 23:26:59 2023 - kroA150 -> opt-nearest-neighbor: 28948
+Sat Jun 10 23:27:02 2023 - kroA150 -> opt-christofides: 28112
+Sat Jun 10 23:27:07 2023 - kroA150 -> opt-stimulated_annealing: 28112
+###### 8 of kroA150[19/48]
+Sat Jun 10 23:27:10 2023 - kroA150 -> opt-nearest-neighbor: 28948
+Sat Jun 10 23:27:13 2023 - kroA150 -> opt-christofides: 28112
+Sat Jun 10 23:27:18 2023 - kroA150 -> opt-stimulated_annealing: 28112
+###### 9 of kroA150[19/48]
+Sat Jun 10 23:27:22 2023 - kroA150 -> opt-nearest-neighbor: 28948
+Sat Jun 10 23:27:24 2023 - kroA150 -> opt-christofides: 28112
+Sat Jun 10 23:27:29 2023 - kroA150 -> opt-stimulated_annealing: 28112
+###### 10 of kroA150[19/48]
+Sat Jun 10 23:27:33 2023 - kroA150 -> opt-nearest-neighbor: 28948
+Sat Jun 10 23:27:35 2023 - kroA150 -> opt-christofides: 28112
+Sat Jun 10 23:27:40 2023 - kroA150 -> opt-stimulated_annealing: 28112
+--->>> kroA150 28112 28112.0
+###### 1 of kroB150[20/48]
+Sat Jun 10 23:27:52 2023 - kroB150 -> opt-nearest-neighbor: 27404
+Sat Jun 10 23:27:54 2023 - kroB150 -> opt-christofides: 27404
+Sat Jun 10 23:27:59 2023 - kroB150 -> opt-stimulated_annealing: 27404
+###### 2 of kroB150[20/48]
+Sat Jun 10 23:28:05 2023 - kroB150 -> opt-nearest-neighbor: 27404
+Sat Jun 10 23:28:08 2023 - kroB150 -> opt-christofides: 27404
+Sat Jun 10 23:28:13 2023 - kroB150 -> opt-stimulated_annealing: 27404
+###### 3 of kroB150[20/48]
+Sat Jun 10 23:28:19 2023 - kroB150 -> opt-nearest-neighbor: 27404
+Sat Jun 10 23:28:21 2023 - kroB150 -> opt-christofides: 27404
+Sat Jun 10 23:28:26 2023 - kroB150 -> opt-stimulated_annealing: 27404
+###### 4 of kroB150[20/48]
+Sat Jun 10 23:28:33 2023 - kroB150 -> opt-nearest-neighbor: 27404
+Sat Jun 10 23:28:35 2023 - kroB150 -> opt-christofides: 27404
+Sat Jun 10 23:28:40 2023 - kroB150 -> opt-stimulated_annealing: 27404
+###### 5 of kroB150[20/48]
+Sat Jun 10 23:28:46 2023 - kroB150 -> opt-nearest-neighbor: 27404
+Sat Jun 10 23:28:49 2023 - kroB150 -> opt-christofides: 27404
+Sat Jun 10 23:28:54 2023 - kroB150 -> opt-stimulated_annealing: 27404
+###### 6 of kroB150[20/48]
+Sat Jun 10 23:29:00 2023 - kroB150 -> opt-nearest-neighbor: 27404
+Sat Jun 10 23:29:03 2023 - kroB150 -> opt-christofides: 27404
+Sat Jun 10 23:29:08 2023 - kroB150 -> opt-stimulated_annealing: 27404
+###### 7 of kroB150[20/48]
+Sat Jun 10 23:29:13 2023 - kroB150 -> opt-nearest-neighbor: 27404
+Sat Jun 10 23:29:16 2023 - kroB150 -> opt-christofides: 27404
+Sat Jun 10 23:29:21 2023 - kroB150 -> opt-stimulated_annealing: 27404
+###### 8 of kroB150[20/48]
+Sat Jun 10 23:29:27 2023 - kroB150 -> opt-nearest-neighbor: 27404
+Sat Jun 10 23:29:30 2023 - kroB150 -> opt-christofides: 27404
+Sat Jun 10 23:29:35 2023 - kroB150 -> opt-stimulated_annealing: 27404
+###### 9 of kroB150[20/48]
+Sat Jun 10 23:29:41 2023 - kroB150 -> opt-nearest-neighbor: 27404
+Sat Jun 10 23:29:43 2023 - kroB150 -> opt-christofides: 27404
+Sat Jun 10 23:29:48 2023 - kroB150 -> opt-stimulated_annealing: 27404
+###### 10 of kroB150[20/48]
+Sat Jun 10 23:29:54 2023 - kroB150 -> opt-nearest-neighbor: 27404
+Sat Jun 10 23:29:57 2023 - kroB150 -> opt-christofides: 27404
+Sat Jun 10 23:30:02 2023 - kroB150 -> opt-stimulated_annealing: 27404
+--->>> kroB150 27404 27404.0
+###### 1 of kroA200[21/48]
+Sat Jun 10 23:30:17 2023 - kroA200 -> opt-nearest-neighbor: 30817
+Sat Jun 10 23:30:25 2023 - kroA200 -> opt-christofides: 30817
+Sat Jun 10 23:30:30 2023 - kroA200 -> opt-stimulated_annealing: 30817
+###### 2 of kroA200[21/48]
+Sat Jun 10 23:30:40 2023 - kroA200 -> opt-nearest-neighbor: 30817
+Sat Jun 10 23:30:49 2023 - kroA200 -> opt-christofides: 30817
+Sat Jun 10 23:30:54 2023 - kroA200 -> opt-stimulated_annealing: 30817
+###### 3 of kroA200[21/48]
+Sat Jun 10 23:31:04 2023 - kroA200 -> opt-nearest-neighbor: 30817
+Sat Jun 10 23:31:13 2023 - kroA200 -> opt-christofides: 30817
+Sat Jun 10 23:31:18 2023 - kroA200 -> opt-stimulated_annealing: 30817
+###### 4 of kroA200[21/48]
+Sat Jun 10 23:31:28 2023 - kroA200 -> opt-nearest-neighbor: 30817
+Sat Jun 10 23:31:37 2023 - kroA200 -> opt-christofides: 30817
+Sat Jun 10 23:31:42 2023 - kroA200 -> opt-stimulated_annealing: 30817
+###### 5 of kroA200[21/48]
+Sat Jun 10 23:31:53 2023 - kroA200 -> opt-nearest-neighbor: 30817
+Sat Jun 10 23:32:01 2023 - kroA200 -> opt-christofides: 30817
+Sat Jun 10 23:32:06 2023 - kroA200 -> opt-stimulated_annealing: 30817
+###### 6 of kroA200[21/48]
+Sat Jun 10 23:32:17 2023 - kroA200 -> opt-nearest-neighbor: 30817
+Sat Jun 10 23:32:25 2023 - kroA200 -> opt-christofides: 30817
+Sat Jun 10 23:32:30 2023 - kroA200 -> opt-stimulated_annealing: 30817
+###### 7 of kroA200[21/48]
+Sat Jun 10 23:32:40 2023 - kroA200 -> opt-nearest-neighbor: 30817
+Sat Jun 10 23:32:49 2023 - kroA200 -> opt-christofides: 30817
+Sat Jun 10 23:32:54 2023 - kroA200 -> opt-stimulated_annealing: 30817
+###### 8 of kroA200[21/48]
+Sat Jun 10 23:33:04 2023 - kroA200 -> opt-nearest-neighbor: 30817
+Sat Jun 10 23:33:12 2023 - kroA200 -> opt-christofides: 30817
+Sat Jun 10 23:33:18 2023 - kroA200 -> opt-stimulated_annealing: 30817
+###### 9 of kroA200[21/48]
+Sat Jun 10 23:33:28 2023 - kroA200 -> opt-nearest-neighbor: 30817
+Sat Jun 10 23:33:36 2023 - kroA200 -> opt-christofides: 30817
+Sat Jun 10 23:33:41 2023 - kroA200 -> opt-stimulated_annealing: 30817
+###### 10 of kroA200[21/48]
+Sat Jun 10 23:33:52 2023 - kroA200 -> opt-nearest-neighbor: 30817
+Sat Jun 10 23:34:00 2023 - kroA200 -> opt-christofides: 30817
+Sat Jun 10 23:34:05 2023 - kroA200 -> opt-stimulated_annealing: 30817
+--->>> kroA200 30817 30817.0
+###### 1 of kroB200[22/48]
+Sat Jun 10 23:34:21 2023 - kroB200 -> opt-nearest-neighbor: 32296
+Sat Jun 10 23:34:31 2023 - kroB200 -> opt-christofides: 31182
+Sat Jun 10 23:34:36 2023 - kroB200 -> opt-stimulated_annealing: 31182
+###### 2 of kroB200[22/48]
+Sat Jun 10 23:34:46 2023 - kroB200 -> opt-nearest-neighbor: 32296
+Sat Jun 10 23:34:56 2023 - kroB200 -> opt-christofides: 31182
+Sat Jun 10 23:35:01 2023 - kroB200 -> opt-stimulated_annealing: 31182
+###### 3 of kroB200[22/48]
+Sat Jun 10 23:35:12 2023 - kroB200 -> opt-nearest-neighbor: 32296
+Sat Jun 10 23:35:22 2023 - kroB200 -> opt-christofides: 31182
+Sat Jun 10 23:35:27 2023 - kroB200 -> opt-stimulated_annealing: 31182
+###### 4 of kroB200[22/48]
+Sat Jun 10 23:35:37 2023 - kroB200 -> opt-nearest-neighbor: 32296
+Sat Jun 10 23:35:47 2023 - kroB200 -> opt-christofides: 31182
+Sat Jun 10 23:35:52 2023 - kroB200 -> opt-stimulated_annealing: 31182
+###### 5 of kroB200[22/48]
+Sat Jun 10 23:36:03 2023 - kroB200 -> opt-nearest-neighbor: 32296
+Sat Jun 10 23:36:13 2023 - kroB200 -> opt-christofides: 31182
+Sat Jun 10 23:36:18 2023 - kroB200 -> opt-stimulated_annealing: 31182
+###### 6 of kroB200[22/48]
+Sat Jun 10 23:36:29 2023 - kroB200 -> opt-nearest-neighbor: 32296
+Sat Jun 10 23:36:39 2023 - kroB200 -> opt-christofides: 31182
+Sat Jun 10 23:36:44 2023 - kroB200 -> opt-stimulated_annealing: 31182
+###### 7 of kroB200[22/48]
+Sat Jun 10 23:36:54 2023 - kroB200 -> opt-nearest-neighbor: 32296
+Sat Jun 10 23:37:04 2023 - kroB200 -> opt-christofides: 31182
+Sat Jun 10 23:37:10 2023 - kroB200 -> opt-stimulated_annealing: 31182
+###### 8 of kroB200[22/48]
+Sat Jun 10 23:37:20 2023 - kroB200 -> opt-nearest-neighbor: 32296
+Sat Jun 10 23:37:30 2023 - kroB200 -> opt-christofides: 31182
+Sat Jun 10 23:37:35 2023 - kroB200 -> opt-stimulated_annealing: 31182
+###### 9 of kroB200[22/48]
+Sat Jun 10 23:37:46 2023 - kroB200 -> opt-nearest-neighbor: 32296
+Sat Jun 10 23:37:56 2023 - kroB200 -> opt-christofides: 31182
+Sat Jun 10 23:38:01 2023 - kroB200 -> opt-stimulated_annealing: 31182
+###### 10 of kroB200[22/48]
+Sat Jun 10 23:38:11 2023 - kroB200 -> opt-nearest-neighbor: 32296
+Sat Jun 10 23:38:21 2023 - kroB200 -> opt-christofides: 31182
+Sat Jun 10 23:38:26 2023 - kroB200 -> opt-stimulated_annealing: 31182
+--->>> kroB200 31182 31182.0
+###### 1 of lin105[23/48]
+Sat Jun 10 23:38:31 2023 - lin105 -> opt: 14379
+Sat Jun 10 23:38:32 2023 - lin105 -> opt-nearest-neighbor: 15222
+Sat Jun 10 23:38:33 2023 - lin105 -> opt-christofides: 15222
+Sat Jun 10 23:38:38 2023 - lin105 -> opt-stimulated_annealing: 15222
+###### 2 of lin105[23/48]
+Sat Jun 10 23:38:38 2023 - lin105 -> opt: 14379
+Sat Jun 10 23:38:40 2023 - lin105 -> opt-nearest-neighbor: 15222
+Sat Jun 10 23:38:41 2023 - lin105 -> opt-christofides: 15222
+Sat Jun 10 23:38:46 2023 - lin105 -> opt-stimulated_annealing: 15222
+###### 3 of lin105[23/48]
+Sat Jun 10 23:38:46 2023 - lin105 -> opt: 14379
+Sat Jun 10 23:38:47 2023 - lin105 -> opt-nearest-neighbor: 15222
+Sat Jun 10 23:38:48 2023 - lin105 -> opt-christofides: 15222
+Sat Jun 10 23:38:53 2023 - lin105 -> opt-stimulated_annealing: 15222
+###### 4 of lin105[23/48]
+Sat Jun 10 23:38:53 2023 - lin105 -> opt: 14379
+Sat Jun 10 23:38:54 2023 - lin105 -> opt-nearest-neighbor: 15222
+Sat Jun 10 23:38:55 2023 - lin105 -> opt-christofides: 15222
+Sat Jun 10 23:39:00 2023 - lin105 -> opt-stimulated_annealing: 15222
+###### 5 of lin105[23/48]
+Sat Jun 10 23:39:00 2023 - lin105 -> opt: 14379
+Sat Jun 10 23:39:02 2023 - lin105 -> opt-nearest-neighbor: 15222
+Sat Jun 10 23:39:03 2023 - lin105 -> opt-christofides: 15222
+Sat Jun 10 23:39:08 2023 - lin105 -> opt-stimulated_annealing: 15222
+###### 6 of lin105[23/48]
+Sat Jun 10 23:39:08 2023 - lin105 -> opt: 14379
+Sat Jun 10 23:39:09 2023 - lin105 -> opt-nearest-neighbor: 15222
+Sat Jun 10 23:39:10 2023 - lin105 -> opt-christofides: 15222
+Sat Jun 10 23:39:15 2023 - lin105 -> opt-stimulated_annealing: 15222
+###### 7 of lin105[23/48]
+Sat Jun 10 23:39:15 2023 - lin105 -> opt: 14379
+Sat Jun 10 23:39:17 2023 - lin105 -> opt-nearest-neighbor: 15222
+Sat Jun 10 23:39:17 2023 - lin105 -> opt-christofides: 15222
+Sat Jun 10 23:39:22 2023 - lin105 -> opt-stimulated_annealing: 15222
+###### 8 of lin105[23/48]
+Sat Jun 10 23:39:22 2023 - lin105 -> opt: 14379
+Sat Jun 10 23:39:24 2023 - lin105 -> opt-nearest-neighbor: 15222
+Sat Jun 10 23:39:25 2023 - lin105 -> opt-christofides: 15222
+Sat Jun 10 23:39:30 2023 - lin105 -> opt-stimulated_annealing: 15222
+###### 9 of lin105[23/48]
+Sat Jun 10 23:39:30 2023 - lin105 -> opt: 14379
+Sat Jun 10 23:39:31 2023 - lin105 -> opt-nearest-neighbor: 15222
+Sat Jun 10 23:39:32 2023 - lin105 -> opt-christofides: 15222
+Sat Jun 10 23:39:37 2023 - lin105 -> opt-stimulated_annealing: 15222
+###### 10 of lin105[23/48]
+Sat Jun 10 23:39:37 2023 - lin105 -> opt: 14379
+Sat Jun 10 23:39:39 2023 - lin105 -> opt-nearest-neighbor: 15222
+Sat Jun 10 23:39:40 2023 - lin105 -> opt-christofides: 15222
+Sat Jun 10 23:39:45 2023 - lin105 -> opt-stimulated_annealing: 15222
+--->>> lin105 15222 15222.0
+###### 1 of lin318[24/48]
+Sat Jun 10 23:40:40 2023 - lin318 -> opt-nearest-neighbor: 44317
+Sat Jun 10 23:41:13 2023 - lin318 -> opt-christofides: 44317
+Sat Jun 10 23:41:19 2023 - lin318 -> opt-stimulated_annealing: 44317
+###### 2 of lin318[24/48]
+Sat Jun 10 23:42:11 2023 - lin318 -> opt-nearest-neighbor: 44317
+Sat Jun 10 23:42:44 2023 - lin318 -> opt-christofides: 44317
+Sat Jun 10 23:42:50 2023 - lin318 -> opt-stimulated_annealing: 44317
+###### 3 of lin318[24/48]
+Sat Jun 10 23:43:42 2023 - lin318 -> opt-nearest-neighbor: 44317
+Sat Jun 10 23:44:15 2023 - lin318 -> opt-christofides: 44317
+Sat Jun 10 23:44:21 2023 - lin318 -> opt-stimulated_annealing: 44317
+###### 4 of lin318[24/48]
+Sat Jun 10 23:45:12 2023 - lin318 -> opt-nearest-neighbor: 44317
+Sat Jun 10 23:45:46 2023 - lin318 -> opt-christofides: 44317
+Sat Jun 10 23:45:51 2023 - lin318 -> opt-stimulated_annealing: 44317
+###### 5 of lin318[24/48]
+Sat Jun 10 23:46:43 2023 - lin318 -> opt-nearest-neighbor: 44317
+Sat Jun 10 23:47:16 2023 - lin318 -> opt-christofides: 44317
+Sat Jun 10 23:47:22 2023 - lin318 -> opt-stimulated_annealing: 44317
+###### 6 of lin318[24/48]
+Sat Jun 10 23:48:12 2023 - lin318 -> opt-nearest-neighbor: 44317
+Sat Jun 10 23:48:46 2023 - lin318 -> opt-christofides: 44317
+Sat Jun 10 23:48:51 2023 - lin318 -> opt-stimulated_annealing: 44317
+###### 7 of lin318[24/48]
+Sat Jun 10 23:49:42 2023 - lin318 -> opt-nearest-neighbor: 44317
+Sat Jun 10 23:50:16 2023 - lin318 -> opt-christofides: 44317
+Sat Jun 10 23:50:22 2023 - lin318 -> opt-stimulated_annealing: 44317
+###### 8 of lin318[24/48]
+Sat Jun 10 23:51:13 2023 - lin318 -> opt-nearest-neighbor: 44317
+Sat Jun 10 23:51:46 2023 - lin318 -> opt-christofides: 44317
+Sat Jun 10 23:51:52 2023 - lin318 -> opt-stimulated_annealing: 44317
+###### 9 of lin318[24/48]
+Sat Jun 10 23:52:42 2023 - lin318 -> opt-nearest-neighbor: 44317
+Sat Jun 10 23:53:17 2023 - lin318 -> opt-christofides: 44317
+Sat Jun 10 23:53:22 2023 - lin318 -> opt-stimulated_annealing: 44317
+###### 10 of lin318[24/48]
+Sat Jun 10 23:54:14 2023 - lin318 -> opt-nearest-neighbor: 44317
+Sat Jun 10 23:54:48 2023 - lin318 -> opt-christofides: 44317
+Sat Jun 10 23:54:53 2023 - lin318 -> opt-stimulated_annealing: 44317
+--->>> lin318 44317 44317.0
+###### 1 of p654[25/48]
+Sun Jun 11 00:03:45 2023 - p654 -> opt-nearest-neighbor: 35933
+Sun Jun 11 00:08:40 2023 - p654 -> opt-christofides: 35933
+Sun Jun 11 00:08:45 2023 - p654 -> opt-stimulated_annealing: 35933
+###### 2 of p654[25/48]
+Sun Jun 11 00:17:29 2023 - p654 -> opt-nearest-neighbor: 35933
+Sun Jun 11 00:22:24 2023 - p654 -> opt-christofides: 35933
+Sun Jun 11 00:22:30 2023 - p654 -> opt-stimulated_annealing: 35933
+###### 3 of p654[25/48]
+Sun Jun 11 00:31:18 2023 - p654 -> opt-nearest-neighbor: 35933
+Sun Jun 11 00:36:15 2023 - p654 -> opt-christofides: 35933
+Sun Jun 11 00:36:20 2023 - p654 -> opt-stimulated_annealing: 35933
+###### 4 of p654[25/48]
+Sun Jun 11 00:45:09 2023 - p654 -> opt-nearest-neighbor: 35933
+Sun Jun 11 00:50:07 2023 - p654 -> opt-christofides: 35933
+Sun Jun 11 00:50:12 2023 - p654 -> opt-stimulated_annealing: 35933
+###### 5 of p654[25/48]
+Sun Jun 11 00:58:59 2023 - p654 -> opt-nearest-neighbor: 35933
+Sun Jun 11 01:03:55 2023 - p654 -> opt-christofides: 35933
+Sun Jun 11 01:04:01 2023 - p654 -> opt-stimulated_annealing: 35933
+###### 6 of p654[25/48]
+Sun Jun 11 01:12:50 2023 - p654 -> opt-nearest-neighbor: 35933
+Sun Jun 11 01:17:48 2023 - p654 -> opt-christofides: 35933
+Sun Jun 11 01:17:53 2023 - p654 -> opt-stimulated_annealing: 35933
+###### 7 of p654[25/48]
+Sun Jun 11 01:26:39 2023 - p654 -> opt-nearest-neighbor: 35933
+Sun Jun 11 01:31:35 2023 - p654 -> opt-christofides: 35933
+Sun Jun 11 01:31:40 2023 - p654 -> opt-stimulated_annealing: 35933
+###### 8 of p654[25/48]
+Sun Jun 11 01:40:32 2023 - p654 -> opt-nearest-neighbor: 35933
+Sun Jun 11 01:45:30 2023 - p654 -> opt-christofides: 35933
+Sun Jun 11 01:45:35 2023 - p654 -> opt-stimulated_annealing: 35933
+###### 9 of p654[25/48]
+Sun Jun 11 01:54:24 2023 - p654 -> opt-nearest-neighbor: 35933
+Sun Jun 11 01:59:21 2023 - p654 -> opt-christofides: 35933
+Sun Jun 11 01:59:26 2023 - p654 -> opt-stimulated_annealing: 35933
+###### 10 of p654[25/48]
+Sun Jun 11 02:08:18 2023 - p654 -> opt-nearest-neighbor: 35933
+Sun Jun 11 02:13:20 2023 - p654 -> opt-christofides: 35933
+Sun Jun 11 02:13:25 2023 - p654 -> opt-stimulated_annealing: 35933
+--->>> p654 35933 35933.0
+###### 1 of pcb442[26/48]
+Sun Jun 11 02:13:30 2023 - pcb442 -> opt: 50778
+Sun Jun 11 02:15:31 2023 - pcb442 -> opt-nearest-neighbor: 54172
+Sun Jun 11 02:17:25 2023 - pcb442 -> opt-christofides: 52858
+Sun Jun 11 02:17:31 2023 - pcb442 -> opt-stimulated_annealing: 52858
+###### 2 of pcb442[26/48]
+Sun Jun 11 02:17:31 2023 - pcb442 -> opt: 50778
+Sun Jun 11 02:19:30 2023 - pcb442 -> opt-nearest-neighbor: 54172
+Sun Jun 11 02:21:24 2023 - pcb442 -> opt-christofides: 52858
+Sun Jun 11 02:21:29 2023 - pcb442 -> opt-stimulated_annealing: 52858
+###### 3 of pcb442[26/48]
+Sun Jun 11 02:21:29 2023 - pcb442 -> opt: 50778
+Sun Jun 11 02:23:31 2023 - pcb442 -> opt-nearest-neighbor: 54172
+Sun Jun 11 02:25:26 2023 - pcb442 -> opt-christofides: 52858
+Sun Jun 11 02:25:31 2023 - pcb442 -> opt-stimulated_annealing: 52858
+###### 4 of pcb442[26/48]
+Sun Jun 11 02:25:31 2023 - pcb442 -> opt: 50778
+Sun Jun 11 02:27:32 2023 - pcb442 -> opt-nearest-neighbor: 54172
+Sun Jun 11 02:29:27 2023 - pcb442 -> opt-christofides: 52858
+Sun Jun 11 02:29:32 2023 - pcb442 -> opt-stimulated_annealing: 52858
+###### 5 of pcb442[26/48]
+Sun Jun 11 02:29:32 2023 - pcb442 -> opt: 50778
+Sun Jun 11 02:31:32 2023 - pcb442 -> opt-nearest-neighbor: 54172
+Sun Jun 11 02:33:27 2023 - pcb442 -> opt-christofides: 52858
+Sun Jun 11 02:33:32 2023 - pcb442 -> opt-stimulated_annealing: 52858
+###### 6 of pcb442[26/48]
+Sun Jun 11 02:33:32 2023 - pcb442 -> opt: 50778
+Sun Jun 11 02:35:32 2023 - pcb442 -> opt-nearest-neighbor: 54172
+Sun Jun 11 02:37:26 2023 - pcb442 -> opt-christofides: 52858
+Sun Jun 11 02:37:31 2023 - pcb442 -> opt-stimulated_annealing: 52858
+###### 7 of pcb442[26/48]
+Sun Jun 11 02:37:32 2023 - pcb442 -> opt: 50778
+Sun Jun 11 02:39:33 2023 - pcb442 -> opt-nearest-neighbor: 54172
+Sun Jun 11 02:41:28 2023 - pcb442 -> opt-christofides: 52858
+Sun Jun 11 02:41:34 2023 - pcb442 -> opt-stimulated_annealing: 52858
+###### 8 of pcb442[26/48]
+Sun Jun 11 02:41:34 2023 - pcb442 -> opt: 50778
+Sun Jun 11 02:43:35 2023 - pcb442 -> opt-nearest-neighbor: 54172
+Sun Jun 11 02:45:29 2023 - pcb442 -> opt-christofides: 52858
+Sun Jun 11 02:45:34 2023 - pcb442 -> opt-stimulated_annealing: 52858
+###### 9 of pcb442[26/48]
+Sun Jun 11 02:45:34 2023 - pcb442 -> opt: 50778
+Sun Jun 11 02:47:32 2023 - pcb442 -> opt-nearest-neighbor: 54172
+Sun Jun 11 02:49:28 2023 - pcb442 -> opt-christofides: 52858
+Sun Jun 11 02:49:33 2023 - pcb442 -> opt-stimulated_annealing: 52858
+###### 10 of pcb442[26/48]
+Sun Jun 11 02:49:34 2023 - pcb442 -> opt: 50778
+Sun Jun 11 02:51:36 2023 - pcb442 -> opt-nearest-neighbor: 54172
+Sun Jun 11 02:53:31 2023 - pcb442 -> opt-christofides: 52858
+Sun Jun 11 02:53:36 2023 - pcb442 -> opt-stimulated_annealing: 52858
+--->>> pcb442 52858 52858.0
+###### 1 of pr76[27/48]
+Sun Jun 11 02:53:41 2023 - pr76 -> opt: 108159
+Sun Jun 11 02:53:42 2023 - pr76 -> opt-nearest-neighbor: 112947
+Sun Jun 11 02:53:43 2023 - pr76 -> opt-christofides: 111972
+Sun Jun 11 02:53:48 2023 - pr76 -> opt-stimulated_annealing: 111972
+###### 2 of pr76[27/48]
+Sun Jun 11 02:53:48 2023 - pr76 -> opt: 108159
+Sun Jun 11 02:53:48 2023 - pr76 -> opt-nearest-neighbor: 112947
+Sun Jun 11 02:53:49 2023 - pr76 -> opt-christofides: 111972
+Sun Jun 11 02:53:54 2023 - pr76 -> opt-stimulated_annealing: 111972
+###### 3 of pr76[27/48]
+Sun Jun 11 02:53:54 2023 - pr76 -> opt: 108159
+Sun Jun 11 02:53:55 2023 - pr76 -> opt-nearest-neighbor: 112947
+Sun Jun 11 02:53:55 2023 - pr76 -> opt-christofides: 111972
+Sun Jun 11 02:54:00 2023 - pr76 -> opt-stimulated_annealing: 111972
+###### 4 of pr76[27/48]
+Sun Jun 11 02:54:00 2023 - pr76 -> opt: 108159
+Sun Jun 11 02:54:01 2023 - pr76 -> opt-nearest-neighbor: 112947
+Sun Jun 11 02:54:02 2023 - pr76 -> opt-christofides: 111972
+Sun Jun 11 02:54:07 2023 - pr76 -> opt-stimulated_annealing: 111972
+###### 5 of pr76[27/48]
+Sun Jun 11 02:54:07 2023 - pr76 -> opt: 108159
+Sun Jun 11 02:54:07 2023 - pr76 -> opt-nearest-neighbor: 112947
+Sun Jun 11 02:54:08 2023 - pr76 -> opt-christofides: 111972
+Sun Jun 11 02:54:13 2023 - pr76 -> opt-stimulated_annealing: 111972
+###### 6 of pr76[27/48]
+Sun Jun 11 02:54:13 2023 - pr76 -> opt: 108159
+Sun Jun 11 02:54:14 2023 - pr76 -> opt-nearest-neighbor: 112947
+Sun Jun 11 02:54:14 2023 - pr76 -> opt-christofides: 111972
+Sun Jun 11 02:54:19 2023 - pr76 -> opt-stimulated_annealing: 111972
+###### 7 of pr76[27/48]
+Sun Jun 11 02:54:19 2023 - pr76 -> opt: 108159
+Sun Jun 11 02:54:20 2023 - pr76 -> opt-nearest-neighbor: 112947
+Sun Jun 11 02:54:21 2023 - pr76 -> opt-christofides: 111972
+Sun Jun 11 02:54:26 2023 - pr76 -> opt-stimulated_annealing: 111972
+###### 8 of pr76[27/48]
+Sun Jun 11 02:54:26 2023 - pr76 -> opt: 108159
+Sun Jun 11 02:54:26 2023 - pr76 -> opt-nearest-neighbor: 112947
+Sun Jun 11 02:54:27 2023 - pr76 -> opt-christofides: 111972
+Sun Jun 11 02:54:32 2023 - pr76 -> opt-stimulated_annealing: 111972
+###### 9 of pr76[27/48]
+Sun Jun 11 02:54:32 2023 - pr76 -> opt: 108159
+Sun Jun 11 02:54:33 2023 - pr76 -> opt-nearest-neighbor: 112947
+Sun Jun 11 02:54:33 2023 - pr76 -> opt-christofides: 111972
+Sun Jun 11 02:54:38 2023 - pr76 -> opt-stimulated_annealing: 111972
+###### 10 of pr76[27/48]
+Sun Jun 11 02:54:38 2023 - pr76 -> opt: 108159
+Sun Jun 11 02:54:39 2023 - pr76 -> opt-nearest-neighbor: 112947
+Sun Jun 11 02:54:40 2023 - pr76 -> opt-christofides: 111972
+Sun Jun 11 02:54:45 2023 - pr76 -> opt-stimulated_annealing: 111972
+--->>> pr76 111972 111972.0
+###### 1 of pr107[28/48]
+Sun Jun 11 02:54:50 2023 - pr107 -> opt-nearest-neighbor: 44613
+Sun Jun 11 02:54:51 2023 - pr107 -> opt-christofides: 44613
+Sun Jun 11 02:54:56 2023 - pr107 -> opt-stimulated_annealing: 44613
+###### 2 of pr107[28/48]
+Sun Jun 11 02:54:58 2023 - pr107 -> opt-nearest-neighbor: 44613
+Sun Jun 11 02:54:59 2023 - pr107 -> opt-christofides: 44613
+Sun Jun 11 02:55:04 2023 - pr107 -> opt-stimulated_annealing: 44613
+###### 3 of pr107[28/48]
+Sun Jun 11 02:55:05 2023 - pr107 -> opt-nearest-neighbor: 44613
+Sun Jun 11 02:55:06 2023 - pr107 -> opt-christofides: 44613
+Sun Jun 11 02:55:11 2023 - pr107 -> opt-stimulated_annealing: 44613
+###### 4 of pr107[28/48]
+Sun Jun 11 02:55:13 2023 - pr107 -> opt-nearest-neighbor: 44613
+Sun Jun 11 02:55:14 2023 - pr107 -> opt-christofides: 44613
+Sun Jun 11 02:55:19 2023 - pr107 -> opt-stimulated_annealing: 44613
+###### 5 of pr107[28/48]
+Sun Jun 11 02:55:20 2023 - pr107 -> opt-nearest-neighbor: 44613
+Sun Jun 11 02:55:21 2023 - pr107 -> opt-christofides: 44613
+Sun Jun 11 02:55:26 2023 - pr107 -> opt-stimulated_annealing: 44613
+###### 6 of pr107[28/48]
+Sun Jun 11 02:55:27 2023 - pr107 -> opt-nearest-neighbor: 44613
+Sun Jun 11 02:55:29 2023 - pr107 -> opt-christofides: 44613
+Sun Jun 11 02:55:34 2023 - pr107 -> opt-stimulated_annealing: 44613
+###### 7 of pr107[28/48]
+Sun Jun 11 02:55:35 2023 - pr107 -> opt-nearest-neighbor: 44613
+Sun Jun 11 02:55:36 2023 - pr107 -> opt-christofides: 44613
+Sun Jun 11 02:55:41 2023 - pr107 -> opt-stimulated_annealing: 44613
+###### 8 of pr107[28/48]
+Sun Jun 11 02:55:42 2023 - pr107 -> opt-nearest-neighbor: 44613
+Sun Jun 11 02:55:43 2023 - pr107 -> opt-christofides: 44613
+Sun Jun 11 02:55:49 2023 - pr107 -> opt-stimulated_annealing: 44613
+###### 9 of pr107[28/48]
+Sun Jun 11 02:55:50 2023 - pr107 -> opt-nearest-neighbor: 44613
+Sun Jun 11 02:55:51 2023 - pr107 -> opt-christofides: 44613
+Sun Jun 11 02:55:56 2023 - pr107 -> opt-stimulated_annealing: 44613
+###### 10 of pr107[28/48]
+Sun Jun 11 02:55:57 2023 - pr107 -> opt-nearest-neighbor: 44613
+Sun Jun 11 02:55:58 2023 - pr107 -> opt-christofides: 44613
+Sun Jun 11 02:56:03 2023 - pr107 -> opt-stimulated_annealing: 44613
+--->>> pr107 44613 44613.0
+###### 1 of pr124[29/48]
+Sun Jun 11 02:56:11 2023 - pr124 -> opt-nearest-neighbor: 60663
+Sun Jun 11 02:56:12 2023 - pr124 -> opt-christofides: 59246
+Sun Jun 11 02:56:17 2023 - pr124 -> opt-stimulated_annealing: 59246
+###### 2 of pr124[29/48]
+Sun Jun 11 02:56:20 2023 - pr124 -> opt-nearest-neighbor: 60663
+Sun Jun 11 02:56:21 2023 - pr124 -> opt-christofides: 59246
+Sun Jun 11 02:56:26 2023 - pr124 -> opt-stimulated_annealing: 59246
+###### 3 of pr124[29/48]
+Sun Jun 11 02:56:29 2023 - pr124 -> opt-nearest-neighbor: 60663
+Sun Jun 11 02:56:31 2023 - pr124 -> opt-christofides: 59246
+Sun Jun 11 02:56:36 2023 - pr124 -> opt-stimulated_annealing: 59246
+###### 4 of pr124[29/48]
+Sun Jun 11 02:56:39 2023 - pr124 -> opt-nearest-neighbor: 60663
+Sun Jun 11 02:56:40 2023 - pr124 -> opt-christofides: 59246
+Sun Jun 11 02:56:45 2023 - pr124 -> opt-stimulated_annealing: 59246
+###### 5 of pr124[29/48]
+Sun Jun 11 02:56:48 2023 - pr124 -> opt-nearest-neighbor: 60663
+Sun Jun 11 02:56:50 2023 - pr124 -> opt-christofides: 59246
+Sun Jun 11 02:56:55 2023 - pr124 -> opt-stimulated_annealing: 59246
+###### 6 of pr124[29/48]
+Sun Jun 11 02:56:57 2023 - pr124 -> opt-nearest-neighbor: 60663
+Sun Jun 11 02:56:59 2023 - pr124 -> opt-christofides: 59246
+Sun Jun 11 02:57:04 2023 - pr124 -> opt-stimulated_annealing: 59246
+###### 7 of pr124[29/48]
+Sun Jun 11 02:57:07 2023 - pr124 -> opt-nearest-neighbor: 60663
+Sun Jun 11 02:57:08 2023 - pr124 -> opt-christofides: 59246
+Sun Jun 11 02:57:13 2023 - pr124 -> opt-stimulated_annealing: 59246
+###### 8 of pr124[29/48]
+Sun Jun 11 02:57:16 2023 - pr124 -> opt-nearest-neighbor: 60663
+Sun Jun 11 02:57:18 2023 - pr124 -> opt-christofides: 59246
+Sun Jun 11 02:57:23 2023 - pr124 -> opt-stimulated_annealing: 59246
+###### 9 of pr124[29/48]
+Sun Jun 11 02:57:26 2023 - pr124 -> opt-nearest-neighbor: 60663
+Sun Jun 11 02:57:27 2023 - pr124 -> opt-christofides: 59246
+Sun Jun 11 02:57:32 2023 - pr124 -> opt-stimulated_annealing: 59246
+###### 10 of pr124[29/48]
+Sun Jun 11 02:57:35 2023 - pr124 -> opt-nearest-neighbor: 60663
+Sun Jun 11 02:57:37 2023 - pr124 -> opt-christofides: 59246
+Sun Jun 11 02:57:42 2023 - pr124 -> opt-stimulated_annealing: 59246
+--->>> pr124 59246 59246.0
+###### 1 of pr136[30/48]
+Sun Jun 11 02:57:49 2023 - pr136 -> opt-nearest-neighbor: 106637
+Sun Jun 11 02:57:51 2023 - pr136 -> opt-christofides: 100324
+Sun Jun 11 02:57:56 2023 - pr136 -> opt-stimulated_annealing: 100324
+###### 2 of pr136[30/48]
+Sun Jun 11 02:57:59 2023 - pr136 -> opt-nearest-neighbor: 106637
+Sun Jun 11 02:58:01 2023 - pr136 -> opt-christofides: 100324
+Sun Jun 11 02:58:06 2023 - pr136 -> opt-stimulated_annealing: 100324
+###### 3 of pr136[30/48]
+Sun Jun 11 02:58:09 2023 - pr136 -> opt-nearest-neighbor: 106637
+Sun Jun 11 02:58:11 2023 - pr136 -> opt-christofides: 100324
+Sun Jun 11 02:58:16 2023 - pr136 -> opt-stimulated_annealing: 100324
+###### 4 of pr136[30/48]
+Sun Jun 11 02:58:19 2023 - pr136 -> opt-nearest-neighbor: 106637
+Sun Jun 11 02:58:21 2023 - pr136 -> opt-christofides: 100324
+Sun Jun 11 02:58:26 2023 - pr136 -> opt-stimulated_annealing: 100324
+###### 5 of pr136[30/48]
+Sun Jun 11 02:58:29 2023 - pr136 -> opt-nearest-neighbor: 106637
+Sun Jun 11 02:58:31 2023 - pr136 -> opt-christofides: 100324
+Sun Jun 11 02:58:36 2023 - pr136 -> opt-stimulated_annealing: 100324
+###### 6 of pr136[30/48]
+Sun Jun 11 02:58:39 2023 - pr136 -> opt-nearest-neighbor: 106637
+Sun Jun 11 02:58:41 2023 - pr136 -> opt-christofides: 100324
+Sun Jun 11 02:58:46 2023 - pr136 -> opt-stimulated_annealing: 100324
+###### 7 of pr136[30/48]
+Sun Jun 11 02:58:49 2023 - pr136 -> opt-nearest-neighbor: 106637
+Sun Jun 11 02:58:51 2023 - pr136 -> opt-christofides: 100324
+Sun Jun 11 02:58:56 2023 - pr136 -> opt-stimulated_annealing: 100324
+###### 8 of pr136[30/48]
+Sun Jun 11 02:58:59 2023 - pr136 -> opt-nearest-neighbor: 106637
+Sun Jun 11 02:59:01 2023 - pr136 -> opt-christofides: 100324
+Sun Jun 11 02:59:06 2023 - pr136 -> opt-stimulated_annealing: 100324
+###### 9 of pr136[30/48]
+Sun Jun 11 02:59:10 2023 - pr136 -> opt-nearest-neighbor: 106637
+Sun Jun 11 02:59:12 2023 - pr136 -> opt-christofides: 100324
+Sun Jun 11 02:59:17 2023 - pr136 -> opt-stimulated_annealing: 100324
+###### 10 of pr136[30/48]
+Sun Jun 11 02:59:20 2023 - pr136 -> opt-nearest-neighbor: 106637
+Sun Jun 11 02:59:22 2023 - pr136 -> opt-christofides: 100324
+Sun Jun 11 02:59:27 2023 - pr136 -> opt-stimulated_annealing: 100324
+--->>> pr136 100324 100324.0
+###### 1 of pr144[31/48]
+Sun Jun 11 02:59:33 2023 - pr144 -> opt-nearest-neighbor: 60754
+Sun Jun 11 02:59:36 2023 - pr144 -> opt-christofides: 60754
+Sun Jun 11 02:59:41 2023 - pr144 -> opt-stimulated_annealing: 60754
+###### 2 of pr144[31/48]
+Sun Jun 11 02:59:43 2023 - pr144 -> opt-nearest-neighbor: 60754
+Sun Jun 11 02:59:46 2023 - pr144 -> opt-christofides: 60754
+Sun Jun 11 02:59:51 2023 - pr144 -> opt-stimulated_annealing: 60754
+###### 3 of pr144[31/48]
+Sun Jun 11 02:59:53 2023 - pr144 -> opt-nearest-neighbor: 60754
+Sun Jun 11 02:59:56 2023 - pr144 -> opt-christofides: 60754
+Sun Jun 11 03:00:01 2023 - pr144 -> opt-stimulated_annealing: 60754
+###### 4 of pr144[31/48]
+Sun Jun 11 03:00:04 2023 - pr144 -> opt-nearest-neighbor: 60754
+Sun Jun 11 03:00:07 2023 - pr144 -> opt-christofides: 60754
+Sun Jun 11 03:00:12 2023 - pr144 -> opt-stimulated_annealing: 60754
+###### 5 of pr144[31/48]
+Sun Jun 11 03:00:14 2023 - pr144 -> opt-nearest-neighbor: 60754
+Sun Jun 11 03:00:17 2023 - pr144 -> opt-christofides: 60754
+Sun Jun 11 03:00:23 2023 - pr144 -> opt-stimulated_annealing: 60754
+###### 6 of pr144[31/48]
+Sun Jun 11 03:00:25 2023 - pr144 -> opt-nearest-neighbor: 60754
+Sun Jun 11 03:00:28 2023 - pr144 -> opt-christofides: 60754
+Sun Jun 11 03:00:33 2023 - pr144 -> opt-stimulated_annealing: 60754
+###### 7 of pr144[31/48]
+Sun Jun 11 03:00:35 2023 - pr144 -> opt-nearest-neighbor: 60754
+Sun Jun 11 03:00:38 2023 - pr144 -> opt-christofides: 60754
+Sun Jun 11 03:00:43 2023 - pr144 -> opt-stimulated_annealing: 60754
+###### 8 of pr144[31/48]
+Sun Jun 11 03:00:46 2023 - pr144 -> opt-nearest-neighbor: 60754
+Sun Jun 11 03:00:49 2023 - pr144 -> opt-christofides: 60754
+Sun Jun 11 03:00:54 2023 - pr144 -> opt-stimulated_annealing: 60754
+###### 9 of pr144[31/48]
+Sun Jun 11 03:00:56 2023 - pr144 -> opt-nearest-neighbor: 60754
+Sun Jun 11 03:00:59 2023 - pr144 -> opt-christofides: 60754
+Sun Jun 11 03:01:04 2023 - pr144 -> opt-stimulated_annealing: 60754
+###### 10 of pr144[31/48]
+Sun Jun 11 03:01:07 2023 - pr144 -> opt-nearest-neighbor: 60754
+Sun Jun 11 03:01:10 2023 - pr144 -> opt-christofides: 60754
+Sun Jun 11 03:01:15 2023 - pr144 -> opt-stimulated_annealing: 60754
+--->>> pr144 60754 60754.0
+###### 1 of pr152[32/48]
+Sun Jun 11 03:01:22 2023 - pr152 -> opt-nearest-neighbor: 76104
+Sun Jun 11 03:01:25 2023 - pr152 -> opt-christofides: 75809
+Sun Jun 11 03:01:30 2023 - pr152 -> opt-stimulated_annealing: 75809
+###### 2 of pr152[32/48]
+Sun Jun 11 03:01:34 2023 - pr152 -> opt-nearest-neighbor: 76104
+Sun Jun 11 03:01:37 2023 - pr152 -> opt-christofides: 75809
+Sun Jun 11 03:01:42 2023 - pr152 -> opt-stimulated_annealing: 75809
+###### 3 of pr152[32/48]
+Sun Jun 11 03:01:45 2023 - pr152 -> opt-nearest-neighbor: 76104
+Sun Jun 11 03:01:48 2023 - pr152 -> opt-christofides: 75809
+Sun Jun 11 03:01:53 2023 - pr152 -> opt-stimulated_annealing: 75809
+###### 4 of pr152[32/48]
+Sun Jun 11 03:01:56 2023 - pr152 -> opt-nearest-neighbor: 76104
+Sun Jun 11 03:01:59 2023 - pr152 -> opt-christofides: 75809
+Sun Jun 11 03:02:04 2023 - pr152 -> opt-stimulated_annealing: 75809
+###### 5 of pr152[32/48]
+Sun Jun 11 03:02:08 2023 - pr152 -> opt-nearest-neighbor: 76104
+Sun Jun 11 03:02:10 2023 - pr152 -> opt-christofides: 75809
+Sun Jun 11 03:02:15 2023 - pr152 -> opt-stimulated_annealing: 75809
+###### 6 of pr152[32/48]
+Sun Jun 11 03:02:19 2023 - pr152 -> opt-nearest-neighbor: 76104
+Sun Jun 11 03:02:21 2023 - pr152 -> opt-christofides: 75809
+Sun Jun 11 03:02:26 2023 - pr152 -> opt-stimulated_annealing: 75809
+###### 7 of pr152[32/48]
+Sun Jun 11 03:02:30 2023 - pr152 -> opt-nearest-neighbor: 76104
+Sun Jun 11 03:02:33 2023 - pr152 -> opt-christofides: 75809
+Sun Jun 11 03:02:38 2023 - pr152 -> opt-stimulated_annealing: 75809
+###### 8 of pr152[32/48]
+Sun Jun 11 03:02:41 2023 - pr152 -> opt-nearest-neighbor: 76104
+Sun Jun 11 03:02:44 2023 - pr152 -> opt-christofides: 75809
+Sun Jun 11 03:02:49 2023 - pr152 -> opt-stimulated_annealing: 75809
+###### 9 of pr152[32/48]
+Sun Jun 11 03:02:52 2023 - pr152 -> opt-nearest-neighbor: 76104
+Sun Jun 11 03:02:55 2023 - pr152 -> opt-christofides: 75809
+Sun Jun 11 03:03:00 2023 - pr152 -> opt-stimulated_annealing: 75809
+###### 10 of pr152[32/48]
+Sun Jun 11 03:03:04 2023 - pr152 -> opt-nearest-neighbor: 76104
+Sun Jun 11 03:03:07 2023 - pr152 -> opt-christofides: 75809
+Sun Jun 11 03:03:12 2023 - pr152 -> opt-stimulated_annealing: 75809
+--->>> pr152 75809 75809.0
+###### 1 of pr226[33/48]
+Sun Jun 11 03:03:31 2023 - pr226 -> opt-nearest-neighbor: 83052
+Sun Jun 11 03:03:40 2023 - pr226 -> opt-christofides: 82801
+Sun Jun 11 03:03:45 2023 - pr226 -> opt-stimulated_annealing: 82801
+###### 2 of pr226[33/48]
+Sun Jun 11 03:04:00 2023 - pr226 -> opt-nearest-neighbor: 83052
+Sun Jun 11 03:04:08 2023 - pr226 -> opt-christofides: 82801
+Sun Jun 11 03:04:13 2023 - pr226 -> opt-stimulated_annealing: 82801
+###### 3 of pr226[33/48]
+Sun Jun 11 03:04:28 2023 - pr226 -> opt-nearest-neighbor: 83052
+Sun Jun 11 03:04:38 2023 - pr226 -> opt-christofides: 82801
+Sun Jun 11 03:04:43 2023 - pr226 -> opt-stimulated_annealing: 82801
+###### 4 of pr226[33/48]
+Sun Jun 11 03:04:57 2023 - pr226 -> opt-nearest-neighbor: 83052
+Sun Jun 11 03:05:06 2023 - pr226 -> opt-christofides: 82801
+Sun Jun 11 03:05:11 2023 - pr226 -> opt-stimulated_annealing: 82801
+###### 5 of pr226[33/48]
+Sun Jun 11 03:05:26 2023 - pr226 -> opt-nearest-neighbor: 83052
+Sun Jun 11 03:05:35 2023 - pr226 -> opt-christofides: 82801
+Sun Jun 11 03:05:40 2023 - pr226 -> opt-stimulated_annealing: 82801
+###### 6 of pr226[33/48]
+Sun Jun 11 03:05:54 2023 - pr226 -> opt-nearest-neighbor: 83052
+Sun Jun 11 03:06:03 2023 - pr226 -> opt-christofides: 82801
+Sun Jun 11 03:06:08 2023 - pr226 -> opt-stimulated_annealing: 82801
+###### 7 of pr226[33/48]
+Sun Jun 11 03:06:22 2023 - pr226 -> opt-nearest-neighbor: 83052
+Sun Jun 11 03:06:31 2023 - pr226 -> opt-christofides: 82801
+Sun Jun 11 03:06:36 2023 - pr226 -> opt-stimulated_annealing: 82801
+###### 8 of pr226[33/48]
+Sun Jun 11 03:06:51 2023 - pr226 -> opt-nearest-neighbor: 83052
+Sun Jun 11 03:07:01 2023 - pr226 -> opt-christofides: 82801
+Sun Jun 11 03:07:06 2023 - pr226 -> opt-stimulated_annealing: 82801
+###### 9 of pr226[33/48]
+Sun Jun 11 03:07:21 2023 - pr226 -> opt-nearest-neighbor: 83052
+Sun Jun 11 03:07:30 2023 - pr226 -> opt-christofides: 82801
+Sun Jun 11 03:07:35 2023 - pr226 -> opt-stimulated_annealing: 82801
+###### 10 of pr226[33/48]
+Sun Jun 11 03:07:49 2023 - pr226 -> opt-nearest-neighbor: 83052
+Sun Jun 11 03:07:58 2023 - pr226 -> opt-christofides: 82801
+Sun Jun 11 03:08:03 2023 - pr226 -> opt-stimulated_annealing: 82801
+--->>> pr226 82801 82801.0
+###### 1 of pr264[34/48]
+Sun Jun 11 03:08:31 2023 - pr264 -> opt-nearest-neighbor: 52745
+Sun Jun 11 03:08:50 2023 - pr264 -> opt-christofides: 52408
+Sun Jun 11 03:08:55 2023 - pr264 -> opt-stimulated_annealing: 52408
+###### 2 of pr264[34/48]
+Sun Jun 11 03:09:19 2023 - pr264 -> opt-nearest-neighbor: 52745
+Sun Jun 11 03:09:38 2023 - pr264 -> opt-christofides: 52408
+Sun Jun 11 03:09:43 2023 - pr264 -> opt-stimulated_annealing: 52408
+###### 3 of pr264[34/48]
+Sun Jun 11 03:10:07 2023 - pr264 -> opt-nearest-neighbor: 52745
+Sun Jun 11 03:10:26 2023 - pr264 -> opt-christofides: 52408
+Sun Jun 11 03:10:31 2023 - pr264 -> opt-stimulated_annealing: 52408
+###### 4 of pr264[34/48]
+Sun Jun 11 03:10:55 2023 - pr264 -> opt-nearest-neighbor: 52745
+Sun Jun 11 03:11:13 2023 - pr264 -> opt-christofides: 52408
+Sun Jun 11 03:11:18 2023 - pr264 -> opt-stimulated_annealing: 52408
+###### 5 of pr264[34/48]
+Sun Jun 11 03:11:42 2023 - pr264 -> opt-nearest-neighbor: 52745
+Sun Jun 11 03:12:00 2023 - pr264 -> opt-christofides: 52408
+Sun Jun 11 03:12:05 2023 - pr264 -> opt-stimulated_annealing: 52408
+###### 6 of pr264[34/48]
+Sun Jun 11 03:12:29 2023 - pr264 -> opt-nearest-neighbor: 52745
+Sun Jun 11 03:12:48 2023 - pr264 -> opt-christofides: 52408
+Sun Jun 11 03:12:53 2023 - pr264 -> opt-stimulated_annealing: 52408
+###### 7 of pr264[34/48]
+Sun Jun 11 03:13:18 2023 - pr264 -> opt-nearest-neighbor: 52745
+Sun Jun 11 03:13:36 2023 - pr264 -> opt-christofides: 52408
+Sun Jun 11 03:13:41 2023 - pr264 -> opt-stimulated_annealing: 52408
+###### 8 of pr264[34/48]
+Sun Jun 11 03:14:05 2023 - pr264 -> opt-nearest-neighbor: 52745
+Sun Jun 11 03:14:24 2023 - pr264 -> opt-christofides: 52408
+Sun Jun 11 03:14:29 2023 - pr264 -> opt-stimulated_annealing: 52408
+###### 9 of pr264[34/48]
+Sun Jun 11 03:14:53 2023 - pr264 -> opt-nearest-neighbor: 52745
+Sun Jun 11 03:15:11 2023 - pr264 -> opt-christofides: 52408
+Sun Jun 11 03:15:16 2023 - pr264 -> opt-stimulated_annealing: 52408
+###### 10 of pr264[34/48]
+Sun Jun 11 03:15:41 2023 - pr264 -> opt-nearest-neighbor: 52745
+Sun Jun 11 03:16:00 2023 - pr264 -> opt-christofides: 52408
+Sun Jun 11 03:16:05 2023 - pr264 -> opt-stimulated_annealing: 52408
+--->>> pr264 52408 52408.0
+###### 1 of pr299[35/48]
+Sun Jun 11 03:16:52 2023 - pr299 -> opt-nearest-neighbor: 51086
+Sun Jun 11 03:17:19 2023 - pr299 -> opt-christofides: 49859
+Sun Jun 11 03:17:24 2023 - pr299 -> opt-stimulated_annealing: 49859
+###### 2 of pr299[35/48]
+Sun Jun 11 03:18:08 2023 - pr299 -> opt-nearest-neighbor: 51086
+Sun Jun 11 03:18:36 2023 - pr299 -> opt-christofides: 49859
+Sun Jun 11 03:18:41 2023 - pr299 -> opt-stimulated_annealing: 49859
+###### 3 of pr299[35/48]
+Sun Jun 11 03:19:24 2023 - pr299 -> opt-nearest-neighbor: 51086
+Sun Jun 11 03:19:53 2023 - pr299 -> opt-christofides: 49859
+Sun Jun 11 03:19:58 2023 - pr299 -> opt-stimulated_annealing: 49859
+###### 4 of pr299[35/48]
+Sun Jun 11 03:20:40 2023 - pr299 -> opt-nearest-neighbor: 51086
+Sun Jun 11 03:21:09 2023 - pr299 -> opt-christofides: 49859
+Sun Jun 11 03:21:14 2023 - pr299 -> opt-stimulated_annealing: 49859
+###### 5 of pr299[35/48]
+Sun Jun 11 03:21:57 2023 - pr299 -> opt-nearest-neighbor: 51086
+Sun Jun 11 03:22:25 2023 - pr299 -> opt-christofides: 49859
+Sun Jun 11 03:22:30 2023 - pr299 -> opt-stimulated_annealing: 49859
+###### 6 of pr299[35/48]
+Sun Jun 11 03:23:13 2023 - pr299 -> opt-nearest-neighbor: 51086
+Sun Jun 11 03:23:40 2023 - pr299 -> opt-christofides: 49859
+Sun Jun 11 03:23:45 2023 - pr299 -> opt-stimulated_annealing: 49859
+###### 7 of pr299[35/48]
+Sun Jun 11 03:24:28 2023 - pr299 -> opt-nearest-neighbor: 51086
+Sun Jun 11 03:24:56 2023 - pr299 -> opt-christofides: 49859
+Sun Jun 11 03:25:01 2023 - pr299 -> opt-stimulated_annealing: 49859
+###### 8 of pr299[35/48]
+Sun Jun 11 03:25:44 2023 - pr299 -> opt-nearest-neighbor: 51086
+Sun Jun 11 03:26:13 2023 - pr299 -> opt-christofides: 49859
+Sun Jun 11 03:26:18 2023 - pr299 -> opt-stimulated_annealing: 49859
+###### 9 of pr299[35/48]
+Sun Jun 11 03:27:01 2023 - pr299 -> opt-nearest-neighbor: 51086
+Sun Jun 11 03:27:29 2023 - pr299 -> opt-christofides: 49859
+Sun Jun 11 03:27:35 2023 - pr299 -> opt-stimulated_annealing: 49859
+###### 10 of pr299[35/48]
+Sun Jun 11 03:28:18 2023 - pr299 -> opt-nearest-neighbor: 51086
+Sun Jun 11 03:28:47 2023 - pr299 -> opt-christofides: 49859
+Sun Jun 11 03:28:52 2023 - pr299 -> opt-stimulated_annealing: 49859
+--->>> pr299 49859 49859.0
+###### 1 of pr439[36/48]
+Sun Jun 11 03:31:38 2023 - pr439 -> opt-nearest-neighbor: 113494
+Sun Jun 11 03:33:07 2023 - pr439 -> opt-christofides: 110141
+Sun Jun 11 03:33:12 2023 - pr439 -> opt-stimulated_annealing: 110141
+###### 2 of pr439[36/48]
+Sun Jun 11 03:35:54 2023 - pr439 -> opt-nearest-neighbor: 113494
+Sun Jun 11 03:37:23 2023 - pr439 -> opt-christofides: 110141
+Sun Jun 11 03:37:28 2023 - pr439 -> opt-stimulated_annealing: 110141
+###### 3 of pr439[36/48]
+Sun Jun 11 03:40:12 2023 - pr439 -> opt-nearest-neighbor: 113494
+Sun Jun 11 03:41:40 2023 - pr439 -> opt-christofides: 110141
+Sun Jun 11 03:41:45 2023 - pr439 -> opt-stimulated_annealing: 110141
+###### 4 of pr439[36/48]
+Sun Jun 11 03:44:26 2023 - pr439 -> opt-nearest-neighbor: 113494
+Sun Jun 11 03:45:55 2023 - pr439 -> opt-christofides: 110141
+Sun Jun 11 03:46:00 2023 - pr439 -> opt-stimulated_annealing: 110141
+###### 5 of pr439[36/48]
+Sun Jun 11 03:48:41 2023 - pr439 -> opt-nearest-neighbor: 113494
+Sun Jun 11 03:50:10 2023 - pr439 -> opt-christofides: 110141
+Sun Jun 11 03:50:15 2023 - pr439 -> opt-stimulated_annealing: 110141
+###### 6 of pr439[36/48]
+Sun Jun 11 03:52:55 2023 - pr439 -> opt-nearest-neighbor: 113494
+Sun Jun 11 03:54:26 2023 - pr439 -> opt-christofides: 110141
+Sun Jun 11 03:54:31 2023 - pr439 -> opt-stimulated_annealing: 110141
+###### 7 of pr439[36/48]
+Sun Jun 11 03:57:10 2023 - pr439 -> opt-nearest-neighbor: 113494
+Sun Jun 11 03:58:37 2023 - pr439 -> opt-christofides: 110141
+Sun Jun 11 03:58:42 2023 - pr439 -> opt-stimulated_annealing: 110141
+###### 8 of pr439[36/48]
+Sun Jun 11 04:01:23 2023 - pr439 -> opt-nearest-neighbor: 113494
+Sun Jun 11 04:02:52 2023 - pr439 -> opt-christofides: 110141
+Sun Jun 11 04:02:58 2023 - pr439 -> opt-stimulated_annealing: 110141
+###### 9 of pr439[36/48]
+Sun Jun 11 04:05:37 2023 - pr439 -> opt-nearest-neighbor: 113494
+Sun Jun 11 04:07:06 2023 - pr439 -> opt-christofides: 110141
+Sun Jun 11 04:07:11 2023 - pr439 -> opt-stimulated_annealing: 110141
+###### 10 of pr439[36/48]
+Sun Jun 11 04:09:50 2023 - pr439 -> opt-nearest-neighbor: 113494
+Sun Jun 11 04:11:20 2023 - pr439 -> opt-christofides: 110141
+Sun Jun 11 04:11:25 2023 - pr439 -> opt-stimulated_annealing: 110141
+--->>> pr439 110141 110141.0
+###### 1 of rat99[37/48]
+Sun Jun 11 04:11:30 2023 - rat99 -> opt-nearest-neighbor: 1315
+Sun Jun 11 04:11:31 2023 - rat99 -> opt-christofides: 1280
+Sun Jun 11 04:11:36 2023 - rat99 -> opt-stimulated_annealing: 1280
+###### 2 of rat99[37/48]
+Sun Jun 11 04:11:37 2023 - rat99 -> opt-nearest-neighbor: 1315
+Sun Jun 11 04:11:38 2023 - rat99 -> opt-christofides: 1280
+Sun Jun 11 04:11:43 2023 - rat99 -> opt-stimulated_annealing: 1280
+###### 3 of rat99[37/48]
+Sun Jun 11 04:11:44 2023 - rat99 -> opt-nearest-neighbor: 1315
+Sun Jun 11 04:11:45 2023 - rat99 -> opt-christofides: 1280
+Sun Jun 11 04:11:50 2023 - rat99 -> opt-stimulated_annealing: 1280
+###### 4 of rat99[37/48]
+Sun Jun 11 04:11:51 2023 - rat99 -> opt-nearest-neighbor: 1315
+Sun Jun 11 04:11:52 2023 - rat99 -> opt-christofides: 1280
+Sun Jun 11 04:11:57 2023 - rat99 -> opt-stimulated_annealing: 1280
+###### 5 of rat99[37/48]
+Sun Jun 11 04:11:58 2023 - rat99 -> opt-nearest-neighbor: 1315
+Sun Jun 11 04:11:59 2023 - rat99 -> opt-christofides: 1280
+Sun Jun 11 04:12:04 2023 - rat99 -> opt-stimulated_annealing: 1280
+###### 6 of rat99[37/48]
+Sun Jun 11 04:12:05 2023 - rat99 -> opt-nearest-neighbor: 1315
+Sun Jun 11 04:12:06 2023 - rat99 -> opt-christofides: 1280
+Sun Jun 11 04:12:11 2023 - rat99 -> opt-stimulated_annealing: 1280
+###### 7 of rat99[37/48]
+Sun Jun 11 04:12:12 2023 - rat99 -> opt-nearest-neighbor: 1315
+Sun Jun 11 04:12:13 2023 - rat99 -> opt-christofides: 1280
+Sun Jun 11 04:12:18 2023 - rat99 -> opt-stimulated_annealing: 1280
+###### 8 of rat99[37/48]
+Sun Jun 11 04:12:19 2023 - rat99 -> opt-nearest-neighbor: 1315
+Sun Jun 11 04:12:20 2023 - rat99 -> opt-christofides: 1280
+Sun Jun 11 04:12:25 2023 - rat99 -> opt-stimulated_annealing: 1280
+###### 9 of rat99[37/48]
+Sun Jun 11 04:12:26 2023 - rat99 -> opt-nearest-neighbor: 1315
+Sun Jun 11 04:12:27 2023 - rat99 -> opt-christofides: 1280
+Sun Jun 11 04:12:32 2023 - rat99 -> opt-stimulated_annealing: 1280
+###### 10 of rat99[37/48]
+Sun Jun 11 04:12:33 2023 - rat99 -> opt-nearest-neighbor: 1315
+Sun Jun 11 04:12:34 2023 - rat99 -> opt-christofides: 1280
+Sun Jun 11 04:12:39 2023 - rat99 -> opt-stimulated_annealing: 1280
+--->>> rat99 1280 1280.0
+###### 1 of rat195[38/48]
+Sun Jun 11 04:12:50 2023 - rat195 -> opt-nearest-neighbor: 2509
+Sun Jun 11 04:12:56 2023 - rat195 -> opt-christofides: 2470
+Sun Jun 11 04:13:01 2023 - rat195 -> opt-stimulated_annealing: 2470
+###### 2 of rat195[38/48]
+Sun Jun 11 04:13:08 2023 - rat195 -> opt-nearest-neighbor: 2509
+Sun Jun 11 04:13:14 2023 - rat195 -> opt-christofides: 2470
+Sun Jun 11 04:13:19 2023 - rat195 -> opt-stimulated_annealing: 2470
+###### 3 of rat195[38/48]
+Sun Jun 11 04:13:27 2023 - rat195 -> opt-nearest-neighbor: 2509
+Sun Jun 11 04:13:32 2023 - rat195 -> opt-christofides: 2470
+Sun Jun 11 04:13:37 2023 - rat195 -> opt-stimulated_annealing: 2470
+###### 4 of rat195[38/48]
+Sun Jun 11 04:13:45 2023 - rat195 -> opt-nearest-neighbor: 2509
+Sun Jun 11 04:13:51 2023 - rat195 -> opt-christofides: 2470
+Sun Jun 11 04:13:56 2023 - rat195 -> opt-stimulated_annealing: 2470
+###### 5 of rat195[38/48]
+Sun Jun 11 04:14:04 2023 - rat195 -> opt-nearest-neighbor: 2509
+Sun Jun 11 04:14:10 2023 - rat195 -> opt-christofides: 2470
+Sun Jun 11 04:14:15 2023 - rat195 -> opt-stimulated_annealing: 2470
+###### 6 of rat195[38/48]
+Sun Jun 11 04:14:22 2023 - rat195 -> opt-nearest-neighbor: 2509
+Sun Jun 11 04:14:28 2023 - rat195 -> opt-christofides: 2470
+Sun Jun 11 04:14:33 2023 - rat195 -> opt-stimulated_annealing: 2470
+###### 7 of rat195[38/48]
+Sun Jun 11 04:14:40 2023 - rat195 -> opt-nearest-neighbor: 2509
+Sun Jun 11 04:14:46 2023 - rat195 -> opt-christofides: 2470
+Sun Jun 11 04:14:51 2023 - rat195 -> opt-stimulated_annealing: 2470
+###### 8 of rat195[38/48]
+Sun Jun 11 04:14:59 2023 - rat195 -> opt-nearest-neighbor: 2509
+Sun Jun 11 04:15:04 2023 - rat195 -> opt-christofides: 2470
+Sun Jun 11 04:15:09 2023 - rat195 -> opt-stimulated_annealing: 2470
+###### 9 of rat195[38/48]
+Sun Jun 11 04:15:17 2023 - rat195 -> opt-nearest-neighbor: 2509
+Sun Jun 11 04:15:24 2023 - rat195 -> opt-christofides: 2470
+Sun Jun 11 04:15:29 2023 - rat195 -> opt-stimulated_annealing: 2470
+###### 10 of rat195[38/48]
+Sun Jun 11 04:15:37 2023 - rat195 -> opt-nearest-neighbor: 2509
+Sun Jun 11 04:15:43 2023 - rat195 -> opt-christofides: 2470
+Sun Jun 11 04:15:48 2023 - rat195 -> opt-stimulated_annealing: 2470
+--->>> rat195 2470 2470.0
+###### 1 of rat575[39/48]
+Sun Jun 11 04:20:15 2023 - rat575 -> opt-nearest-neighbor: 7293
+Sun Jun 11 04:25:20 2023 - rat575 -> opt-christofides: 7293
+Sun Jun 11 04:25:25 2023 - rat575 -> opt-stimulated_annealing: 7293
+###### 2 of rat575[39/48]
+Sun Jun 11 04:29:46 2023 - rat575 -> opt-nearest-neighbor: 7293
+Sun Jun 11 04:34:52 2023 - rat575 -> opt-christofides: 7293
+Sun Jun 11 04:34:58 2023 - rat575 -> opt-stimulated_annealing: 7293
+###### 3 of rat575[39/48]
+Sun Jun 11 04:39:18 2023 - rat575 -> opt-nearest-neighbor: 7293
+Sun Jun 11 04:44:24 2023 - rat575 -> opt-christofides: 7293
+Sun Jun 11 04:44:30 2023 - rat575 -> opt-stimulated_annealing: 7293
+###### 4 of rat575[39/48]
+Sun Jun 11 04:48:52 2023 - rat575 -> opt-nearest-neighbor: 7293
+Sun Jun 11 04:53:58 2023 - rat575 -> opt-christofides: 7293
+Sun Jun 11 04:54:03 2023 - rat575 -> opt-stimulated_annealing: 7293
+###### 5 of rat575[39/48]
+Sun Jun 11 04:58:23 2023 - rat575 -> opt-nearest-neighbor: 7293
+Sun Jun 11 05:03:26 2023 - rat575 -> opt-christofides: 7293
+Sun Jun 11 05:03:32 2023 - rat575 -> opt-stimulated_annealing: 7293
+###### 6 of rat575[39/48]
+Sun Jun 11 05:07:53 2023 - rat575 -> opt-nearest-neighbor: 7293
+Sun Jun 11 05:12:58 2023 - rat575 -> opt-christofides: 7293
+Sun Jun 11 05:13:03 2023 - rat575 -> opt-stimulated_annealing: 7293
+###### 7 of rat575[39/48]
+Sun Jun 11 05:17:26 2023 - rat575 -> opt-nearest-neighbor: 7293
+Sun Jun 11 05:22:34 2023 - rat575 -> opt-christofides: 7293
+Sun Jun 11 05:22:40 2023 - rat575 -> opt-stimulated_annealing: 7293
+###### 8 of rat575[39/48]
+Sun Jun 11 05:26:59 2023 - rat575 -> opt-nearest-neighbor: 7293
+Sun Jun 11 05:32:02 2023 - rat575 -> opt-christofides: 7293
+Sun Jun 11 05:32:07 2023 - rat575 -> opt-stimulated_annealing: 7293
+###### 9 of rat575[39/48]
+Sun Jun 11 05:36:27 2023 - rat575 -> opt-nearest-neighbor: 7293
+Sun Jun 11 05:41:35 2023 - rat575 -> opt-christofides: 7293
+Sun Jun 11 05:41:40 2023 - rat575 -> opt-stimulated_annealing: 7293
+###### 10 of rat575[39/48]
+Sun Jun 11 05:46:02 2023 - rat575 -> opt-nearest-neighbor: 7293
+Sun Jun 11 05:51:06 2023 - rat575 -> opt-christofides: 7293
+Sun Jun 11 05:51:11 2023 - rat575 -> opt-stimulated_annealing: 7293
+--->>> rat575 7293 7293.0
+###### 1 of rat783[40/48]
+Sun Jun 11 06:02:55 2023 - rat783 -> opt-nearest-neighbor: 9462
+Sun Jun 11 06:11:55 2023 - rat783 -> opt-christofides: 9439
+Sun Jun 11 06:12:00 2023 - rat783 -> opt-stimulated_annealing: 9439
+###### 2 of rat783[40/48]
+Sun Jun 11 06:23:42 2023 - rat783 -> opt-nearest-neighbor: 9462
+Sun Jun 11 06:32:50 2023 - rat783 -> opt-christofides: 9439
+Sun Jun 11 06:32:56 2023 - rat783 -> opt-stimulated_annealing: 9439
+###### 3 of rat783[40/48]
+Sun Jun 11 06:44:33 2023 - rat783 -> opt-nearest-neighbor: 9462
+Sun Jun 11 06:53:40 2023 - rat783 -> opt-christofides: 9439
+Sun Jun 11 06:53:45 2023 - rat783 -> opt-stimulated_annealing: 9439
+###### 4 of rat783[40/48]
+Sun Jun 11 07:05:26 2023 - rat783 -> opt-nearest-neighbor: 9462
+Sun Jun 11 07:14:31 2023 - rat783 -> opt-christofides: 9439
+Sun Jun 11 07:14:36 2023 - rat783 -> opt-stimulated_annealing: 9439
+###### 5 of rat783[40/48]
+Sun Jun 11 07:26:14 2023 - rat783 -> opt-nearest-neighbor: 9462
+Sun Jun 11 07:35:21 2023 - rat783 -> opt-christofides: 9439
+Sun Jun 11 07:35:27 2023 - rat783 -> opt-stimulated_annealing: 9439
+###### 6 of rat783[40/48]
+Sun Jun 11 07:47:08 2023 - rat783 -> opt-nearest-neighbor: 9462
+Sun Jun 11 07:56:12 2023 - rat783 -> opt-christofides: 9439
+Sun Jun 11 07:56:17 2023 - rat783 -> opt-stimulated_annealing: 9439
+###### 7 of rat783[40/48]
+Sun Jun 11 08:08:04 2023 - rat783 -> opt-nearest-neighbor: 9462
+Sun Jun 11 08:17:13 2023 - rat783 -> opt-christofides: 9439
+Sun Jun 11 08:17:18 2023 - rat783 -> opt-stimulated_annealing: 9439
+###### 8 of rat783[40/48]
+Sun Jun 11 08:28:58 2023 - rat783 -> opt-nearest-neighbor: 9462
+Sun Jun 11 08:38:04 2023 - rat783 -> opt-christofides: 9439
+Sun Jun 11 08:38:09 2023 - rat783 -> opt-stimulated_annealing: 9439
+###### 9 of rat783[40/48]
+Sun Jun 11 08:49:54 2023 - rat783 -> opt-nearest-neighbor: 9462
+Sun Jun 11 08:59:01 2023 - rat783 -> opt-christofides: 9439
+Sun Jun 11 08:59:06 2023 - rat783 -> opt-stimulated_annealing: 9439
+###### 10 of rat783[40/48]
+Sun Jun 11 09:10:52 2023 - rat783 -> opt-nearest-neighbor: 9462
+Sun Jun 11 09:20:07 2023 - rat783 -> opt-christofides: 9439
+Sun Jun 11 09:20:12 2023 - rat783 -> opt-stimulated_annealing: 9439
+--->>> rat783 9439 9439.0
+###### 1 of rd100[41/48]
+Sun Jun 11 09:20:17 2023 - rd100 -> opt: 7910
+Sun Jun 11 09:20:19 2023 - rd100 -> opt-nearest-neighbor: 8241
+Sun Jun 11 09:20:20 2023 - rd100 -> opt-christofides: 8241
+Sun Jun 11 09:20:25 2023 - rd100 -> opt-stimulated_annealing: 8241
+###### 2 of rd100[41/48]
+Sun Jun 11 09:20:25 2023 - rd100 -> opt: 7910
+Sun Jun 11 09:20:26 2023 - rd100 -> opt-nearest-neighbor: 8241
+Sun Jun 11 09:20:27 2023 - rd100 -> opt-christofides: 8241
+Sun Jun 11 09:20:32 2023 - rd100 -> opt-stimulated_annealing: 8241
+###### 3 of rd100[41/48]
+Sun Jun 11 09:20:32 2023 - rd100 -> opt: 7910
+Sun Jun 11 09:20:33 2023 - rd100 -> opt-nearest-neighbor: 8241
+Sun Jun 11 09:20:35 2023 - rd100 -> opt-christofides: 8241
+Sun Jun 11 09:20:40 2023 - rd100 -> opt-stimulated_annealing: 8241
+###### 4 of rd100[41/48]
+Sun Jun 11 09:20:40 2023 - rd100 -> opt: 7910
+Sun Jun 11 09:20:41 2023 - rd100 -> opt-nearest-neighbor: 8241
+Sun Jun 11 09:20:42 2023 - rd100 -> opt-christofides: 8241
+Sun Jun 11 09:20:47 2023 - rd100 -> opt-stimulated_annealing: 8241
+###### 5 of rd100[41/48]
+Sun Jun 11 09:20:47 2023 - rd100 -> opt: 7910
+Sun Jun 11 09:20:48 2023 - rd100 -> opt-nearest-neighbor: 8241
+Sun Jun 11 09:20:49 2023 - rd100 -> opt-christofides: 8241
+Sun Jun 11 09:20:55 2023 - rd100 -> opt-stimulated_annealing: 8241
+###### 6 of rd100[41/48]
+Sun Jun 11 09:20:55 2023 - rd100 -> opt: 7910
+Sun Jun 11 09:20:56 2023 - rd100 -> opt-nearest-neighbor: 8241
+Sun Jun 11 09:20:57 2023 - rd100 -> opt-christofides: 8241
+Sun Jun 11 09:21:02 2023 - rd100 -> opt-stimulated_annealing: 8241
+###### 7 of rd100[41/48]
+Sun Jun 11 09:21:02 2023 - rd100 -> opt: 7910
+Sun Jun 11 09:21:03 2023 - rd100 -> opt-nearest-neighbor: 8241
+Sun Jun 11 09:21:04 2023 - rd100 -> opt-christofides: 8241
+Sun Jun 11 09:21:09 2023 - rd100 -> opt-stimulated_annealing: 8241
+###### 8 of rd100[41/48]
+Sun Jun 11 09:21:09 2023 - rd100 -> opt: 7910
+Sun Jun 11 09:21:10 2023 - rd100 -> opt-nearest-neighbor: 8241
+Sun Jun 11 09:21:11 2023 - rd100 -> opt-christofides: 8241
+Sun Jun 11 09:21:16 2023 - rd100 -> opt-stimulated_annealing: 8241
+###### 9 of rd100[41/48]
+Sun Jun 11 09:21:16 2023 - rd100 -> opt: 7910
+Sun Jun 11 09:21:18 2023 - rd100 -> opt-nearest-neighbor: 8241
+Sun Jun 11 09:21:19 2023 - rd100 -> opt-christofides: 8241
+Sun Jun 11 09:21:24 2023 - rd100 -> opt-stimulated_annealing: 8241
+###### 10 of rd100[41/48]
+Sun Jun 11 09:21:24 2023 - rd100 -> opt: 7910
+Sun Jun 11 09:21:25 2023 - rd100 -> opt-nearest-neighbor: 8241
+Sun Jun 11 09:21:26 2023 - rd100 -> opt-christofides: 8241
+Sun Jun 11 09:21:31 2023 - rd100 -> opt-stimulated_annealing: 8241
+--->>> rd100 8241 8241.0
+###### 1 of rd400[42/48]
+Sun Jun 11 09:23:24 2023 - rd400 -> opt-nearest-neighbor: 16008
+Sun Jun 11 09:24:32 2023 - rd400 -> opt-christofides: 16008
+Sun Jun 11 09:24:37 2023 - rd400 -> opt-stimulated_annealing: 16008
+###### 2 of rd400[42/48]
+Sun Jun 11 09:26:27 2023 - rd400 -> opt-nearest-neighbor: 16008
+Sun Jun 11 09:27:39 2023 - rd400 -> opt-christofides: 16008
+Sun Jun 11 09:27:44 2023 - rd400 -> opt-stimulated_annealing: 16008
+###### 3 of rd400[42/48]
+Sun Jun 11 09:29:40 2023 - rd400 -> opt-nearest-neighbor: 16008
+Sun Jun 11 09:30:51 2023 - rd400 -> opt-christofides: 16008
+Sun Jun 11 09:30:57 2023 - rd400 -> opt-stimulated_annealing: 16008
+###### 4 of rd400[42/48]
+Sun Jun 11 09:32:43 2023 - rd400 -> opt-nearest-neighbor: 16008
+Sun Jun 11 09:33:53 2023 - rd400 -> opt-christofides: 16008
+Sun Jun 11 09:33:58 2023 - rd400 -> opt-stimulated_annealing: 16008
+###### 5 of rd400[42/48]
+Sun Jun 11 09:35:46 2023 - rd400 -> opt-nearest-neighbor: 16008
+Sun Jun 11 09:36:55 2023 - rd400 -> opt-christofides: 16008
+Sun Jun 11 09:37:01 2023 - rd400 -> opt-stimulated_annealing: 16008
+###### 6 of rd400[42/48]
+Sun Jun 11 09:38:47 2023 - rd400 -> opt-nearest-neighbor: 16008
+Sun Jun 11 09:39:57 2023 - rd400 -> opt-christofides: 16008
+Sun Jun 11 09:40:02 2023 - rd400 -> opt-stimulated_annealing: 16008
+###### 7 of rd400[42/48]
+Sun Jun 11 09:41:56 2023 - rd400 -> opt-nearest-neighbor: 16008
+Sun Jun 11 09:43:06 2023 - rd400 -> opt-christofides: 16008
+Sun Jun 11 09:43:12 2023 - rd400 -> opt-stimulated_annealing: 16008
+###### 8 of rd400[42/48]
+Sun Jun 11 09:45:03 2023 - rd400 -> opt-nearest-neighbor: 16008
+Sun Jun 11 09:46:15 2023 - rd400 -> opt-christofides: 16008
+Sun Jun 11 09:46:20 2023 - rd400 -> opt-stimulated_annealing: 16008
+###### 9 of rd400[42/48]
+Sun Jun 11 09:48:07 2023 - rd400 -> opt-nearest-neighbor: 16008
+Sun Jun 11 09:49:16 2023 - rd400 -> opt-christofides: 16008
+Sun Jun 11 09:49:21 2023 - rd400 -> opt-stimulated_annealing: 16008
+###### 10 of rd400[42/48]
+Sun Jun 11 09:51:08 2023 - rd400 -> opt-nearest-neighbor: 16008
+Sun Jun 11 09:52:18 2023 - rd400 -> opt-christofides: 16008
+Sun Jun 11 09:52:23 2023 - rd400 -> opt-stimulated_annealing: 16008
+--->>> rd400 16008 16008.0
+###### 1 of st70[43/48]
+Sun Jun 11 09:52:27 2023 - st70 -> opt: 675
+Sun Jun 11 09:52:28 2023 - st70 -> opt-nearest-neighbor: 723
+Sun Jun 11 09:52:28 2023 - st70 -> opt-christofides: 692
+Sun Jun 11 09:52:33 2023 - st70 -> opt-stimulated_annealing: 692
+###### 2 of st70[43/48]
+Sun Jun 11 09:52:33 2023 - st70 -> opt: 675
+Sun Jun 11 09:52:34 2023 - st70 -> opt-nearest-neighbor: 723
+Sun Jun 11 09:52:34 2023 - st70 -> opt-christofides: 692
+Sun Jun 11 09:52:39 2023 - st70 -> opt-stimulated_annealing: 692
+###### 3 of st70[43/48]
+Sun Jun 11 09:52:39 2023 - st70 -> opt: 675
+Sun Jun 11 09:52:40 2023 - st70 -> opt-nearest-neighbor: 723
+Sun Jun 11 09:52:40 2023 - st70 -> opt-christofides: 692
+Sun Jun 11 09:52:45 2023 - st70 -> opt-stimulated_annealing: 692
+###### 4 of st70[43/48]
+Sun Jun 11 09:52:45 2023 - st70 -> opt: 675
+Sun Jun 11 09:52:46 2023 - st70 -> opt-nearest-neighbor: 723
+Sun Jun 11 09:52:46 2023 - st70 -> opt-christofides: 692
+Sun Jun 11 09:52:51 2023 - st70 -> opt-stimulated_annealing: 692
+###### 5 of st70[43/48]
+Sun Jun 11 09:52:51 2023 - st70 -> opt: 675
+Sun Jun 11 09:52:52 2023 - st70 -> opt-nearest-neighbor: 723
+Sun Jun 11 09:52:52 2023 - st70 -> opt-christofides: 692
+Sun Jun 11 09:52:57 2023 - st70 -> opt-stimulated_annealing: 692
+###### 6 of st70[43/48]
+Sun Jun 11 09:52:57 2023 - st70 -> opt: 675
+Sun Jun 11 09:52:58 2023 - st70 -> opt-nearest-neighbor: 723
+Sun Jun 11 09:52:58 2023 - st70 -> opt-christofides: 692
+Sun Jun 11 09:53:03 2023 - st70 -> opt-stimulated_annealing: 692
+###### 7 of st70[43/48]
+Sun Jun 11 09:53:03 2023 - st70 -> opt: 675
+Sun Jun 11 09:53:04 2023 - st70 -> opt-nearest-neighbor: 723
+Sun Jun 11 09:53:04 2023 - st70 -> opt-christofides: 692
+Sun Jun 11 09:53:09 2023 - st70 -> opt-stimulated_annealing: 692
+###### 8 of st70[43/48]
+Sun Jun 11 09:53:09 2023 - st70 -> opt: 675
+Sun Jun 11 09:53:10 2023 - st70 -> opt-nearest-neighbor: 723
+Sun Jun 11 09:53:10 2023 - st70 -> opt-christofides: 692
+Sun Jun 11 09:53:15 2023 - st70 -> opt-stimulated_annealing: 692
+###### 9 of st70[43/48]
+Sun Jun 11 09:53:15 2023 - st70 -> opt: 675
+Sun Jun 11 09:53:16 2023 - st70 -> opt-nearest-neighbor: 723
+Sun Jun 11 09:53:16 2023 - st70 -> opt-christofides: 692
+Sun Jun 11 09:53:21 2023 - st70 -> opt-stimulated_annealing: 692
+###### 10 of st70[43/48]
+Sun Jun 11 09:53:21 2023 - st70 -> opt: 675
+Sun Jun 11 09:53:22 2023 - st70 -> opt-nearest-neighbor: 723
+Sun Jun 11 09:53:22 2023 - st70 -> opt-christofides: 692
+Sun Jun 11 09:53:27 2023 - st70 -> opt-stimulated_annealing: 692
+--->>> st70 692 692.0
+###### 1 of ts225[44/48]
+Sun Jun 11 09:53:44 2023 - ts225 -> opt-nearest-neighbor: 133815
+Sun Jun 11 09:53:53 2023 - ts225 -> opt-christofides: 129007
+Sun Jun 11 09:53:58 2023 - ts225 -> opt-stimulated_annealing: 129007
+###### 2 of ts225[44/48]
+Sun Jun 11 09:54:10 2023 - ts225 -> opt-nearest-neighbor: 133815
+Sun Jun 11 09:54:18 2023 - ts225 -> opt-christofides: 129007
+Sun Jun 11 09:54:23 2023 - ts225 -> opt-stimulated_annealing: 129007
+###### 3 of ts225[44/48]
+Sun Jun 11 09:54:36 2023 - ts225 -> opt-nearest-neighbor: 133815
+Sun Jun 11 09:54:45 2023 - ts225 -> opt-christofides: 129007
+Sun Jun 11 09:54:50 2023 - ts225 -> opt-stimulated_annealing: 129007
+###### 4 of ts225[44/48]
+Sun Jun 11 09:55:02 2023 - ts225 -> opt-nearest-neighbor: 133815
+Sun Jun 11 09:55:11 2023 - ts225 -> opt-christofides: 129007
+Sun Jun 11 09:55:16 2023 - ts225 -> opt-stimulated_annealing: 129007
+###### 5 of ts225[44/48]
+Sun Jun 11 09:55:28 2023 - ts225 -> opt-nearest-neighbor: 133815
+Sun Jun 11 09:55:36 2023 - ts225 -> opt-christofides: 129007
+Sun Jun 11 09:55:42 2023 - ts225 -> opt-stimulated_annealing: 129007
+###### 6 of ts225[44/48]
+Sun Jun 11 09:55:53 2023 - ts225 -> opt-nearest-neighbor: 133815
+Sun Jun 11 09:56:02 2023 - ts225 -> opt-christofides: 129007
+Sun Jun 11 09:56:07 2023 - ts225 -> opt-stimulated_annealing: 129007
+###### 7 of ts225[44/48]
+Sun Jun 11 09:56:19 2023 - ts225 -> opt-nearest-neighbor: 133815
+Sun Jun 11 09:56:27 2023 - ts225 -> opt-christofides: 129007
+Sun Jun 11 09:56:32 2023 - ts225 -> opt-stimulated_annealing: 129007
+###### 8 of ts225[44/48]
+Sun Jun 11 09:56:45 2023 - ts225 -> opt-nearest-neighbor: 133815
+Sun Jun 11 09:56:53 2023 - ts225 -> opt-christofides: 129007
+Sun Jun 11 09:56:58 2023 - ts225 -> opt-stimulated_annealing: 129007
+###### 9 of ts225[44/48]
+Sun Jun 11 09:57:11 2023 - ts225 -> opt-nearest-neighbor: 133815
+Sun Jun 11 09:57:20 2023 - ts225 -> opt-christofides: 129007
+Sun Jun 11 09:57:25 2023 - ts225 -> opt-stimulated_annealing: 129007
+###### 10 of ts225[44/48]
+Sun Jun 11 09:57:37 2023 - ts225 -> opt-nearest-neighbor: 133815
+Sun Jun 11 09:57:45 2023 - ts225 -> opt-christofides: 129007
+Sun Jun 11 09:57:51 2023 - ts225 -> opt-stimulated_annealing: 129007
+--->>> ts225 129007 129007.0
+###### 1 of tsp225[45/48]
+Sun Jun 11 09:57:55 2023 - tsp225 -> opt: 3861
+Sun Jun 11 09:58:09 2023 - tsp225 -> opt-nearest-neighbor: 4065
+Sun Jun 11 09:58:18 2023 - tsp225 -> opt-christofides: 4065
+Sun Jun 11 09:58:23 2023 - tsp225 -> opt-stimulated_annealing: 4065
+###### 2 of tsp225[45/48]
+Sun Jun 11 09:58:23 2023 - tsp225 -> opt: 3861
+Sun Jun 11 09:58:37 2023 - tsp225 -> opt-nearest-neighbor: 4065
+Sun Jun 11 09:58:46 2023 - tsp225 -> opt-christofides: 4065
+Sun Jun 11 09:58:51 2023 - tsp225 -> opt-stimulated_annealing: 4065
+###### 3 of tsp225[45/48]
+Sun Jun 11 09:58:51 2023 - tsp225 -> opt: 3861
+Sun Jun 11 09:59:06 2023 - tsp225 -> opt-nearest-neighbor: 4065
+Sun Jun 11 09:59:15 2023 - tsp225 -> opt-christofides: 4065
+Sun Jun 11 09:59:20 2023 - tsp225 -> opt-stimulated_annealing: 4065
+###### 4 of tsp225[45/48]
+Sun Jun 11 09:59:20 2023 - tsp225 -> opt: 3861
+Sun Jun 11 09:59:35 2023 - tsp225 -> opt-nearest-neighbor: 4065
+Sun Jun 11 09:59:44 2023 - tsp225 -> opt-christofides: 4065
+Sun Jun 11 09:59:49 2023 - tsp225 -> opt-stimulated_annealing: 4065
+###### 5 of tsp225[45/48]
+Sun Jun 11 09:59:49 2023 - tsp225 -> opt: 3861
+Sun Jun 11 10:00:03 2023 - tsp225 -> opt-nearest-neighbor: 4065
+Sun Jun 11 10:00:12 2023 - tsp225 -> opt-christofides: 4065
+Sun Jun 11 10:00:17 2023 - tsp225 -> opt-stimulated_annealing: 4065
+###### 6 of tsp225[45/48]
+Sun Jun 11 10:00:17 2023 - tsp225 -> opt: 3861
+Sun Jun 11 10:00:31 2023 - tsp225 -> opt-nearest-neighbor: 4065
+Sun Jun 11 10:00:40 2023 - tsp225 -> opt-christofides: 4065
+Sun Jun 11 10:00:45 2023 - tsp225 -> opt-stimulated_annealing: 4065
+###### 7 of tsp225[45/48]
+Sun Jun 11 10:00:45 2023 - tsp225 -> opt: 3861
+Sun Jun 11 10:01:01 2023 - tsp225 -> opt-nearest-neighbor: 4065
+Sun Jun 11 10:01:11 2023 - tsp225 -> opt-christofides: 4065
+Sun Jun 11 10:01:16 2023 - tsp225 -> opt-stimulated_annealing: 4065
+###### 8 of tsp225[45/48]
+Sun Jun 11 10:01:16 2023 - tsp225 -> opt: 3861
+Sun Jun 11 10:01:30 2023 - tsp225 -> opt-nearest-neighbor: 4065
+Sun Jun 11 10:01:39 2023 - tsp225 -> opt-christofides: 4065
+Sun Jun 11 10:01:44 2023 - tsp225 -> opt-stimulated_annealing: 4065
+###### 9 of tsp225[45/48]
+Sun Jun 11 10:01:44 2023 - tsp225 -> opt: 3861
+Sun Jun 11 10:01:58 2023 - tsp225 -> opt-nearest-neighbor: 4065
+Sun Jun 11 10:02:07 2023 - tsp225 -> opt-christofides: 4065
+Sun Jun 11 10:02:12 2023 - tsp225 -> opt-stimulated_annealing: 4065
+###### 10 of tsp225[45/48]
+Sun Jun 11 10:02:12 2023 - tsp225 -> opt: 3861
+Sun Jun 11 10:02:26 2023 - tsp225 -> opt-nearest-neighbor: 4065
+Sun Jun 11 10:02:35 2023 - tsp225 -> opt-christofides: 4065
+Sun Jun 11 10:02:40 2023 - tsp225 -> opt-stimulated_annealing: 4065
+--->>> tsp225 4065 4065.0
+###### 1 of u159[46/48]
+Sun Jun 11 10:02:49 2023 - u159 -> opt-nearest-neighbor: 44658
+Sun Jun 11 10:02:53 2023 - u159 -> opt-christofides: 44658
+Sun Jun 11 10:02:58 2023 - u159 -> opt-stimulated_annealing: 44658
+###### 2 of u159[46/48]
+Sun Jun 11 10:03:03 2023 - u159 -> opt-nearest-neighbor: 44658
+Sun Jun 11 10:03:06 2023 - u159 -> opt-christofides: 44658
+Sun Jun 11 10:03:11 2023 - u159 -> opt-stimulated_annealing: 44658
+###### 3 of u159[46/48]
+Sun Jun 11 10:03:17 2023 - u159 -> opt-nearest-neighbor: 44658
+Sun Jun 11 10:03:20 2023 - u159 -> opt-christofides: 44658
+Sun Jun 11 10:03:25 2023 - u159 -> opt-stimulated_annealing: 44658
+###### 4 of u159[46/48]
+Sun Jun 11 10:03:30 2023 - u159 -> opt-nearest-neighbor: 44658
+Sun Jun 11 10:03:33 2023 - u159 -> opt-christofides: 44658
+Sun Jun 11 10:03:38 2023 - u159 -> opt-stimulated_annealing: 44658
+###### 5 of u159[46/48]
+Sun Jun 11 10:03:43 2023 - u159 -> opt-nearest-neighbor: 44658
+Sun Jun 11 10:03:47 2023 - u159 -> opt-christofides: 44658
+Sun Jun 11 10:03:52 2023 - u159 -> opt-stimulated_annealing: 44658
+###### 6 of u159[46/48]
+Sun Jun 11 10:03:57 2023 - u159 -> opt-nearest-neighbor: 44658
+Sun Jun 11 10:04:00 2023 - u159 -> opt-christofides: 44658
+Sun Jun 11 10:04:05 2023 - u159 -> opt-stimulated_annealing: 44658
+###### 7 of u159[46/48]
+Sun Jun 11 10:04:10 2023 - u159 -> opt-nearest-neighbor: 44658
+Sun Jun 11 10:04:13 2023 - u159 -> opt-christofides: 44658
+Sun Jun 11 10:04:18 2023 - u159 -> opt-stimulated_annealing: 44658
+###### 8 of u159[46/48]
+Sun Jun 11 10:04:24 2023 - u159 -> opt-nearest-neighbor: 44658
+Sun Jun 11 10:04:27 2023 - u159 -> opt-christofides: 44658
+Sun Jun 11 10:04:32 2023 - u159 -> opt-stimulated_annealing: 44658
+###### 9 of u159[46/48]
+Sun Jun 11 10:04:37 2023 - u159 -> opt-nearest-neighbor: 44658
+Sun Jun 11 10:04:40 2023 - u159 -> opt-christofides: 44658
+Sun Jun 11 10:04:45 2023 - u159 -> opt-stimulated_annealing: 44658
+###### 10 of u159[46/48]
+Sun Jun 11 10:04:50 2023 - u159 -> opt-nearest-neighbor: 44658
+Sun Jun 11 10:04:54 2023 - u159 -> opt-christofides: 44658
+Sun Jun 11 10:04:59 2023 - u159 -> opt-stimulated_annealing: 44658
+--->>> u159 44658 44658.0
+
+Sun Jun 11 11:40:22 2023 - u574 -> opt-nearest-neighbor: 39586
+Sun Jun 11 11:44:42 2023 - u574 -> opt-christofides: 39046
+###### 1 of u574[47/48]
+Sun Jun 11 11:44:47 2023 - u574 -> opt-stimulated_annealing: 39046
+###### 2 of u574[47/48]
+Sun Jun 11 11:44:52 2023 - u574 -> opt-stimulated_annealing: 39046
+###### 3 of u574[47/48]
+Sun Jun 11 11:44:58 2023 - u574 -> opt-stimulated_annealing: 39046
+###### 4 of u574[47/48]
+Sun Jun 11 11:45:03 2023 - u574 -> opt-stimulated_annealing: 39046
+###### 5 of u574[47/48]
+Sun Jun 11 11:45:08 2023 - u574 -> opt-stimulated_annealing: 39046
+###### 6 of u574[47/48]
+Sun Jun 11 11:45:13 2023 - u574 -> opt-stimulated_annealing: 39046
+###### 7 of u574[47/48]
+Sun Jun 11 11:45:18 2023 - u574 -> opt-stimulated_annealing: 39046
+###### 8 of u574[47/48]
+Sun Jun 11 11:45:24 2023 - u574 -> opt-stimulated_annealing: 39046
+###### 9 of u574[47/48]
+Sun Jun 11 11:45:29 2023 - u574 -> opt-stimulated_annealing: 39046
+###### 10 of u574[47/48]
+Sun Jun 11 11:45:34 2023 - u574 -> opt-stimulated_annealing: 39046
+--->>> u574 39046 39046.0
+Sun Jun 11 11:55:00 2023 - u724 -> opt-nearest-neighbor: 45196
+Sun Jun 11 12:04:01 2023 - u724 -> opt-christofides: 44945
+###### 1 of u724[48/48]
+Sun Jun 11 12:04:06 2023 - u724 -> opt-stimulated_annealing: 44945
+###### 2 of u724[48/48]
+Sun Jun 11 12:04:12 2023 - u724 -> opt-stimulated_annealing: 44945
+###### 3 of u724[48/48]
+Sun Jun 11 12:04:17 2023 - u724 -> opt-stimulated_annealing: 44945
+###### 4 of u724[48/48]
+Sun Jun 11 12:04:23 2023 - u724 -> opt-stimulated_annealing: 44945
+###### 5 of u724[48/48]
+Sun Jun 11 12:04:28 2023 - u724 -> opt-stimulated_annealing: 44945
+###### 6 of u724[48/48]
+Sun Jun 11 12:04:33 2023 - u724 -> opt-stimulated_annealing: 44945
+###### 7 of u724[48/48]
+Sun Jun 11 12:04:39 2023 - u724 -> opt-stimulated_annealing: 44945
+###### 8 of u724[48/48]
+Sun Jun 11 12:04:44 2023 - u724 -> opt-stimulated_annealing: 44945
+###### 9 of u724[48/48]
+Sun Jun 11 12:04:50 2023 - u724 -> opt-stimulated_annealing: 44945
+###### 10 of u724[48/48]
+Sun Jun 11 12:04:55 2023 - u724 -> opt-stimulated_annealing: 44945
+--->>> u724 44945 44945.0

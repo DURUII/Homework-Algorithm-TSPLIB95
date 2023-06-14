@@ -69,13 +69,14 @@ class TSPParser:
             # FIXME all optimal solutions in euc_2d but tsp225, are consistent with the reported value
             # http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/STSP.html
             with open("log.txt", "a") as fout:
-                fout.write(f"{timestamp()} - {cls.G.graph['benchmark']} -> opt: {opt_tour_length}\n")
+                fout.write(f"{timestamp()} --> opt: {opt_tour_length}\n")
 
     @classmethod
     def boss_info(cls, alg_label: str, visualize=False) -> (List[int], int):
         # print(f"{timestamp()} - {cls.G.graph['benchmark']} -> {alg_label}: {cls.G.graph['x_tour_length']}")
         with open("log.txt", "a") as fout:
-            fout.write(f"{timestamp()} - {cls.G.graph['benchmark']} -> {alg_label}: {cls.G.graph['x_tour_length']}\n")
+            # fout.write(f"{timestamp()} - {cls.G.graph['benchmark']} -> {alg_label}: {cls.G.graph['x_tour_length']}\n")
+            fout.write(f"{timestamp()} --> {alg_label}: {cls.G.graph['x_tour_length']}\n")
 
         if visualize:
             fig, ax = plt.subplots(layout='constrained', dpi=500)
@@ -95,9 +96,11 @@ class TSPParser:
         src, dst = permutation[-1], permutation[0]
         length += cls.G.edges[src, dst]["weight"]
 
-        # TODO: all the boilerplate for the best solution are not needed elsewhere
+        # print(timestamp(), length)
+        # N.B. all the boilerplate for the best solution are not needed elsewhere
         if leaderboard and length < TSPParser.G.graph["x_tour_length"]:
-            # print(timestamp(), length)
+            with open("log.txt", "a") as fout:
+                fout.write(f"{timestamp()} -*- {length}\n")
             TSPParser.G.graph["x_tour_length"] = length
             TSPParser.G.graph["x_tour"] = permutation
 
@@ -134,3 +137,35 @@ class TSPParser:
             ax.set_title(f"{cls.G.graph['benchmark']}'s best result - {cls.G.graph['x_tour_length']}")
 
         plt.show()
+
+    @classmethod
+    def parse2list(cls, name) -> (List[List[float]], List[int]):
+        assert os.path.exists(f"tsplib_benchmark/{name}.tsp")
+
+        info = []
+        # __benchmark__.tsp
+        lines = read_lines(filepath=f"tsplib_benchmark/{name}.tsp")
+        # DIMENSION -> nums of cities/nodes/vertices
+        dimension = parse_dimension(lines)
+        # NODE_COORD_SECTION -> nodes/vertices with location
+        starter = lines.index("NODE_COORD_SECTION") + 1
+        for index in range(starter, starter + dimension):
+            i, x, y = lines[index].strip().split()
+            info.append([float(x), float(y)])
+
+        # .opt may not exist at all
+        opt_tour = None
+        if os.path.exists(f"tsplib_benchmark/{name}.opt.tour"):
+            lines = read_lines(f"tsplib_benchmark/{name}.opt.tour")
+            starter = lines.index("TOUR_SECTION") + 1
+            counter, opt_tour = 0, []
+            for index in range(starter, len(lines)):
+                # rd100.opt.tour
+                if counter >= dimension:
+                    break
+
+                for node_index in lines[index].strip().split():
+                    opt_tour.append(int(node_index))
+                    counter += 1
+
+        return info, opt_tour

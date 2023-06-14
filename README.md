@@ -139,11 +139,18 @@ gzip -d *.gz
 > 例如，2-交换的步骤就是删除路线中的两条边，用另外两条更短的边重新连接，是路径连为一体。反复使用2-交换基本操作（邻域算子）改进路线，就可以在很大程度上改进"虎头蛇尾"、"目光短浅"的最近邻路线。
 > ![](assets/images/opt-2.png)
 
+> 编码实现3-交换时，画的草稿：
+> ![](assets/docs/manuscript%20on%203-opt.png)
 
 > k-交换方法虽然在应用中表现出了优秀的性能，在理论上却无法保证优良的最差情况性能。即便如此，使用该算法时也不必过分担心，因为它是算法中的王者，一般情况下都确实能够得到非常好的解。
+> 
 > Lin-Kernighan
+> 
 > Lin-Kernighan-Helsgaun
-> ———— In Pursuit of the Traveling Salesman: Mathematics at the Limits of Computation
+> 
+> —— In Pursuit of the Traveling Salesman: Mathematics at the Limits of Computation
+
+
 ##### 跳坑思想
 
 处理TSP问题的常见思路之一是：先使用非随机性启发算法获得一个相对合理的解，再进行后处理，使用万用启发式算法跳出局部最优，以期待结果有所提升。这仿佛王磊老师经常说的，“如果你期末总评已经满绩了，就要见贤思齐，到更有希望的区域继续提高。”
@@ -213,7 +220,6 @@ gzip -d *.gz
 
 精妙的通用元启发式算法和人类智慧设计的启发式算法一直相互推动着彼此的边界。设计邻域结构、精调超参数、延长停机时间或许一个可能结果改进方向。初始状态的选择与超参数配合，或许也是具有一定影响力的因素之一。此外，符合直觉的邻域，应在全排列对应的路线的长度、图形上差异不能太大，点对换、插入是否高效，也值得探讨，应当分析现有解与最优解的细微差距。
 
-
 ## References 参考资料
 
 1. 王磊-求解旅行商问题的拟物拟人算法研究计算结果，2023年6月
@@ -226,3 +232,23 @@ gzip -d *.gz
 8. [维基百科 - Travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
 9. [NetworkX Documentation](https://networkx.org/documentation/stable/reference/introduction.html)
 10. William J. Cook. 迷茫的旅行商：一个无处不在的计算机算法问题. 人民邮电出版社, 2013.
+
+## Post Experiment 后实验
+
+对于模拟退火效能、邻域算子选择、相关超参数做进行进一步实验：
+
+1. 最初，以克里斯托菲德斯算法（**无2-opt优化**）作为初始格局
+2. 此后，**以历史最优解作为初始格局**，设置超时停机时间为`600`秒，重复下述步骤：
+   - 设置初始温度`27`，终止温度`0.01`，衰减因数`0.9`，最大无近乎容忍次数`50`次
+   - 以`3-opt`和`2-opt`为主要邻域算子，同时以随机次数的`插入`和`交换`作为辅助算子
+   - 获得邻点，若邻点稍差于上次记录，则以`$e^{-\frac{\Delta E}{T}}$`的概率跳转，该步骤重复`$max(temperature, 10)$`次
+
+相较于此前的实验，在测试用例a280上进行10次实验后得到的结果有所改进。
+
+> 实验(2699)⬇️
+> ![](assets/experiment/a280's%20experimental%20result(2699).png)
+> 
+> 后实验()⬇️
+> ![](assets/experiment/a280's%20experimental%20result(2657).png)
+
+实验表明，修改初始温度、精调邻域算子可以充分发挥模拟退火的潜能，及时剪枝、延长停机时间也是一种获得更好解的途径。
