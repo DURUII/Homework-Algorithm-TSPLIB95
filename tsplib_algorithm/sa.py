@@ -1,4 +1,3 @@
-# https://en.wikipedia.org/wiki/2-opt
 import math
 import numpy as np
 import time
@@ -16,7 +15,10 @@ def perturb(permutation: List[int], option=None) -> List[int]:
     if option is None:
         op = random.choice(["3_opt" for _ in range(10)]
                            + ["2_opt" for _ in range(8)]
-                           + ["switch", "opt_insert", "permutation-transform"])
+                           + ["switch" for _ in range(6)]
+                           + ["insert" for _ in range(4)]
+                           + ["chunk_insert" for _ in range(2)]
+                           + ["permutation-transform" for _ in range(1)])
     else:
         op = option
 
@@ -31,8 +33,14 @@ def perturb(permutation: List[int], option=None) -> List[int]:
                 j = random.randint(0, len(perturbed) + 1)
             perturbed.insert(j, n)
 
-    if op == "opt_insert":
-        pass
+    elif op == "chunk_insert":
+        l = random.randint(2, len(permutation)//10)
+        i = random.randint(0, len(permutation) - l)
+        # where to insert
+        j = random.randint(0, len(permutation) - l)
+        temp = perturbed[i:i + l]
+        perturbed[i:i + l] = []
+        perturbed = perturbed[:j] + temp + perturbed[j:]
 
     elif op == "2_opt":
         # edge <i, i+1>
