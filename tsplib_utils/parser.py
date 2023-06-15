@@ -3,6 +3,7 @@ import math
 import networkx as nx
 
 from tsplib_utils.helper import *
+import numpy as np
 
 plt.style.use(["science"])
 
@@ -68,8 +69,8 @@ class TSPParser:
             cls.G.graph["opt_tour"], cls.G.graph["opt_tour_length"] = opt_tour, opt_tour_length
             # FIXME all optimal solutions in euc_2d but tsp225, are consistent with the reported value
             # http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/STSP.html
-            with open("log.txt", "a") as fout:
-                fout.write(f"{timestamp()} --> opt: {opt_tour_length}\n")
+            # with open("log.txt", "a") as fout:
+            #     fout.write(f"{timestamp()} --> opt: {opt_tour_length}\n")
 
     @classmethod
     def boss_info(cls, alg_label: str, visualize=False) -> (List[int], int):
@@ -139,7 +140,7 @@ class TSPParser:
         plt.show()
 
     @classmethod
-    def parse2list(cls, name) -> (List[List[float]], List[int]):
+    def parse2list(cls, name) -> (List[List[float]], List[int], List[List[int]],):
         assert os.path.exists(f"tsplib_benchmark/{name}.tsp")
 
         info = []
@@ -152,6 +153,14 @@ class TSPParser:
         for index in range(starter, starter + dimension):
             i, x, y = lines[index].strip().split()
             info.append([float(x), float(y)])
+
+        distances = [[0 for _ in range(dimension)] for _ in range(dimension)]
+        for i in range(1, dimension + 1):
+            for j in range(1, dimension + 1):
+                x1, y1 = info[i - 1]
+                x2, y2 = info[j - 1]
+                distances[i - 1][j - 1] = round_distance(x1, y1, x2, y2)
+                distances[j - 1][i - 1] = distances[i - 1][j - 1]
 
         # .opt may not exist at all
         opt_tour = None
@@ -168,4 +177,4 @@ class TSPParser:
                     opt_tour.append(int(node_index))
                     counter += 1
 
-        return info, opt_tour
+        return info, opt_tour, distances
