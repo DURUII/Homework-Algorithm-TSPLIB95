@@ -233,7 +233,6 @@ gzip -d *.gz
 9. [NetworkX Documentation](https://networkx.org/documentation/stable/reference/introduction.html)
 10. William J. Cook. 迷茫的旅行商：一个无处不在的计算机算法问题. 人民邮电出版社, 2013.
 11. https://gitee.com/mathu-dxy/tsp_heuristic，Tsp问题的启发式方法
-12. [Ant Colony Optimization - Part 5: Example - Traveling Saleman Problem (TSP)](https://www.youtube.com/watch?v=uqGelWNwzPo&list=PLJEWP9Z0q94AXyg8ZTi-V0xwFMgbVt5wZ&index=19)
 
 
 ## Post Experiment 后实验
