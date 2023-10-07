@@ -232,7 +232,7 @@ gzip -d *.gz
 8. [维基百科 - Travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
 9. [NetworkX Documentation](https://networkx.org/documentation/stable/reference/introduction.html)
 10. William J. Cook. 迷茫的旅行商：一个无处不在的计算机算法问题. 人民邮电出版社, 2013.
-11. https://gitee.com/mathu-dxy/tsp_heuristic，Tsp问题的启发式方法
+11. [Tsp问题的启发式方法 - 徐阳](https://gitee.com/mathu-dxy/tsp_heuristic)
 
 
 ## Post Experiment 后实验
