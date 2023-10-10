@@ -1,5 +1,4 @@
 import networkx as nx
-import rich
 from matplotlib import pyplot as plt
 
 from tsplib_algorithm.base import Algorithm
@@ -13,8 +12,7 @@ class ChristofidesSerdyukov(Algorithm):
     def __init__(self, tag='ChristofidesSerdyukov'):
         super().__init__(tag)
 
-    def solve(self, problem: Instance, verbose=False, visualize=False):
-        """Solve the TSP instance using the Christofides Serdyukov algorithm."""
+    def solve(self, problem: Instance, verbose=False):
         # Find MST T of Graph
         T = nx.minimum_spanning_tree(problem.G)
 

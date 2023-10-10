@@ -17,17 +17,16 @@ class Instance:
         # Initialize a graph to hold the problem instance
         self.benchmark = benchmark
         self.verbose = verbose
+
         self.filepath = os.path.join("tsplib_benchmark", f"{benchmark}.tsp")
         self.best_seen = Solution(math.inf, [])
         self.dimension = -1
-        self.reset_leaderboard()
         self.G = nx.Graph()
 
         # Load and parse the TSP file
         self.load_and_parse_file()
-        
+
         # Load the optimal solution
-        
 
     def reset_leaderboard(self):
         """Reset the best solution seen so far to infinity."""
@@ -71,7 +70,6 @@ class Instance:
         plot_tsp_tour(ax, "C0", self.G, tour)
         # if opt:
         #     plot_tsp_tour(ax, "r", self.G, tour, alpha=0.5, marker='o', linestyle='-', linewidth=2, markersize=2)
-        
 
     def length_of_a_tour(self, tour: list[int], leaderboard=False):
         """Calculate the total length of a tour."""
