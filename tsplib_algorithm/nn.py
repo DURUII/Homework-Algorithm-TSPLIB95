@@ -1,57 +1,47 @@
-import time
-from typing import List, Dict, Set
-
-import networkx as nx
 from operator import itemgetter
 
-from tsplib_algorithm.opt import do_two_opt
-from tsplib_utils.parser import TSPParser
+from tsplib_algorithm.base import Algorithm
+from tsplib_instance.base import Instance
 
 
-def neighbors(graph, node):
-    # https://stackoverflow.com/questions/70168343/find-k-nearest-neighbors-of-a-node-in-a-networkx-graph
-    assert 1 <= node <= graph.number_of_nodes()
+class GreedyNearestNeighbor(Algorithm):
+    """Naive Greedy Nearest Neighbor Algorithm."""
 
-    return list(map(itemgetter(1),
-                    sorted([(e[2]['weight'], e[1])
-                            for e in graph.edges(node, data=True)])[:]))
+    def __init__(self, tag: str = 'GreedyNearestNeighbor'):
+        super().__init__(tag)
 
+    def solve(self, problem: Instance, verbose: bool = False):
+        """Solve the TSP instance using the Greedy Nearest Neighbor algorithm."""
+        self.run_algorithm(problem)
 
-def nearest_neighbor(G: nx.Graph, intermediate_step: List[int]) -> (List[int], int):
-    assert len(intermediate_step) > 0
-    # current chessboard
-    tour_permutation = [i for i in intermediate_step]
+        if verbose:
+            self.print_best_solution(problem)
 
-    # a tour has not been fully constructed
-    while len(tour_permutation) < G.number_of_nodes():
-        # choose the nearest city unvisited from the current city
-        for neighbor in neighbors(G, tour_permutation[-1]):
-            # unvisited
-            if neighbor not in tour_permutation:
-                tour_permutation.append(neighbor)
-                # next time, choose the nearest from there
-                break
+    def run_algorithm(self, problem: Instance):
+        """Runs the algorithm for each possible starting city."""
+        for starting_city in range(1, problem.dimension + 1):
+            self.find_feasible_solution(starting_city, problem)
 
-    # final chessboard
-    return tour_permutation, TSPParser.length_of_a_tour(tour_permutation)
+    def find_feasible_solution(self, starting_city: int, problem: Instance):
+        """Finds a feasible solution by iteratively choosing the nearest unvisited city."""
+        unvisited_cities = {i + 1 for i in range(problem.dimension)}
+        tour = [starting_city]
+        unvisited_cities.remove(tour[-1])
 
+        while len(tour) < problem.dimension:
+            next_city = self.get_nearest_unvisited_city(tour[-1], unvisited_cities, problem)
+            tour.append(next_city)
+            unvisited_cities.remove(next_city)
 
-def do_nearest_neighbor(G: nx.Graph, opt=True, lim=0.5) -> Dict[int, List[int]]:
-    length2tour = dict({})
+        problem.length_of_a_tour(tour, leaderboard=True)
 
-    # n.n algorithm
-    for starter in G.nodes(data=False):
-        local_best_tour, local_min_length = nearest_neighbor(G, [starter])
-        length2tour[local_min_length] = local_best_tour
+    @staticmethod
+    def get_nearest_unvisited_city(current_city: int, unvisited_cities: set, problem: Instance) -> int:
+        """Returns the nearest unvisited city from the current city."""
+        neighbor_cities = list(
+            map(itemgetter(1),
+                sorted([(e[2]['weight'], e[1]) for e in problem.G.edges(current_city, data=True)])))
 
-    # 2-opt with time limits
-    if opt:
-        lengths = sorted(list(length2tour.keys()))
-        index = 0
-        tic = time.perf_counter()
-        while time.perf_counter() - tic < lim:
-            opt_local_best_tour, opt_local_min_length = do_two_opt(length2tour[lengths[index]])
-            length2tour[opt_local_min_length] = opt_local_best_tour
-            index += 1
-
-    return length2tour
+        for city in neighbor_cities:
+            if city in unvisited_cities:
+                return city

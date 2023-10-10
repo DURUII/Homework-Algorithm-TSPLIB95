@@ -1,121 +1,87 @@
 import math
-import numpy as np
-import time
-from typing import List, Dict
-
-import networkx as nx
 import random
+import time
 
-from tsplib_algorithm.opt import do_two_opt
-from tsplib_utils.parser import TSPParser
+from tsplib_utils.operator import *
 
+import numpy as np
 
-def perturb(permutation: List[int], option=None) -> List[int]:
-    perturbed = permutation[:]
-    if option is None:
-        op = random.choice(["3_opt" for _ in range(10)]
-                           + ["2_opt" for _ in range(8)]
-                           + ["switch" for _ in range(6)]
-                           + ["insert" for _ in range(4)]
-                           + ["chunk_insert" for _ in range(2)]
-                           + ["permutation-transform" for _ in range(1)])
-    else:
-        op = option
-
-    if op == "insert":
-        for _ in range(random.randint(1, len(permutation) // 10)):
-            # which to remove
-            i = random.randint(0, len(perturbed) - 1)
-            n = perturbed.pop(i)
-            # where to insert
-            j = random.randint(0, len(perturbed) + 1)
-            while j == i:
-                j = random.randint(0, len(perturbed) + 1)
-            perturbed.insert(j, n)
-
-    elif op == "chunk_insert":
-        l = random.randint(2, len(permutation)//10)
-        i = random.randint(0, len(permutation) - l)
-        # where to insert
-        j = random.randint(0, len(permutation) - l)
-        temp = perturbed[i:i + l]
-        perturbed[i:i + l] = []
-        perturbed = perturbed[:j] + temp + perturbed[j:]
-
-    elif op == "2_opt":
-        # edge <i, i+1>
-        i = random.randint(0, len(perturbed) - 4)
-        # edge <j, j+1>
-        j = random.randint(i + 2, len(perturbed) - 2)
-        temp = perturbed[:]
-        temp[i + 1:j + 1] = temp[j:i:-1]
-        perturbed = temp
-
-    elif op == "3_opt":
-        # edge <i, i+1>
-        i = random.randint(0, len(perturbed) - 6)
-        # edge <j, j+1>
-        j = random.randint(i + 2, len(perturbed) - 4)
-        # edge <k, k+1>
-        k = random.randint(j + 2, len(perturbed) - 2)
-
-        odds = random.randint(1, 4)
-        if odds == 1:
-            temp = perturbed[:i + 1] + perturbed[k:j:-1] + perturbed[i + 1:j + 1] + perturbed[k + 1:]
-        elif odds == 2:
-            temp = perturbed[:i + 1] + perturbed[j + 1:k + 1] + perturbed[i + 1:j + 1] + perturbed[k + 1:]
-        elif odds == 3:
-            temp = perturbed[:i + 1] + perturbed[j + 1:k + 1] + perturbed[j:i:-1] + perturbed[k + 1:]
-        # elif odds == 4:
-        #     temp = perturbed[:i + 1] + perturbed[i + 1:j + 1] + perturbed[k:j:-1] + perturbed[k + 1:]
-        # elif odds == 5:
-        #     temp = perturbed[:i + 1] + perturbed[j:i:-1] + perturbed[j + 1:k + 1] + perturbed[k + 1:]
-        # elif odds == 6:
-        #     temp = perturbed[:i + 1] + perturbed[k: i:-1] + perturbed[k + 1:]
-        else:
-            temp = perturbed[:i + 1] + perturbed[j:i:-1] + perturbed[k:j:-1] + perturbed[k + 1:]
-
-        perturbed = temp
-
-    elif op == "switch":
-        for _ in range(random.randint(1, len(permutation) // 10)):
-            i = random.randint(1, len(perturbed) - 2)
-            j = random.randint(i + 1, len(perturbed) - 1)
-            perturbed[i], perturbed[j] = perturbed[j], perturbed[i]
-
-    else:
-        i = random.randint(1, len(permutation) - 1)
-        perturbed = perturbed[i:] + perturbed[:i]
-
-    return perturbed
+from tsplib_algorithm.base import Algorithm
+from tsplib_instance.base import Instance
+from torch.utils.tensorboard import SummaryWriter
 
 
-def anneal(permutation: List[int], temperature, eps, alpha, max_iterations) -> None:
-    # FIXME whether hyperparameters need fine-tuning
-    # permutation = perturb(permutation)
-    counter = 0
-    while counter <= max_iterations and temperature > eps:
-        counter += 1
-        for _ in range(max(int(temperature), 10)):
-            E0 = TSPParser.length_of_a_tour(permutation)
-            novel_permutation = perturb(permutation)
-            # print(novel_permutation)
-            E1 = TSPParser.length_of_a_tour(novel_permutation)
-            delta = E1 - E0
+class SimulatedAnnealing(Algorithm):
+    def __init__(self, tag='SimulatedAnnealing'):
+        super().__init__(tag)
 
-            if delta < 0:
-                permutation = novel_permutation
-                # still improving
-                counter = 0
+    def generate_tour(self, conductor: list[int], problem: Instance):
+        assert len(conductor) == problem.dimension, f'{len(conductor)} != {problem.dimension}'
 
-            elif random.random() < np.exp(-delta / temperature):
-                permutation = novel_permutation
+        # suppose cities emerge one by one,
+        tour = []
 
-            temperature *= alpha
+        for i in range(len(conductor)):
+            if i < 3:
+                tour.append(conductor[i])
 
+            # at this moment, say [1, 2, 3]
+            else:
+                virtual_tour = tour[:]
+                virtual_tour.append(virtual_tour[0])
 
-def do_stimulated_annealing(lim=500, temperature=200, eps=20, alpha=0.99, max_iterations=25) -> None:
-    tic = time.perf_counter()
-    while time.perf_counter() - tic < lim:
-        # FIXME whether sheer randomness or the record best would be better?
-        anneal(TSPParser.G.graph['x_tour'], temperature, eps, alpha, max_iterations)
+                best_gain, best_idx = math.inf, -1
+
+                # greedy strategy
+                for j in range(1, len(virtual_tour)):
+                    # logically, do tour.insert(j, conductor[i]), say j=1, [1, 2, 3, 1] []
+                    assert conductor[i] != virtual_tour[j] and conductor[i] != virtual_tour[j - 1]
+                    gain = problem.G.edges[virtual_tour[j - 1], conductor[i]]["weight"] + \
+                           problem.G.edges[conductor[i], virtual_tour[j]]["weight"] - \
+                           problem.G.edges[virtual_tour[j - 1], virtual_tour[j]]["weight"]
+
+                    # where to insert minimize the total length gain
+                    if gain < best_gain:
+                        best_gain, best_idx = gain, j
+
+                # insert the emergent city into the tour
+                tour.insert(best_idx, conductor[i])
+
+        return tour
+
+    def solve(self, problem, verbose=False, patience=500, level_step=50, T0=2e2, EPS=1e-2, ALPHA=0.9):
+        epoch = 0
+        writer = SummaryWriter(comment=f'_sa_{patience}_{level_step}_{T0}_{EPS}_{ALPHA}')
+        tic = time.perf_counter()
+        while time.perf_counter() - tic < patience:
+            # initial @chessboard
+            # conductor = list(np.random.permutation([i + 1 for i in range(problem.dimension)]))
+            tour = list(np.random.permutation([i + 1 for i in range(problem.dimension)]))
+
+            t = T0
+            while t >= EPS:
+                
+                # fully search before annealing
+                for _ in range(level_step):
+                    E = problem.length_of_a_tour(tour, leaderboard=True)
+
+                    # random draw another conductor from the previous' neighborhood
+                    tour_new = random.choice([opt_swap_2, opt_swap_3, naive_swap])(tour)
+                    E_new = problem.length_of_a_tour(tour_new, leaderboard=True)
+                    epoch += 1
+
+                    # delta of E
+                    delta = E_new - E
+                    writer.add_scalar('Temperature', t, epoch)
+                    writer.add_scalar('Length', E_new, epoch)
+
+                    # crucial jump
+                    if delta < 0 or (t > 0 and -delta / t < 888 and np.random.rand() < np.exp(-delta / t)):
+                        tour = tour_new
+
+                # annealing
+                print('annealing')
+                t *= ALPHA
+
+        if verbose:
+            self.print_best_solution(problem)
