@@ -152,3 +152,4 @@ fabric.properties
 
 **/.DS_Store
 assets-v1/docs/Traditional Algorithms for Symmetric Traveling Salesman Problem with Average Relative Error Rate 4.38%.docx
+**/runs/*
