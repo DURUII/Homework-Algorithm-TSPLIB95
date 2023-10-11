@@ -2,86 +2,76 @@ import math
 import random
 import time
 
+from tsplib_utils.helper import timeit
 from tsplib_utils.operator import *
 
 import numpy as np
 
 from tsplib_algorithm.base import Algorithm
-from tsplib_instance.base import Instance
+from tsplib_problem.base import Problem
 from torch.utils.tensorboard import SummaryWriter
 
 
 class SimulatedAnnealing(Algorithm):
-    def __init__(self, tag='SimulatedAnnealing'):
-        super().__init__(tag)
+    def __init__(self, tag='SimulatedAnnealing', verbose=True, boost=False,
+                 t=1e6, eps=1e-6, alpha=0.999, time_out=300, early_stop=100):
+        """hyperparameters: t0, eps, alpha, time_bound, sample_repeat"""
+        super().__init__(tag, verbose, boost)
 
-    def generate_tour(self, conductor: list[int], problem: Instance):
-        assert len(conductor) == problem.dimension, f'{len(conductor)} != {problem.dimension}'
+        self.operator = [naive_swap, naive_swap, naive_swap, naive_swap,
+                         naive_insert,
+                         naive_reserve,
+                         chunk_flip,
+                         chunk_swap,
+                         opt_swap_2, opt_swap_2, opt_swap_2, opt_swap_2, opt_swap_2, opt_swap_2,
+                         opt_swap_3, opt_swap_3, opt_swap_3, opt_swap_3, opt_swap_3, opt_swap_3]
+        self.t = t
+        self.eps = eps
+        self.alpha = alpha
 
-        # suppose cities emerge one by one,
-        tour = []
+        self.time_out = time_out
+        self.early_stop = early_stop
+        self.writer = SummaryWriter(
+            comment=f'_sa_{self.t}_{self.eps}_{self.alpha}_{self.time_out}_{self.early_stop}')
 
-        for i in range(len(conductor)):
-            if i < 3:
-                tour.append(conductor[i])
-
-            # at this moment, say [1, 2, 3]
-            else:
-                virtual_tour = tour[:]
-                virtual_tour.append(virtual_tour[0])
-
-                best_gain, best_idx = math.inf, -1
-
-                # greedy strategy
-                for j in range(1, len(virtual_tour)):
-                    # logically, do tour.insert(j, conductor[i]), say j=1, [1, 2, 3, 1] []
-                    assert conductor[i] != virtual_tour[j] and conductor[i] != virtual_tour[j - 1]
-                    gain = problem.G.edges[virtual_tour[j - 1], conductor[i]]["weight"] + \
-                           problem.G.edges[conductor[i], virtual_tour[j]]["weight"] - \
-                           problem.G.edges[virtual_tour[j - 1], virtual_tour[j]]["weight"]
-
-                    # where to insert minimize the total length gain
-                    if gain < best_gain:
-                        best_gain, best_idx = gain, j
-
-                # insert the emergent city into the tour
-                tour.insert(best_idx, conductor[i])
-
-        return tour
-
-    def solve(self, problem, verbose=False, patience=500, level_step=50, T0=2e2, EPS=1e-2, ALPHA=0.9):
-        epoch = 0
-        writer = SummaryWriter(comment=f'_sa_{patience}_{level_step}_{T0}_{EPS}_{ALPHA}')
+    @timeit
+    def solve(self, problem):
         tic = time.perf_counter()
-        while time.perf_counter() - tic < patience:
-            # initial @chessboard
-            # conductor = list(np.random.permutation([i + 1 for i in range(problem.dimension)]))
-            tour = list(np.random.permutation([i + 1 for i in range(problem.dimension)]))
+        epoch = 0
+        # time out
+        while time.perf_counter() - tic < self.time_out:
+            # one initial chessboard
+            tour = list(np.random.permutation(np.arange(1, problem.dimension + 1)))
+            length = problem.calculate_length(tour, leaderboard=True)
 
-            t = T0
-            while t >= EPS:
-                
-                # fully search before annealing
-                for _ in range(level_step):
-                    E = problem.length_of_a_tour(tour, leaderboard=True)
+            while self.t > self.eps:
+                miserable_step = 0
+                local_best_length = math.inf
 
-                    # random draw another conductor from the previous' neighborhood
-                    tour_new = random.choice([opt_swap_2, opt_swap_3, naive_swap])(tour)
-                    E_new = problem.length_of_a_tour(tour_new, leaderboard=True)
+                # thermal equilibrium
+                while miserable_step < self.early_stop:
+                    # a little trick
+                    tour_new = [tour[0]]
+                    tour_new.extend(random.choice(self.operator)(tour[1:]))
+
+                    length_new = problem.calculate_length(tour_new, leaderboard=True)
+                    delta = length_new - length
+                    miserable_step += 1
                     epoch += 1
+                    self.writer.add_scalar('Length', length, epoch)
+                    self.writer.add_scalar('Temperature', self.t, epoch)
 
-                    # delta of E
-                    delta = E_new - E
-                    writer.add_scalar('Temperature', t, epoch)
-                    writer.add_scalar('Length', E_new, epoch)
+                    if length_new < local_best_length:
+                        local_best_length = length_new
+                        miserable_step = 0
 
-                    # crucial jump
-                    if delta < 0 or (t > 0 and -delta / t < 888 and np.random.rand() < np.exp(-delta / t)):
+                    if delta < 0:
                         tour = tour_new
+                        length = length_new
 
-                # annealing
-                print('annealing')
-                t *= ALPHA
+                    elif np.random.rand() <= np.exp(-delta / (np.abs(length) + 1e-6) / (self.t + 1e-6)):
+                        tour = tour_new
+                        length = length_new
 
-        if verbose:
-            self.print_best_solution(problem)
+                # simulated annealing
+                self.t *= self.alpha

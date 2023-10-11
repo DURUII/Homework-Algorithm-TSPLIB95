@@ -2,19 +2,21 @@ import networkx as nx
 from matplotlib import pyplot as plt
 
 from tsplib_algorithm.base import Algorithm
-from tsplib_instance.base import Instance
+from tsplib_problem.base import Problem
 from tsplib_utils.helper import plot_tsp_tour
+from tsplib_utils.helper import timeit
 
 
 class ChristofidesSerdyukov(Algorithm):
     """A great algorithm with approximation ratio 1.5."""
 
-    def __init__(self, tag='ChristofidesSerdyukov'):
-        super().__init__(tag)
+    def __init__(self, tag: str = 'ChristofidesSerdyukov', verbose: bool = False, boost: bool = True):
+        super().__init__(tag, verbose, boost)
 
-    def solve(self, problem: Instance, verbose=False):
+    @timeit
+    def solve(self, problem: Problem):
         # Find MST T of Graph
-        T = nx.minimum_spanning_tree(problem.G)
+        T = nx.minimum_spanning_tree(problem.get_graph())
 
         # Isolate Set of Odd-Degree Vertices S
         odd_vertices = set({})
@@ -23,7 +25,7 @@ class ChristofidesSerdyukov(Algorithm):
                 odd_vertices.add(i + 1)
 
         # Find Min Weight Perfect Matching M of S
-        G_prime = nx.Graph(problem.G)
+        G_prime = nx.Graph(problem.get_graph())
         for i in range(G_prime.number_of_nodes()):
             if i + 1 not in odd_vertices:
                 G_prime.remove_node(i + 1)
@@ -46,15 +48,11 @@ class ChristofidesSerdyukov(Algorithm):
                 shortcut.append(i)
 
         # Memo the result
-        problem.length_of_a_tour(shortcut, leaderboard=True)
+        problem.calculate_length(shortcut, leaderboard=True)
 
         # Visualization
-        if visualize:
-            visualize_procedure(problem.G, T, odd_vertices, perf_matching, G_prime, shortcut, problem)
-
-        # Log
-        if verbose:
-            self.print_best_solution(problem)
+        if self.verbose and not self.boost:
+            visualize_procedure(problem.get_graph(), T, odd_vertices, perf_matching, G_prime, shortcut, problem)
 
 
 def visualize_procedure(G: nx.Graph,
@@ -63,7 +61,7 @@ def visualize_procedure(G: nx.Graph,
                         matching,
                         G_prime: nx.Graph,
                         bypass: list[int],
-                        problem: Instance) -> None:
+                        problem: Problem) -> None:
     fig, axes = plt.subplots(2, 2, figsize=(8.5, 6.5), layout='constrained', dpi=500)
 
     # Find MST T of Graph
@@ -110,5 +108,6 @@ def visualize_procedure(G: nx.Graph,
     plot_tsp_tour(ax, "C0", G, bypass)
     uuid = f"{problem.benchmark}'s procedure and experiment result {problem.best_seen.length}"
     ax.set_title(uuid)
-    # plt.savefig(f"{uuid}")
-    plt.show()
+
+    # Output
+    plt.savefig('christofides_serdyukov')

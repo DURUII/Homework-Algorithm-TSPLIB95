@@ -12,6 +12,17 @@ import scienceplots
 plt.style.use(["science"])
 
 
+def timeit(func):
+    def wrap(*args, **kwargs):
+        tic = time.perf_counter()
+        result = func(*args, **kwargs)
+        toc = time.perf_counter()
+        print(f'{func.__name__!r}\' execution time: {(toc - tic):.4f}s')
+        return result
+
+    return wrap
+
+
 def random_color():
     return f"C{random.randint(1, 10)}"
 
@@ -30,4 +41,3 @@ def plot_tsp_tour(ax: plt.Axes, color: str, G: nx.Graph, permutation: List[int],
     xs.append(G.nodes[permutation[0]]["loc"][0])
     ys.append(G.nodes[permutation[0]]["loc"][1])
     ax.plot(xs, ys, color=color, marker='o', linestyle='-', linewidth=linewidth, markersize=markersize, alpha=alpha)
-
