@@ -1,6 +1,7 @@
-from tsplib_algorithm.nn import *
-from tsplib_instance.base import *
+from tsplib_algorithm.nn import GreedyNearestNeighbor
+from tsplib_problem.base import Problem
 
-instance = Instance(benchmark='a280')
 solver = GreedyNearestNeighbor()
-solver.solve(instance)
+problem = Problem('a280')
+solver.solve(problem)
+print(problem.best_seen.length)

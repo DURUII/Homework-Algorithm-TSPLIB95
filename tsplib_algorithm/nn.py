@@ -1,17 +1,16 @@
 import math
-import time
-from operator import itemgetter
 
 from tsplib_algorithm.base import Algorithm
-from tsplib_instance.base import Instance
+from tsplib_problem.base import Problem
+from tsplib_utils.helper import timeit
 
 
 class GreedyNearestNeighbor(Algorithm):
     def __init__(self, tag: str = 'GreedyNearestNeighbor', verbose: bool = True):
         super().__init__(tag, verbose)
 
-    def solve(self, problem: Instance):
-        tic = time.perf_counter()
+    @timeit
+    def solve(self, problem: Problem):
         cities = {i for i in range(1, problem.dimension + 1)}
 
         # Repeat for each possible starting city
@@ -33,8 +32,3 @@ class GreedyNearestNeighbor(Algorithm):
 
             # For this starting city, calculate the length of the tour
             problem.length_of_a_tour(tour=tour, leaderboard=True)
-
-        # Verbose info
-        if self.verbose:
-            super().log(problem)
-            print(f'using time {time.perf_counter() - tic} s')
