@@ -1,3 +1,5 @@
+import math
+import time
 from operator import itemgetter
 
 from tsplib_algorithm.base import Algorithm
@@ -5,43 +7,34 @@ from tsplib_instance.base import Instance
 
 
 class GreedyNearestNeighbor(Algorithm):
-    """Naive Greedy Nearest Neighbor Algorithm."""
+    def __init__(self, tag: str = 'GreedyNearestNeighbor', verbose: bool = True):
+        super().__init__(tag, verbose)
 
-    def __init__(self, tag: str = 'GreedyNearestNeighbor'):
-        super().__init__(tag)
+    def solve(self, problem: Instance):
+        tic = time.perf_counter()
+        cities = {i for i in range(1, problem.dimension + 1)}
 
-    def solve(self, problem: Instance, verbose: bool = False):
-        """Solve the TSP instance using the Greedy Nearest Neighbor algorithm."""
-        self.run_algorithm(problem)
+        # Repeat for each possible starting city
+        for starter in range(1, problem.dimension + 1):
+            tour, visited = [starter], {starter}
 
-        if verbose:
-            self.print_best_solution(problem)
+            while len(tour) < problem.dimension:
+                # Find the nearest unvisited city from the last city
+                candidates = cities - visited
+                best_neighbor, mini_distance = -1, math.inf
+                for candidate in candidates:
+                    if problem.G.edges[tour[-1], candidate]["weight"] < mini_distance:
+                        mini_distance = problem.G.edges[tour[-1], candidate]["weight"]
+                        best_neighbor = candidate
 
-    def run_algorithm(self, problem: Instance):
-        """Runs the algorithm for each possible starting city."""
-        for starting_city in range(1, problem.dimension + 1):
-            self.find_feasible_solution(starting_city, problem)
+                # Update tour and visited
+                tour.append(best_neighbor)
+                visited.add(best_neighbor)
 
-    def find_feasible_solution(self, starting_city: int, problem: Instance):
-        """Finds a feasible solution by iteratively choosing the nearest unvisited city."""
-        unvisited_cities = {i + 1 for i in range(problem.dimension)}
-        tour = [starting_city]
-        unvisited_cities.remove(tour[-1])
+            # For this starting city, calculate the length of the tour
+            problem.length_of_a_tour(tour=tour, leaderboard=True)
 
-        while len(tour) < problem.dimension:
-            next_city = self.get_nearest_unvisited_city(tour[-1], unvisited_cities, problem)
-            tour.append(next_city)
-            unvisited_cities.remove(next_city)
-
-        problem.length_of_a_tour(tour, leaderboard=True)
-
-    @staticmethod
-    def get_nearest_unvisited_city(current_city: int, unvisited_cities: set, problem: Instance) -> int:
-        """Returns the nearest unvisited city from the current city."""
-        neighbor_cities = list(
-            map(itemgetter(1),
-                sorted([(e[2]['weight'], e[1]) for e in problem.G.edges(current_city, data=True)])))
-
-        for city in neighbor_cities:
-            if city in unvisited_cities:
-                return city
+        # Verbose info
+        if self.verbose:
+            super().log(problem)
+            print(f'using time {time.perf_counter() - tic} s')
