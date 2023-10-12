@@ -14,7 +14,7 @@ from torch.utils.tensorboard import SummaryWriter
 
 class SimulatedAnnealing(Algorithm):
     def __init__(self, tag='SimulatedAnnealing', verbose=True, boost=False,
-                 t=1e6, eps=1e-6, alpha=0.999, time_out=300, early_stop=100):
+                 t=1000, eps=1e-14, alpha=0.98, time_out=1, early_stop=280):
         """hyperparameters: t0, eps, alpha, time_bound, sample_repeat"""
         super().__init__(tag, verbose, boost)
 

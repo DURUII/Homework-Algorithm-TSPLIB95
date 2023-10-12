@@ -1,17 +1,19 @@
 from tsplib_algorithm.base import Algorithm
 from tsplib_algorithm.cs import ChristofidesSerdyukov
-from tsplib_instance.base import Instance
+from tsplib_problem.base import Problem
+from tsplib_utils.helper import timeit
 
 
 class Opt2(Algorithm):
-    def __init__(self, tag='2-OPT', base_solver: Algorithm = ChristofidesSerdyukov()):
-        super().__init__(tag)
+    def __init__(self, tag='2-OPT', verbose=True, boost=True, base_solver=ChristofidesSerdyukov(), ):
+        super().__init__(tag, verbose, boost)
         self.base_solver = base_solver
-    
-    @classmethod
-    def optimize(cls, problem, tour):
-        min_length = problem.length_of_a_tour(tour)
-        
+
+    @staticmethod
+    def optimize(problem, tour):
+        tour = tour[:]
+        best_length = problem.calculate_length(tour, leaderboard=True)
+
         improved = True
         while improved:
             improved = False
@@ -20,19 +22,16 @@ class Opt2(Algorithm):
                 for j in range(i + 2, len(tour)):
                     temp = tour[:]
                     temp[i + 1:j + 1] = temp[j:i:-1]
-                    length = problem.length_of_a_tour(temp)
-                    if length < min_length:
-                        min_length = length
+                    length = problem.calculate_length(temp, leaderboard=True)
+                    if length < best_length:
+                        best_length = length
                         improved = True
                         tour = temp
-                        
+
         return tour
 
-    def solve(self, problem: Instance, verbose=False):
-        self.base_solver.solve(problem, verbose=verbose)
-        
-        tour = problem.best_seen.tour[:]
-        tour = Opt2.optimize(problem, tour)
-        
-        if verbose:
-            self.print_best_solution(problem)
+    @timeit
+    def solve(self, problem: Problem):
+        self.base_solver.solve(problem)
+        tour = Opt2.optimize(problem, problem.best_seen.tour)
+        problem.calculate_length(tour, leaderboard=True)
