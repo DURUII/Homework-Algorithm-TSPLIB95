@@ -3,50 +3,33 @@ import random
 import numpy as np
 
 
+##############################
+#########  MUTATION  #########
+##############################
+
 def naive_swap(ll: list[int]):
+    # Pick two alleles at random and swap their positions
     ll = ll[:]
-    i, j = random.sample(range(len(ll)), 2)
+    i, j = random.choices(range(len(ll)), k=2)
     ll[i], ll[j] = ll[j], ll[i]
     return ll
 
 
 def naive_insert(ll: list[int]):
+    # Pick two allele values at random, Move the second to follow the first
     ll = ll[:]
-    # which to remove
-    i = random.randint(0, len(ll) - 1)
-    n = ll.pop(i)
-    # where to insert
-    j = random.randint(0, len(ll) + 1)
-    while j == i:
-        j = random.randint(0, len(ll) + 1)
-    ll.insert(j, n)
+    i, j = random.choices(range(len(ll)), k=2)
+    (i, j) = sorted((i, j))
+    ll.insert(i + 1, ll.pop(j))
     return ll
 
 
-def naive_reserve(ll: list[int]):
+def naive_reverse(ll: list[int]):
+    # Pick two alleles at random and then invert the substring between them.
     ll = ll[:]
-    i = random.randint(1, len(ll) - 2)
-    j = random.randint(i + 1, len(ll) - 1)
+    i, j = random.choices(range(1, len(ll)), k=2)
+    (i, j) = sorted((i, j))
     ll[i:j + 1] = ll[j:i - 1:-1]
-    return ll
-
-def chunk_flip(ll: list[int]):
-    i = random.randint(1, len(ll) - 2)
-    candidate = [ll[i+1:], ll[:i+1]]
-    ll = []
-    for i in range(len(candidate)):
-        ll.extend(candidate[i])
-    return ll
-
-
-def chunk_swap(ll: list[int]):
-    i = random.randint(1, len(ll) - 2)
-    j = random.randint(i + 1, len(ll) - 1)
-
-    candidate = [ll[:i], ll[i:j], ll[j:]]
-    ll = []
-    for i in list(np.random.permutation(3)):
-        ll.extend(candidate[i])
     return ll
 
 
@@ -77,21 +60,44 @@ def opt_swap_3(ll: list[int]):
         temp = ll[:i + 1] + ll[j + 1:k + 1] + ll[i + 1:j + 1] + ll[k + 1:]
     elif odds == 3:
         temp = ll[:i + 1] + ll[j + 1:k + 1] + ll[j:i:-1] + ll[k + 1:]
-    # elif odds == 4:
-    #     temp = ll[:i + 1] + ll[i + 1:j + 1] + ll[k:j:-1] + ll[k + 1:]
-    # elif odds == 5:
-    #     temp = ll[:i + 1] + ll[j:i:-1] + ll[j + 1:k + 1] + ll[k + 1:]
-    # elif odds == 6:
-    #     temp = ll[:i + 1] + ll[k: i:-1] + ll[k + 1:]
     else:
         temp = ll[:i + 1] + ll[j:i:-1] + ll[k:j:-1] + ll[k + 1:]
 
     return temp
 
 
-if __name__ == '__main__':
-    ll = [1, 2, 3, 4, 5, 6, 7]
-    for func in [naive_reserve]:
-        ll_new = func(ll)
-        print(f'{func.__name__}: {ll_new}')
-        assert len(ll_new) == len(ll)
+##############################
+######### CROSSOVER #########
+##############################
+
+def ox(p1: list[int], p2: list[int]):
+    """order crossover (OX)"""
+
+    # Choose an arbitrary part from the parent
+    i, j = random.choices(range(1, len(p1) - 1), k=2)
+
+    def breed(mother, father):
+        nonlocal i, j
+        # Copy this part to the first child
+        offspring = [0 for _ in range(len(mother))]
+        offspring[i:j] = mother[i:j]
+
+        # Copy the numbers that are not in the first part, to the first child:
+        existed = set(offspring[i:j])
+        writer = 0
+        for p in range(len(father)):
+            if writer >= len(offspring):
+                break
+
+            while offspring[writer] != 0:
+                writer += 1
+
+            # using the order of the second parent
+            if father[p] not in existed:
+                offspring[writer] = father[p]
+                existed.add(father[p])
+                writer += 1
+
+        return offspring
+
+    return breed(p1, p2), breed(p2, p1)
