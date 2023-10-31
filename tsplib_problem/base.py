@@ -4,9 +4,6 @@ import networkx as nx
 import rich
 
 from collections import namedtuple
-from typing import List
-import matplotlib.pyplot as plt
-from tsplib_utils.helper import plot_tsp_tour
 
 # Define a named tuple to hold information about the best tour seen so far
 Solution = namedtuple("Solution", ["length", "tour"])
@@ -56,12 +53,6 @@ class Problem:
         assert 1 <= i <= self.dimension and 1 <= j <= self.dimension
         return self.__G.edges[i, j]['weight']
 
-    def plot_tsp_tour(self, ax: plt.Axes, tour: List[int], opt=False):
-        assert len(tour) == self.dimension, 'Tour Incomplete!'
-        plot_tsp_tour(ax, "C0", self.G, tour)
-        # if opt:
-        #     plot_tsp_tour(ax, "r", self.G, tour, alpha=0.5, marker='o', linestyle='-', linewidth=2, markersize=2)
-
     def calculate_length(self, tour: list[int], leaderboard=False):
         """Calculate the total length of a tour."""
         assert len(tour) == self.dimension, 'Tour Incomplete!'
@@ -79,22 +70,10 @@ class Problem:
         if leaderboard and length < self.best_seen.length:
             self.best_seen = Solution(length, tour)
             if self.verbose:
-                rich.print(f"[bold green blink]best length {self.best_seen.length}[/]", )
+                rich.print(f"[bold red]best length {self.best_seen.length}[/]", )
 
         return length
 
     def solve_by(self, algorithm):
         """Solve the TSP instance using the provided algorithm."""
         return algorithm.solve(self)
-
-        # instance = Problem(benchmark='a280')
-        #
-        # distances = np.zeros(shape=(instance.dimension + 1, instance.dimension + 1), dtype=int)
-        #
-        # for i in range(1, instance.dimension + 1):
-        #     for j in range(1, instance.dimension + 1):
-        #         if i != j:
-        #             distances[i][j] = instance.G.edges[i, j]['weight']
-        #
-        # with open('tsplib_benchmark/a280.sum_dist.tsp', 'w') as fout:
-        #     fout.write(str(distances.tolist()))
