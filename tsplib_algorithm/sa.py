@@ -15,14 +15,12 @@ from torch.utils.tensorboard import SummaryWriter
 class SimulatedAnnealing(Algorithm):
     def __init__(self, tag='SimulatedAnnealing', verbose=True, boost=False,
                  t=1000, eps=1e-14, alpha=0.98, time_out=1, early_stop=280):
-        """hyperparameters: t0, eps, alpha, time_bound, sample_repeat"""
+        """hyperparameters: t, eps, alpha, time_out, early_stop"""
         super().__init__(tag, verbose, boost)
 
         self.operator = [naive_swap, naive_swap, naive_swap, naive_swap,
                          naive_insert,
-                         naive_reserve,
-                         chunk_flip,
-                         chunk_swap,
+                         naive_reverse,
                          opt_swap_2, opt_swap_2, opt_swap_2, opt_swap_2, opt_swap_2, opt_swap_2,
                          opt_swap_3, opt_swap_3, opt_swap_3, opt_swap_3, opt_swap_3, opt_swap_3]
         self.t = t
