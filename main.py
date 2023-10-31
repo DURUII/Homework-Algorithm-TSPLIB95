@@ -1,6 +1,8 @@
 from tsplib_algorithm.cs import ChristofidesSerdyukov
 from tsplib_algorithm.nn import GreedyNearestNeighbor
 from tsplib_algorithm.sa import SimulatedAnnealing
+from tsplib_algorithm.wl import WangLeiAlgorithm
+from tsplib_algorithm.ga import GeneticAlgorithm
 from tsplib_problem.base import Problem
 from tsplib_algorithm.opt import Opt2
 
@@ -19,12 +21,17 @@ problem = Problem('a280', verbose=True)
 
 # solver = SimulatedAnnealing(
 #     t=1000, eps=1e-14, alpha=0.98, time_out=1,
-#     early_stop=problem.dimension)
-
+#     early_stop=problem.dimension, verbose=True)
 
 # base_solver = ChristofidesSerdyukov()
 # solver = Opt2(base_solver=base_solver)
 # solver.solve(problem)
 # print(problem.best_seen.length)
 
+# solver = WangLeiAlgorithm(early_stop=problem.dimension)
+# solver.solve(problem)
+# print(problem.best_seen.length)
 
+solver = GeneticAlgorithm()
+solver.solve(problem)
+print(problem.best_seen.length)
