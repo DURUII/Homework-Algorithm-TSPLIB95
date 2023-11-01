@@ -1,11 +1,14 @@
 # Homework-Algorithm-TSPLIB95
 
-This project replicates/implements some classic algorithms for solving the traveling salesman problem, including:
+This project aims to replicate and implement several classic algorithms for solving the traveling salesman problem,
+including:
 
 - Greedy Nearest Neighbor Algorithm
 - Christofides-Serdyukov Algorithm
 - Simulated Annealing Algorithm
 - Genetic Algorithm
+
+I am planning to submit this project as my homework for the "Evolutionary Computation" course at WUST.
 
 ## Getting Started
 
