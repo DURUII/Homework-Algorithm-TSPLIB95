@@ -12,9 +12,11 @@ from tsplib_problem.base import Problem
 
 class GeneticAlgorithm(Algorithm):
     def __init__(self, tag='GeneticAlgorithm', verbose=True, boost=False,
-                 time_out=120, size=1120, pc=0.9, pm=0.5):
+                 time_out=1200, size=1120, pc=0.98, pm=0.02):
         super().__init__(tag, verbose, boost)
-        self.operator = [opt_swap_2, opt_swap_3]
+        self.operator = [naive_swap, naive_insert, naive_reverse,
+                         opt_swap_2, opt_swap_2, opt_swap_2,
+                         opt_swap_3, opt_swap_3, opt_swap_3]
 
         # time of mimicking evolution
         self.time_out = time_out
@@ -43,7 +45,7 @@ class GeneticAlgorithm(Algorithm):
         while time.perf_counter() - tic < self.time_out:
             epoch += 1
             # selection (survival of the fittest)
-            mating_pool = self.select(population, problem)
+            mating_pool = self.select_rank(population, problem)
             # crossover/inheritance
             offspring = self.crossover(mating_pool)
             # in-place mutate/variation
@@ -54,8 +56,9 @@ class GeneticAlgorithm(Algorithm):
         for individual in population:
             self.fitness(individual, problem)
 
-    def select(self, population: list[list[int]], problem: Problem):
+    def select_fitness(self, population: list[list[int]], problem: Problem):
         selected = []
+
         # select based on probability of surviving
         roulette = np.array([self.fitness(i, problem) for i in population])
         roulette /= sum(roulette)
@@ -74,6 +77,24 @@ class GeneticAlgorithm(Algorithm):
             selected.append(population[lo])
 
         return selected
+
+    def select_rank(self, population: list[list[int]], problem: Problem):
+        C = 0.35
+        selected = []
+        sorted_population = sorted(population, key=lambda p: problem.calculate_length(p, leaderboard=True))
+
+        for _ in range(len(population)):
+            idx, target = 0, C
+            while random.random() < target:
+                idx += 1
+                target *= C
+
+            selected.append(sorted_population[idx])
+        return selected
+
+    def select_diversity(self, population: list[list[int]], problem: Problem):
+        # FIXME 39:09
+        pass
 
     def crossover(self, population: list[list[int]]):
         offspring = []
