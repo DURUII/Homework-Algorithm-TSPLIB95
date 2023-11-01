@@ -17,7 +17,6 @@ This project replicates/implements some classic algorithms for solving the trave
 
 An example is as follows:
 
-
     problem = Problem('berlin52', verbose=True)
     
     solver = SimulatedAnnealing(
@@ -27,6 +26,10 @@ An example is as follows:
     solver.solve(problem)
     print(problem.best_seen.length)
 
+## Informative Material
 
-
-
+- [The Traveling Salesman Problem: When Good Enough Beats Perfect](https://youtu.be/GiDsjIBOVoA)
+- [MIT Approximation Algorithms: Traveling Salesman Problem](https://youtu.be/zM5MW5NKZJg)
+- [PlatEMO: A MATLAB Platform for Evolutionary Multi-Objective Optimization](https://github.com/BIMK/PlatEMO/tree/master/PlatEMO/Algorithms/Single-objective%20optimization)
+- [AcWing算法进阶课 - 模拟退火](https://www.acwing.com/activity/content/32/)
+- [Tsp问题的启发式方法 - 徐阳](https://gitee.com/mathu-dxy/tsp_heuristic)
