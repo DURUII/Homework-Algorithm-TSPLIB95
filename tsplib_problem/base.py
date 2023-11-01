@@ -5,6 +5,10 @@ import rich
 
 from collections import namedtuple
 
+from matplotlib import pyplot as plt
+
+from tsplib_utils.helper import plot_tsp_tour
+
 # Define a named tuple to hold information about the best tour seen so far
 Solution = namedtuple("Solution", ["length", "tour"])
 
@@ -18,6 +22,9 @@ class Problem:
         self.verbose = verbose
         self.__filepath = os.path.join("tsplib_benchmark", f"{benchmark}.tsp")
         self.__G = nx.Graph()
+
+        self.fig, self.ax = plt.subplots(1, 1, figsize=(5.5, 4.5), layout='constrained')
+        plt.ion()
 
         self.load_parse_tsp_file()
 
@@ -71,6 +78,13 @@ class Problem:
             self.best_seen = Solution(length, tour)
             if self.verbose:
                 rich.print(f"[bold red]best length {self.best_seen.length}[/]", )
+
+                # plot
+                plt.cla()
+                plot_tsp_tour(self.ax, 'C0', self.__G, tour)
+                self.ax.set_title(length)
+                plt.pause(0.001)
+                plt.ioff()
 
         return length
 
