@@ -36,32 +36,33 @@ class SimulatedAnnealing(Algorithm):
     def solve(self, problem):
         tic = time.perf_counter()
         epoch = 0
-        # time out
+
+        # terminate until it is too late
         while time.perf_counter() - tic < self.time_out:
-            # one initial chessboard
+            # one initial chessboard: generate a random feasible solution
             tour = list(np.random.permutation(np.arange(1, problem.dimension + 1)))
             length = problem.calculate_length(tour, leaderboard=True)
 
             while self.t > self.eps:
-                miserable_step = 0
+                step = 0
                 local_best_length = math.inf
 
                 # thermal equilibrium
-                while miserable_step < self.early_stop:
-                    # a little trick
+                while step < self.early_stop:
+                    # a naive trick: fix the starting city
                     tour_new = [tour[0]]
                     tour_new.extend(random.choice(self.operator)(tour[1:]))
 
                     length_new = problem.calculate_length(tour_new, leaderboard=True)
                     delta = length_new - length
-                    miserable_step += 1
+                    step += 1
                     epoch += 1
                     self.writer.add_scalar('Length', length, epoch)
                     self.writer.add_scalar('Temperature', self.t, epoch)
 
                     if length_new < local_best_length:
                         local_best_length = length_new
-                        miserable_step = 0
+                        step = 0
 
                     if delta < 0:
                         tour = tour_new
