@@ -31,7 +31,8 @@ An example is as follows:
 
 ## Informative Material
 
-- [The Traveling Salesman Problem: When Good Enough Beats Perfect](https://youtu.be/GiDsjIBOVoA)
-- [MIT Approximation Algorithms: Traveling Salesman Problem](https://youtu.be/zM5MW5NKZJg)
-- [AcWing算法进阶课 - 模拟退火](https://www.acwing.com/activity/content/32/)
-- [Tsp问题的启发式方法 - 徐阳](https://gitee.com/mathu-dxy/tsp_heuristic)
+- [Reducible: The Traveling Salesman Problem: When Good Enough Beats Perfect](https://youtu.be/GiDsjIBOVoA)
+- [MIT 6.046J: R9. Approximation Algorithms & Traveling Salesman Problem](https://youtu.be/zM5MW5NKZJg)
+- [MIT 6.034: Lecture 13 Learning: Genetic Algorithms](https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010/resources/lecture-13-learning-genetic-algorithms/)
+- [AcWing算法进阶课：第六章（模拟退火）](https://www.acwing.com/activity/content/32/)
+- [徐阳：Tsp问题的启发式方法](https://gitee.com/mathu-dxy/tsp_heuristic)
