@@ -27,17 +27,17 @@ def random_color():
     return f"C{random.randint(1, 10)}"
 
 
-def plot_tsp_tour(ax: plt.Axes, color: str, G: nx.Graph, permutation: List[int], linewidth=0.6, markersize=2, alpha=1):
-    assert G.number_of_nodes() == len(permutation), f'{G.number_of_nodes()} != {len(permutation)}'
+def plot_tsp_tour(ax: plt.Axes, color: str, G: nx.Graph, tour: List[int], linewidth=0.6, markersize=2, alpha=1):
+    assert G.number_of_nodes() == len(tour), f'{G.number_of_nodes()} != {len(tour)}'
 
     xs, ys = [], []
-    for index in permutation:
+    for index in tour:
         x, y = G.nodes[index]["loc"]
         xs.append(x)
         ys.append(y)
         # label = str(index).zfill(3)
         # assert len(label) == 3
         # ax.text(x - 2, y - 0.5, label, color="w", fontsize=1.5)
-    xs.append(G.nodes[permutation[0]]["loc"][0])
-    ys.append(G.nodes[permutation[0]]["loc"][1])
+    xs.append(G.nodes[tour[0]]["loc"][0])
+    ys.append(G.nodes[tour[0]]["loc"][1])
     ax.plot(xs, ys, color=color, marker='o', linestyle='-', linewidth=linewidth, markersize=markersize, alpha=alpha)
