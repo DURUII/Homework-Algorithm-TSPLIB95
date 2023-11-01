@@ -8,7 +8,7 @@ from tsplib_algorithm.ga import GeneticAlgorithm
 from tsplib_problem.base import Problem
 from tsplib_algorithm.opt import Opt2
 
-problem = Problem('a280', verbose=True)
+problem = Problem('a280', verbose=True, vis=False)
 solver = GeneticAlgorithm()
 solver.solve(problem)
 print(problem.best_seen.length)

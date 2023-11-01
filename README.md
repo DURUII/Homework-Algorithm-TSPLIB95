@@ -20,7 +20,7 @@ I am planning to submit this project as my homework for the "Evolutionary Comput
 
 An example is as follows:
 
-    problem = Problem('berlin52', verbose=True)
+    problem = Problem('a280', verbose=True, vis=False)
     
     solver = SimulatedAnnealing(
         t=1000, eps=1e-14, alpha=0.98, time_out=1,

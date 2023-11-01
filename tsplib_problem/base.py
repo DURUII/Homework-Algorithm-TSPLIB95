@@ -14,12 +14,13 @@ Solution = namedtuple("Solution", ["length", "tour"])
 
 
 class Problem:
-    def __init__(self, benchmark: str, verbose=True) -> None:
+    def __init__(self, benchmark: str, verbose=True, vis=False) -> None:
         # Initialize a graph to hold the problem instance
         self.benchmark = benchmark
         self.best_seen = Solution(math.inf, [])
         self.dimension = -1
         self.verbose = verbose
+        self.vis = vis
         self.__filepath = os.path.join("tsplib_benchmark", f"{benchmark}.tsp")
         self.__G = nx.Graph()
 
@@ -79,12 +80,12 @@ class Problem:
             if self.verbose:
                 rich.print(f"[bold red]best length {self.best_seen.length}[/]", )
 
-                # plot
-                plt.cla()
-                plot_tsp_tour(self.ax, 'C0', self.__G, tour)
-                self.ax.set_title(length)
-                plt.pause(0.001)
-                plt.ioff()
+                if self.vis:
+                    plt.cla()
+                    plot_tsp_tour(self.ax, 'C0', self.__G, tour)
+                    self.ax.set_title(length)
+                    plt.pause(0.001)
+                    plt.ioff()
 
         return length
 

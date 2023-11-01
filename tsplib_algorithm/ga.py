@@ -12,7 +12,7 @@ from tsplib_problem.base import Problem
 
 class GeneticAlgorithm(Algorithm):
     def __init__(self, tag='GeneticAlgorithm', verbose=True, boost=False,
-                 time_out=1200, size=1120, pc=0.98, pm=0.02):
+                 time_out=1200, size=1120, pc=0.9, pm=0.3):
         super().__init__(tag, verbose, boost)
         self.operator = [naive_swap, naive_insert, naive_reverse,
                          opt_swap_2, opt_swap_2, opt_swap_2,

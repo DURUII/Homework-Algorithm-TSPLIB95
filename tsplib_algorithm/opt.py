@@ -5,7 +5,7 @@ from tsplib_utils.helper import timeit
 
 
 class Opt2(Algorithm):
-    def __init__(self, tag='2-OPT', verbose=True, boost=True, base_solver=ChristofidesSerdyukov(), ):
+    def __init__(self, tag='2-OPT', verbose=True, boost=True, base_solver=ChristofidesSerdyukov()):
         super().__init__(tag, verbose, boost)
         self.base_solver = base_solver
 
