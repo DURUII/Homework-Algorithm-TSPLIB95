@@ -24,8 +24,9 @@ class Problem:
         self.__filepath = os.path.join("tsplib_benchmark", f"{benchmark}.tsp")
         self.__G = nx.Graph()
 
-        self.fig, self.ax = plt.subplots(1, 1, figsize=(5.5, 4.5), layout='constrained')
-        plt.ion()
+        if self.vis:
+            self.fig, self.ax = plt.subplots(1, 1, figsize=(5.5, 4.5), layout='constrained')
+            plt.ion()
 
         self.load_parse_tsp_file()
 
@@ -84,8 +85,7 @@ class Problem:
                     plt.cla()
                     plot_tsp_tour(self.ax, 'C0', self.__G, tour)
                     self.ax.set_title(length)
-                    plt.pause(0.001)
-                    plt.ioff()
+                    plt.pause(0.0001)
 
         return length
 
