@@ -13,9 +13,9 @@ from tsplib_problem.base import Problem
 
 class GeneticAlgorithm(Algorithm):
     def __init__(self, tag='GeneticAlgorithm', verbose=True, boost=False,
-                 time_out=600, size=300, pc=0.9, pm=0.4):
+                 time_out=1200, size=66, pc=0.9, pm=0.2):
         super().__init__(tag, verbose, boost)
-        self.operator = [naive_insert, naive_reverse, naive_swap, opt_swap_2, opt_swap_3]
+        self.operator = [naive_insert, naive_reverse, naive_swap, chunk_insert, opt_swap_2, opt_swap_3, do_mutate]
 
         # time of mimicking evolution
         self.time_out = time_out
@@ -104,24 +104,25 @@ class GeneticAlgorithm(Algorithm):
         length = [problem.calculate_length(i, leaderboard=True) for i in population]
         diversity = []
         for i in range(len(length)):
-            diversity.append(0)
-            for j in range(i + 1, len(length)):
-                diversity[i] -= abs(length[j] - length[i])
+            diversity.append(math.inf)
+            for j in range(len(length)):
+                if j!=i:
+                    diversity[i] = min(length[j] - length[i], diversity[i])
 
-        C = 0.35
+        C = 0.49
         selected = []
         order_length = np.argsort(length)
         order_diversity = np.argsort(diversity)
 
         # inheritance strategy
-        selected.append(problem.best_seen.tour)
-        for _ in range(len(population) - 1):
+        # selected.append(problem.best_seen.tour)
+        for _ in range(len(population)):
             idx, target = 0, 1
             while random.random() < target * (1 - C):
                 idx += 1
                 target *= C
 
-            if random.random() < 0.75:
+            if random.random() < 0.8:
                 selected.append(population[order_length[idx]])
             else:
                 selected.append(population[order_diversity[idx]])

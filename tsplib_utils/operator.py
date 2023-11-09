@@ -23,6 +23,16 @@ def naive_insert(ll: list[int]):
     ll.insert(i + 1, ll.pop(j))
     return ll
 
+def chunk_insert(ll: list[int]):
+    ll = ll[:]
+    i, j, k = random.sample(range(len(ll)), k=3)
+    # Move [i, j] to k
+    (i, j, k) = sorted((i, j, k))
+    for _ in range(i, j+1):
+        ll.insert(random.randint(k,len(ll)-1)+1, ll.pop(i))
+        k=k-1
+    return ll
+
 
 def naive_reverse(ll: list[int]):
     # Pick two alleles at random and then invert the substring between them.
@@ -65,6 +75,19 @@ def opt_swap_3(ll: list[int]):
 
     return temp
 
+
+def do_mutate(seq):
+    assert len(seq)!=0
+    m = 0
+    n = 0
+    while m >= n:
+        m = random.randint(0, (len(seq) - 2) - 1)
+        n = random.randint(0, len(seq) - 1)
+
+    j = (n - m + 1) >> 1
+    for i in range(j):
+        seq[m + i], seq[n - i] = seq[n - i], seq[m + i]
+    return seq
 
 ##############################
 ######### CROSSOVER #########
