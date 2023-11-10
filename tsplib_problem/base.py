@@ -24,7 +24,7 @@ class Problem:
         self.__filepath = os.path.join("tsplib_benchmark", f"{benchmark}.tsp")
         self.__G = nx.Graph()
 
-        if self.vis:
+        if self.verbose and self.vis:
             self.fig, self.ax = plt.subplots(1, 1, figsize=(5.5, 4.5), layout='constrained')
             plt.ion()
 
