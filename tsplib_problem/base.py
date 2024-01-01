@@ -1,94 +1,76 @@
 import math
 import os
-import networkx as nx
-import rich
 
+import numpy as np
+from rich import print
 from collections import namedtuple
-
-from matplotlib import pyplot as plt
-
-from tsplib_utils.helper import plot_tsp_tour
 
 # Define a named tuple to hold information about the best tour seen so far
 Solution = namedtuple("Solution", ["length", "tour"])
 
 
 class Problem:
-    def __init__(self, benchmark: str, verbose=True, vis=False) -> None:
+    def __init__(self, benchmark: str) -> None:
         # Initialize a graph to hold the problem instance
         self.benchmark = benchmark
-        self.best_seen = Solution(math.inf, [])
+        self.filepath = os.path.join("tsplib_benchmark", f"{benchmark}.tsp")
+
+        self.graph = None
         self.dimension = -1
-        self.verbose = verbose
-        self.vis = vis
-        self.__filepath = os.path.join("tsplib_benchmark", f"{benchmark}.tsp")
-        self.__G = nx.Graph()
-
-        if self.verbose and self.vis:
-            self.fig, self.ax = plt.subplots(1, 1, figsize=(5.5, 4.5), layout='constrained')
-            plt.ion()
-
         self.load_parse_tsp_file()
+
+        self.best_seen = Solution(math.inf, [])
 
     def load_parse_tsp_file(self):
         # DIMENSION -> nums of cities/nodes/vertices
-        with open(self.__filepath) as fin:
+        with open(self.filepath) as fin:
             lines = [line.strip() for line in fin.readlines()]
             for line in lines:
                 if line.startswith("DIMENSION"):
                     self.dimension = int(line.split(":")[1])
+                    self.graph = np.full((self.dimension + 1, self.dimension + 1), -1)
+                    print(f'DIMENSION: {self.dimension}')
+                    break
 
             if self.dimension == -1:
                 raise ValueError('File does not contain a "DIMENSION" line.')
 
-        # NODE_COORD_SECTION -> nodes/vertices with location
-        starter = lines.index("NODE_COORD_SECTION") + 1
-        for idx in range(starter, starter + self.dimension):
-            i, x, y = lines[idx].split()
-            self.__G.add_node(int(i), loc=(float(x), float(y)))
+            # NODE_COORD_SECTION -> nodes/vertices with location
+            starter = lines.index("NODE_COORD_SECTION") + 1
+            coordinates = {}
+            for idx in range(starter, starter + self.dimension):
+                i, x, y = lines[idx].split()
+                coordinates[int(i)] = (float(x), float(y))
 
-        # GRAPH -> edges/links with distance
-        for i in range(1, self.dimension + 1):
-            for j in range(i + 1, self.dimension + 1):
-                (x1, y1), (x2, y2) = self.__G.nodes[i]["loc"], self.__G.nodes[j]["loc"]
-                # EUC_2D -> ROUNDED Euclidean distance
-                weight = int(round(math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)))
-                self.__G.add_edge(i, j, weight=weight)
+            # GRAPH -> edges/links with distance
+            for i in range(1, self.dimension + 1):
+                (x1, y1) = coordinates[i]
+                for j in range(i + 1, self.dimension + 1):
+                    (x2, y2) = coordinates[j]
+                    # EUC_2D -> ROUNDED Euclidean distance
+                    weight = int(round(math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)))
+                    self.graph[i, j] = self.graph[j, i] = weight
 
-    def get_graph(self):
-        return self.__G
+            print(f'GRAPH INITIALIZED')
 
     def get_distance(self, i, j):
-        assert 1 <= i <= self.dimension and 1 <= j <= self.dimension
-        return self.__G.edges[i, j]['weight']
+        weight = self.graph[i, j]
+        if weight == -1:
+            raise ValueError(f'City ({i}, {j}) illegal.')
+        return weight
 
     def calculate_length(self, tour: list[int], leaderboard=False):
         """Calculate the total length of a tour."""
-        assert len(tour) == self.dimension, 'Tour Incomplete!'
-
         length = 0
-        for i in range(1, len(tour)):
-            src, dst = tour[i - 1], tour[i]
-            length += self.__G.edges[src, dst]["weight"]
-
-        # Include the distance of the edge going back to the starting point
-        src, dst = tour[-1], tour[0]
-        length += self.__G.edges[src, dst]["weight"]
+        for i in range(0, len(tour)):
+            if i == 0:
+                # going back to the starting point
+                src, dst = tour[-1], tour[0]
+            else:
+                src, dst = tour[i - 1], tour[i]
+            length += self.graph[src, dst]
 
         # If this tour is better, update the best seen
         if leaderboard and length < self.best_seen.length:
             self.best_seen = Solution(length, tour)
-            if self.verbose:
-                rich.print(f"[bold red]best length {self.best_seen.length}[/]", )
-
-                if self.vis:
-                    plt.cla()
-                    plot_tsp_tour(self.ax, 'C0', self.__G, tour)
-                    self.ax.set_title(length)
-                    plt.pause(0.0001)
-
         return length
-
-    def solve_by(self, algorithm):
-        """Solve the TSP instance using the provided algorithm."""
-        return algorithm.solve(self)
