@@ -2,23 +2,32 @@ import math
 import os
 
 import numpy as np
-from rich import print
+from numba import jit
+import rich
 from collections import namedtuple
 
 # Define a named tuple to hold information about the best tour seen so far
 Solution = namedtuple("Solution", ["length", "tour"])
 
 
+@jit(nopython=True)
+def jit_matrix(dimension: int, coordinates: np.array):
+    dist_matrix = np.full((dimension + 1, dimension + 1), -1)
+    for i in range(1, dimension + 1):
+        for j in range(i + 1, dimension + 1):
+            # EUC_2D -> ROUNDED Euclidean distance
+            dist = int(round(np.linalg.norm(coordinates[i] - coordinates[j])))
+            dist_matrix[i, j] = dist_matrix[j, i] = dist
+    return dist_matrix
+
+
 class Problem:
     def __init__(self, benchmark: str) -> None:
-        # Initialize a graph to hold the problem instance
         self.benchmark = benchmark
         self.filepath = os.path.join("tsplib_benchmark", f"{benchmark}.tsp")
-
         self.graph = None
         self.dimension = -1
         self.load_parse_tsp_file()
-
         self.best_seen = Solution(math.inf, [])
 
     def load_parse_tsp_file(self):
@@ -28,8 +37,8 @@ class Problem:
             for line in lines:
                 if line.startswith("DIMENSION"):
                     self.dimension = int(line.split(":")[1])
-                    self.graph = np.full((self.dimension + 1, self.dimension + 1), -1)
-                    print(f'DIMENSION: {self.dimension}')
+                    coordinates = np.zeros((self.dimension + 1, 2))
+                    rich.print(f'DIMENSION: {self.dimension}')
                     break
 
             if self.dimension == -1:
@@ -37,21 +46,13 @@ class Problem:
 
             # NODE_COORD_SECTION -> nodes/vertices with location
             starter = lines.index("NODE_COORD_SECTION") + 1
-            coordinates = {}
             for idx in range(starter, starter + self.dimension):
                 i, x, y = lines[idx].split()
-                coordinates[int(i)] = (float(x), float(y))
+                coordinates[int(i)] = [float(x), float(y)]
 
             # GRAPH -> edges/links with distance
-            for i in range(1, self.dimension + 1):
-                (x1, y1) = coordinates[i]
-                for j in range(i + 1, self.dimension + 1):
-                    (x2, y2) = coordinates[j]
-                    # EUC_2D -> ROUNDED Euclidean distance
-                    weight = int(round(math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)))
-                    self.graph[i, j] = self.graph[j, i] = weight
-
-            print(f'GRAPH INITIALIZED')
+            self.graph = jit_matrix(self.dimension, coordinates)
+            rich.print(f'GRAPH INITIALIZED')
 
     def get_distance(self, i, j):
         weight = self.graph[i, j]
@@ -59,18 +60,14 @@ class Problem:
             raise ValueError(f'City ({i}, {j}) illegal.')
         return weight
 
-    def calculate_length(self, tour: list[int], leaderboard=False):
-        """Calculate the total length of a tour."""
+    def calculate_length(self, tour: np.array, leaderboard=False):
+        # Calculate the total length of a tour (fitness/objective)
         length = 0
         for i in range(0, len(tour)):
-            if i == 0:
-                # going back to the starting point
-                src, dst = tour[-1], tour[0]
-            else:
-                src, dst = tour[i - 1], tour[i]
+            src, dst = tour[i - 1], tour[i]
             length += self.graph[src, dst]
 
-        # If this tour is better, update the best seen
         if leaderboard and length < self.best_seen.length:
+            print(length)
             self.best_seen = Solution(length, tour)
         return length

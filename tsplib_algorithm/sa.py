@@ -33,7 +33,7 @@ class SimulatedAnnealing(Algorithm):
             comment=f'_sa_{self.t}_{self.eps}_{self.alpha}_{self.time_out}_{self.early_stop}')
 
     @timeit
-    def solve(self, problem:Problem):
+    def solve(self, problem: Problem):
         tic = time.perf_counter()
         epoch = 0
 

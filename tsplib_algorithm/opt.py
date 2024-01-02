@@ -10,9 +10,9 @@ class Opt2(Algorithm):
         self.base_solver = base_solver
 
     @staticmethod
-    def optimize(problem, tour):
+    def optimize(problem, tour, leaderboard):
         tour = tour[:]
-        best_length = problem.calculate_length(tour, leaderboard=True)
+        best_length = problem.calculate_length(tour, leaderboard=leaderboard)
 
         improved = True
         while improved:
@@ -22,7 +22,7 @@ class Opt2(Algorithm):
                 for j in range(i + 2, len(tour)):
                     temp = tour[:]
                     temp[i + 1:j + 1] = temp[j:i:-1]
-                    length = problem.calculate_length(temp, leaderboard=True)
+                    length = problem.calculate_length(temp, leaderboard=leaderboard)
                     if length < best_length:
                         best_length = length
                         improved = True
@@ -31,7 +31,7 @@ class Opt2(Algorithm):
         return tour
 
     @timeit
-    def solve(self, problem: Problem):
-        self.base_solver.solve(problem)
-        tour = Opt2.optimize(problem, problem.best_seen.tour)
-        problem.calculate_length(tour, leaderboard=True)
+    def solve(self, problem: Problem, leaderboard=False):
+        tour = Opt2.optimize(problem, self.base_solver.solve(problem, leaderboard), leaderboard)
+        problem.calculate_length(tour, leaderboard)
+        return tour

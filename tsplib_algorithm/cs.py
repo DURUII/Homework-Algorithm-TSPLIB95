@@ -1,4 +1,3 @@
-import networkx as nx
 from matplotlib import pyplot as plt
 
 from tsplib_algorithm.base import Algorithm
@@ -14,7 +13,7 @@ class ChristofidesSerdyukov(Algorithm):
         super().__init__(tag, verbose, boost)
 
     @timeit
-    def solve(self, problem: Problem):
+    def solve(self, problem: Problem, leaderboard):
         # Find MST T of Graph
         T = nx.minimum_spanning_tree(problem.get_graph())
 
@@ -48,11 +47,13 @@ class ChristofidesSerdyukov(Algorithm):
                 shortcut.append(i)
 
         # Memo the result
-        problem.calculate_length(shortcut, leaderboard=True)
+        problem.calculate_length(shortcut, leaderboard)
 
         # Visualization
         if self.verbose and not self.boost:
             visualize_procedure(problem.get_graph(), T, odd_vertices, perf_matching, G_prime, shortcut, problem)
+
+        return shortcut
 
 
 def visualize_procedure(G: nx.Graph,
