@@ -1,17 +1,18 @@
 import math
 import random
-
 from tsplib_algorithm.base import Algorithm
 from tsplib_problem.base import Problem
-from tsplib_utils.helper import timeit
+from tsplib_utils.time import timeit
 
 
 class GreedyNearestNeighbor(Algorithm):
-    def __init__(self, tag: str = 'GreedyNearestNeighbor', verbose: bool = True, boost=True):
+    def __init__(self, tag: str = 'GreedyNearestNeighbor',
+                 verbose: bool = True, boost=True):
         super().__init__(tag, verbose, boost)
 
     @timeit
     def solve(self, problem: Problem):
+        problem.clear_cache()
         cities = {i for i in range(1, problem.dimension + 1)}
 
         if self.boost:
@@ -39,3 +40,6 @@ class GreedyNearestNeighbor(Algorithm):
 
             # Calculate the length of the tour and update history record
             problem.calculate_length(tour=tour, leaderboard=True)
+
+        # logger
+        return self.tag, problem.benchmark, problem.best_seen.length, problem.best_seen.tour

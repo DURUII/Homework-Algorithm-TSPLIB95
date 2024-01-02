@@ -3,18 +3,21 @@ from matplotlib import pyplot as plt
 
 from tsplib_algorithm.base import Algorithm
 from tsplib_problem.base import Problem
-from tsplib_utils.helper import plot_tsp_tour
-from tsplib_utils.helper import timeit
+from tsplib_utils.plot import plot_tsp_tour
+from tsplib_utils.time import timeit
 
 
 class ChristofidesSerdyukov(Algorithm):
     """A great algorithm with approximation ratio 1.5."""
 
-    def __init__(self, tag: str = 'ChristofidesSerdyukov', verbose: bool = False, boost: bool = True):
+    def __init__(self, tag: str = 'ChristofidesSerdyukov',
+                 verbose: bool = False, boost: bool = True):
         super().__init__(tag, verbose, boost)
 
     @timeit
     def solve(self, problem: Problem):
+        problem.clear_cache()
+
         # Find MST T of Graph
         T = nx.minimum_spanning_tree(problem.get_graph())
 
@@ -51,8 +54,11 @@ class ChristofidesSerdyukov(Algorithm):
         problem.calculate_length(shortcut, leaderboard=True)
 
         # Visualization
-        if self.verbose and not self.boost:
+        if self.verbose:
             visualize_procedure(problem.get_graph(), T, odd_vertices, perf_matching, G_prime, shortcut, problem)
+
+        # logger
+        return self.tag, problem.benchmark, problem.best_seen.length, problem.best_seen.tour
 
 
 def visualize_procedure(G: nx.Graph,

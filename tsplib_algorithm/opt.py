@@ -1,7 +1,7 @@
 from tsplib_algorithm.base import Algorithm
 from tsplib_algorithm.cs import ChristofidesSerdyukov
 from tsplib_problem.base import Problem
-from tsplib_utils.helper import timeit
+from tsplib_utils.time import timeit
 
 
 class Opt2(Algorithm):
@@ -32,6 +32,8 @@ class Opt2(Algorithm):
 
     @timeit
     def solve(self, problem: Problem):
+        problem.clear_cache()
+
         self.base_solver.solve(problem)
         tour = Opt2.optimize(problem, problem.best_seen.tour)
         problem.calculate_length(tour, leaderboard=True)
