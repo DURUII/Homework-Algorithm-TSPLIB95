@@ -43,7 +43,7 @@ def greedy_insert(ll: list[int], problem: Problem):
     if random.random() < 0.3:
         conductor = [tour.pop(random.randint(1, len(tour) - 2)) for _ in range(times)]
     else:
-        pivot = random.randint(1, 1+times)
+        pivot = random.randint(1, 1 + times)
         conductor = [tour.pop(pivot) for _ in range(times)]
 
     for i in range(len(conductor)):

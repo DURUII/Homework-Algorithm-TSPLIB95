@@ -37,3 +37,6 @@ class Opt2(Algorithm):
         self.base_solver.solve(problem)
         tour = Opt2.optimize(problem, problem.best_seen.tour)
         problem.calculate_length(tour, leaderboard=True)
+
+        # logger
+        return self.tag, problem.benchmark, problem.best_seen.length, problem.best_seen.tour

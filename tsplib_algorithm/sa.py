@@ -1,20 +1,14 @@
-import math
-import random
 import time
-
-from tsplib_utils.helper import timeit
+from tsplib_utils.time import timeit
 from tsplib_utils.operator import *
-
 import numpy as np
-
 from tsplib_algorithm.base import Algorithm
 from tsplib_problem.base import Problem
-from torch.utils.tensorboard import SummaryWriter
 
 
 class SimulatedAnnealing(Algorithm):
     def __init__(self, tag='SimulatedAnnealing', verbose=True, boost=False,
-                 t=1000, eps=1e-14, alpha=0.98, time_out=1, early_stop=280):
+                 t=1000, eps=1e-14, alpha=0.98, time_out=1, early_stop=250):
         """hyperparameters: t, eps, alpha, time_out, early_stop"""
         super().__init__(tag, verbose, boost)
 
@@ -29,11 +23,11 @@ class SimulatedAnnealing(Algorithm):
 
         self.time_out = time_out
         self.early_stop = early_stop
-        self.writer = SummaryWriter(
-            comment=f'_sa_{self.t}_{self.eps}_{self.alpha}_{self.time_out}_{self.early_stop}')
 
     @timeit
-    def solve(self, problem:Problem):
+    def solve(self, problem: Problem):
+        problem.clear_cache()
+
         tic = time.perf_counter()
         epoch = 0
 
@@ -57,8 +51,6 @@ class SimulatedAnnealing(Algorithm):
                     delta = length_new - length
                     step += 1
                     epoch += 1
-                    self.writer.add_scalar('Length', length, epoch)
-                    self.writer.add_scalar('Temperature', self.t, epoch)
 
                     if length_new < local_best_length:
                         local_best_length = length_new
@@ -74,3 +66,6 @@ class SimulatedAnnealing(Algorithm):
 
                 # simulated annealing
                 self.t *= self.alpha
+
+        # logger
+        return self.tag, problem.benchmark, problem.best_seen.length, problem.best_seen.tour

@@ -4,7 +4,7 @@ import time
 
 from tsplib_algorithm.base import Algorithm
 from tsplib_problem.base import Problem
-from tsplib_utils.helper import timeit
+from tsplib_utils.time import timeit
 import numpy as np
 
 
@@ -49,14 +49,18 @@ class Particle:
 
 
 class ParticleSwarmOpt(Algorithm):
-    def __init__(self, tag='ParticleSwarmOpt', verbose=True, boost=False):
+    def __init__(self, tag='ParticleSwarmOpt',
+                 size=11200, time_out=180, early_stop=500,
+                 verbose=True, boost=False):
         super().__init__(tag, verbose, boost)
-        self.size = 11200
-        self.time_out = 1200
-        self.early_stop = 50
+        self.size = size
+        self.time_out = time_out
+        self.early_stop = early_stop
 
     @timeit
     def solve(self, problem: Problem):
+        problem.clear_cache()
+
         # before it is too late
         tic = time.perf_counter()
         while time.perf_counter() - tic < self.time_out:
@@ -82,3 +86,6 @@ class ParticleSwarmOpt(Algorithm):
                 print(step)
 
             print('restart')
+
+        # logger
+        return self.tag, problem.benchmark, problem.best_seen.length, problem.best_seen.tour

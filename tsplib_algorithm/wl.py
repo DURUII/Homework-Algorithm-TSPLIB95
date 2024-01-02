@@ -1,16 +1,6 @@
-import math
-import random
-import time
-
-import numpy as np
-import matplotlib.pyplot as plt
-
 from tsplib_algorithm.base import Algorithm
-from tsplib_algorithm.opt import Opt2
-from tsplib_problem.base import Problem
 from tsplib_utils.operator import *
-from tsplib_utils.helper import *
-from torch.utils.tensorboard import SummaryWriter
+from tsplib_utils.time import *
 
 
 class WangLeiAlgorithm(Algorithm):
@@ -24,16 +14,18 @@ class WangLeiAlgorithm(Algorithm):
         It employs mini-step local search complemented by large-step basin-hopping.
     """
 
-    def __init__(self, tag="WangLeiAlgorithm", verbose: bool = True, boost=True,
-                 time_out=120, early_stop=280):
+    def __init__(self, tag="WangLeiAlgorithm",
+                 verbose: bool = True, boost=True,
+                 time_out=180, early_stop=500):
         super().__init__(tag, verbose, boost)
+
         self.time_out = time_out
         self.early_stop = early_stop
-        self.mini_operator = [naive_swap, naive_insert, naive_reverse]
-        self.large_operator = [opt_swap_2, opt_swap_3]
-        self.writer = SummaryWriter(comment=f'_wl')
 
-    def solve(self, problem: Problem, early_stop=500, patience=500, verbose=False):
+        self.mini_operator = [naive_swap, naive_insert]
+        self.large_operator = [naive_reverse, chunk_swap, opt_swap_2, opt_swap_3]
+
+    def solve(self, problem: Problem):
         epoch = 0
         # initial chessboard -> the coming order of cities
         conductor = list(np.random.permutation([i + 1 for i in range(problem.dimension)]))
@@ -62,13 +54,17 @@ class WangLeiAlgorithm(Algorithm):
                     # update status
                     step = 0
                     conductor = new_conductor
-                    self.writer.add_scalar('Length', local_best_length, epoch)
 
-            print('local search over!')
+            if self.verbose:
+                print('local search over!')
 
             # basin-hopping
             conductor = random.choice(self.large_operator)(conductor)
-            print('basin-hopping over!')
+            if self.verbose:
+                print('basin-hopping over!')
+
+        # logger
+        return self.tag, problem.benchmark, problem.best_seen.length, problem.best_seen.tour
 
     @staticmethod
     def generate_tour(conductor: list[int], problem: Problem):
