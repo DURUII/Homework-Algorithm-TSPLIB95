@@ -35,19 +35,21 @@ def naive_insert(ll: list[int], problem=None):
 
 def greedy_insert(ll: list[int], problem: Problem):
     tour = ll[:]
-    if random.random() < 0.1:
-        times = max(min(int(abs(np.random.normal(10, 10))), problem.dimension // 2), 1)
-    else:
-        times = max(min(int(abs(np.random.normal(2, 1))), problem.dimension // 2), 1)
 
-    if random.random() < 0.3:
-        conductor = [tour.pop(random.randint(1, len(tour) - 2)) for _ in range(times)]
+    times = int(max(random.gauss(0.018, 0.01), 2 /
+                problem.dimension) * problem.dimension)
+    if random.random() < 0.1:
+        times = problem.dimension // random.randint(10, 30)
+
+    if random.random() < 0.5:
+        conductor = [tour.pop(random.randint(1, len(tour) - 2))
+                     for _ in range(times)]
     else:
-        pivot = random.randint(1, 1 + times)
+        pivot = random.randint(1, problem.dimension - times - 1)
         conductor = [tour.pop(pivot) for _ in range(times)]
 
-    for i in range(len(conductor)):
-        vertex = conductor[i]
+    for item in conductor:
+        vertex = item
         tour.append(tour[0])
         best_gain, best_idx = math.inf, -1
         for j in range(1, len(tour)):
@@ -56,8 +58,8 @@ def greedy_insert(ll: list[int], problem: Problem):
             assert vertex != tour[j]
             assert tour[j - 1] != tour[j]
             gain = problem.get_distance(tour[j - 1], vertex) + \
-                   problem.get_distance(vertex, tour[j]) - \
-                   problem.get_distance(tour[j - 1], tour[j])
+                problem.get_distance(vertex, tour[j]) - \
+                problem.get_distance(tour[j - 1], tour[j])
 
             # where to insert you can minimize the total length gain with high probability
             if gain < best_gain and random.random():
