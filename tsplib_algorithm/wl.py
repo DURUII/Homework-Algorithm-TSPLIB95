@@ -16,23 +16,22 @@ class WangLeiAlgorithm(Algorithm):
 
     def __init__(self, tag="WangLeiAlgorithm",
                  verbose: bool = True, boost=True,
-                 time_out=180, early_stop=500):
+                 epoch=12, early_stop=1000):
         super().__init__(tag, verbose, boost)
 
-        self.time_out = time_out
+        self.epoch = epoch
         self.early_stop = early_stop
 
         self.mini_operator = [naive_swap, naive_insert]
         self.large_operator = [naive_reverse, chunk_swap, opt_swap_2, opt_swap_3]
 
     def solve(self, problem: Problem):
-        epoch = 0
-        # initial chessboard -> the coming order of cities
-        conductor = list(np.random.permutation([i + 1 for i in range(problem.dimension)]))
+        problem.clear_cache()
+        
+        for _ in range(self.epoch):
+            # initial chessboard -> the coming order of cities
+            conductor = list(np.random.permutation([i + 1 for i in range(problem.dimension)]))
 
-        # loop until time is out
-        tic = time.perf_counter()
-        while time.perf_counter() - tic <= self.time_out:
             # map conductor to tour (a feasible solution to the problem)
             tour = self.generate_tour(conductor, problem)
             local_best_length = problem.calculate_length(tour, leaderboard=True)
@@ -46,7 +45,7 @@ class WangLeiAlgorithm(Algorithm):
                 # map conductor to tour
                 new_tour = self.generate_tour(new_conductor, problem)
                 new_length = problem.calculate_length(new_tour, leaderboard=True)
-                epoch += 1
+                step += 1
 
                 # steepest descent
                 if new_length < local_best_length:
@@ -59,9 +58,14 @@ class WangLeiAlgorithm(Algorithm):
                 print('local search over!')
 
             # basin-hopping
-            conductor = random.choice(self.large_operator)(conductor)
+            if random.random() < 0.5:
+                conductor = random.choice(self.large_operator)(conductor)
+            else:
+                conductor = list(np.random.permutation([i + 1 for i in range(problem.dimension)]))
+            
             if self.verbose:
                 print('basin-hopping over!')
+
 
         # logger
         return self.tag, problem.benchmark, problem.best_seen.length, problem.best_seen.tour

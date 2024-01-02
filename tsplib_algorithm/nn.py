@@ -13,7 +13,7 @@ class GreedyNearestNeighbor(Algorithm):
     @timeit
     def solve(self, problem: Problem):
         problem.clear_cache()
-        cities = {i for i in range(1, problem.dimension + 1)}
+        cities = set(range(1, problem.dimension + 1))
 
         if self.boost:
             # Choose a starting city randomly
