@@ -9,7 +9,7 @@ from tsplib_problem.base import Problem
 
 
 class GeneticAlgorithm(Algorithm):
-    def __init__(self, init_population: list[int] = None, tag='GeneticAlgorithm', verbose=True, boost=False,
+    def __init__(self, init_population: list[int] = None, tag='GeneticAlgorithm', verbose=False, boost=False,
                  epoch=6, early_stop=7500, size=50, pc=1, pm=0.4, C=0.5):
         super().__init__(tag, verbose, boost)
         self.operator = [naive_swap, chunk_swap, chunk_swap, 
@@ -37,7 +37,8 @@ class GeneticAlgorithm(Algorithm):
             boss_length, step = math.inf, 0
             while step <= self.early_stop:
                 self.select()
-                print(f'{epoch} - selected with best seen {problem.best_seen.length}')
+                if self.verbose:
+                    print(f'{epoch} - selected with best seen {problem.best_seen.length}')
                 self.crossover()
                 self.mutate()
                 step +=1
