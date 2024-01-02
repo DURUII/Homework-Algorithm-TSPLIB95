@@ -26,8 +26,6 @@ for benchmark in open('./benchmark.txt'):
         solver = GeneticAlgorithm(init_population=memo)
         solver.solve(problem)
 
-        assert 1==0
-
         solver = WangLeiAlgorithm()
         solver.solve(problem)
 
