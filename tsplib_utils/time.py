@@ -9,7 +9,7 @@ def timeit(func):
         with open('log.csv', 'a') as logger:
             tag, benchmark, length, tour = result
             logger.write(
-                f'{benchmark},{tag},{length},{toc - tic}\n'
+                f'{benchmark},{tag},{length},{toc - tic},\'{tour}\'\n'
             )
         return result
 
