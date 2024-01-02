@@ -10,13 +10,14 @@ from tsplib_problem.base import Problem
 
 class GeneticAlgorithm(Algorithm):
     def __init__(self, init_population: list[int] = None, tag='GeneticAlgorithm', verbose=True, boost=False,
-                 epoch=10, early_stop=2500, size=50, pc=1, pm=0.4, C=0.5):
+                 epoch=6, early_stop=7500, size=50, pc=1, pm=0.4, C=0.5):
         super().__init__(tag, verbose, boost)
-        self.operator = [naive_insert, chunk_insert, chunk_insert,
-                         greedy_insert, naive_reverse, naive_reverse,
-                         naive_swap, chunk_swap, chunk_swap,
-                         opt_swap_2, opt_swap_3, opt_swap_3,
-                         opt_swap_2, opt_swap_3, opt_swap_3]
+        self.operator = [naive_swap, chunk_swap, chunk_swap, 
+                         naive_insert, greedy_insert, greedy_insert, 
+                         greedy_insert, chunk_insert, chunk_insert,
+                         naive_reverse, naive_reverse, 
+                         opt_swap_2,opt_swap_2,
+                         opt_swap_3, opt_swap_3]
 
         self.early_stop, self.epoch, self.size,  = early_stop, epoch, size
         self.pc, self.pm, self.C = pc, pm, C
@@ -46,7 +47,6 @@ class GeneticAlgorithm(Algorithm):
                     step = 0
             
             # basin-hopping
-            self.init_population.append(problem.best_seen.tour)
             self.initialize_population()
         
         # logger

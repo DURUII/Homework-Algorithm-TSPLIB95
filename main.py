@@ -21,15 +21,14 @@ for benchmark in open('./benchmark.txt'):
         memo.append(solver.solve(problem)[-1])
 
         solver = SimulatedAnnealing()
-        solver.solve(problem)
+        memo.append(solver.solve(problem)[-1])
 
         solver = GeneticAlgorithm(init_population=memo)
         solver.solve(problem)
 
-        break
-
-        solver = ParticleSwarmOpt()
-        solver.solve(problem)
+        assert 1==0
 
         solver = WangLeiAlgorithm()
         solver.solve(problem)
+
+        
