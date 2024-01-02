@@ -12,10 +12,8 @@ for benchmark in open('./benchmark.txt'):
     problem = Problem(benchmark, verbose=True, vis=False)
 
     for _ in range(10):
-        memo = []
-
         solver = GreedyNearestNeighbor()
-        memo.append(solver.solve(problem)[-1])
+        memo = [solver.solve(problem)[-1]]
 
         solver = Opt2(base_solver=ChristofidesSerdyukov())
         memo.append(solver.solve(problem)[-1])
@@ -23,6 +21,7 @@ for benchmark in open('./benchmark.txt'):
         solver = SimulatedAnnealing()
         memo.append(solver.solve(problem)[-1])
 
+        # ensemble
         solver = GeneticAlgorithm(init_population=memo)
         solver.solve(problem)
 
