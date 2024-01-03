@@ -16,7 +16,7 @@ class WangLeiAlgorithm(Algorithm):
 
     def __init__(self, tag="WangLeiAlgorithm",
                  verbose: bool = False, boost=True,
-                 epoch=160, early_stop=200):
+                 epoch=16, early_stop=250):
         super().__init__(tag, verbose, boost)
 
         self.epoch = epoch
