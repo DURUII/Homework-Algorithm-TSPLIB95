@@ -15,7 +15,7 @@ class WangLeiAlgorithm(Algorithm):
     """
 
     def __init__(self, tag="WangLeiAlgorithm",
-                 verbose: bool = True, boost=True,
+                 verbose: bool = False, boost=True,
                  epoch=160, early_stop=200):
         super().__init__(tag, verbose, boost)
 
@@ -25,12 +25,11 @@ class WangLeiAlgorithm(Algorithm):
         self.mini_operator = [naive_swap, naive_insert]
         self.large_operator = [naive_reverse, chunk_swap, opt_swap_2, opt_swap_3]
 
+    @timeit
     def solve(self, problem: Problem):
         problem.clear_cache()
         
         for _ in range(self.epoch):
-            tic = time.perf_counter()
-            
             # initial chessboard -> the coming order of cities
             conductor = list(np.random.permutation([i + 1 for i in range(problem.dimension)]))
 
@@ -67,9 +66,6 @@ class WangLeiAlgorithm(Algorithm):
             
             if self.verbose:
                 print('basin-hopping over!')
-
-            toc = time.perf_counter()
-            print(toc- tic)
 
 
         # logger
