@@ -14,15 +14,15 @@ for benchmark in open('./benchmark.txt'):
     tour = solver.solve(problem)[-1]
 
     for _ in range(10):
+        solver = SimulatedAnnealing()
+        solver.solve(problem)
+
         solver = WangLeiAlgorithm()
         solver.solve(problem)
 
         memo = [tour]
 
         solver = GreedyNearestNeighbor()
-        memo.append(solver.solve(problem)[-1])
-
-        solver = SimulatedAnnealing()
         memo.append(solver.solve(problem)[-1])
 
         # ensemble
