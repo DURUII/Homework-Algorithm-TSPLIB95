@@ -87,7 +87,7 @@ class Problem:
             plot_tsp_tour(self.ax, 'C0', self.__G, tour)
             length = self.calculate_length(tour)
         self.ax.set_title(f'Algorithm {tag} with length {length}')
-        plt.savefig(tag)
+        plt.savefig(f'{self.benchmark}_{tag}')
 
     def clear_cache(self):
         self.best_seen = Solution(math.inf, [])
