@@ -507,7 +507,7 @@ $\alpha$记为该算法的近似比，可用于评价算法优劣。
 
 \section{实验设置与测试结果}
 
-\subsection{数据集与超参数}
+\subsection{数据集与超参数设置}
 
 TSPLIB（\url{http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/}）中公布了旅行商问题的benchmark测试数据集。
 以EUC-2D类型的测试数据集中的实例a280为例，
@@ -544,13 +544,14 @@ a280.txt文件开头有一段说明文字，然后是280（表示点的个数）
 而我对算法的实现均采用Python语言编程，不具有可比较性，因此，我弃用了王磊老师于《专业方向综合实践验收的问题》中提到的报道结果，
 而是用Python复现的王磊算法进行比较。
 
+代码开源在：\url{https://github.com/DURUII/Homework-Algorithm-TSPLIB95}。
 在Python环境中对算法进行编程实现，对本文提出的改进的遗传算法进行了测试。
+
 
 选取城市数小于等于1000中27个benchmark测试用例进行测试，两点间距离四舍五入取整，每个实例计算10次。
 下面是10次计算所得回路长度的最小值、平均值和平均计算时间。
 本文提出改进的遗传算法，在7个测试用例中超过王磊算法或已求得最优解；在剩余测试用例中，平均回路长度不超过王磊算法的2.03\%，最短回路长度不超过王磊算法的2.12\%；在所有测试用例中，与最优回路相比，平均最小相对误差为0.73\%，低于1\%。\\[1em]
 
-代码开源在：\url{https://github.com/DURUII/Homework-Algorithm-TSPLIB95}。
 
 \begin{table}[htbp]
     % \caption{算法运行统计结果}
@@ -558,11 +559,11 @@ a280.txt文件开头有一段说明文字，然后是280（表示点的个数）
     \centering
     \begin{tabular}{rcccccccccc}
         \toprule
-                 &                  & \multicolumn{3}{c}{Proposed GIGA} & \multicolumn{3}{c}{WangLei} & \multicolumn{3}{c}{SimulatedAnnealing}                                                                                                                               \\
-        \cmidrule(l){3-5} \cmidrule(l){6-8} \cmidrule(l){9-11}
-                 & $L_{\text{OPT}}$ & $L_{\min}$                        & $L_{\text{avg}}$            & $t_{\text{avg}}$                       & $L_{\min}$              & $L_{\text{avg}}$ & $t_{\text{avg}}$ & $L_{\min}$            & $L_{\text{avg}}$ & $t_{\text{avg}}$ \\
+        \multicolumn{2}{c}{Benchmark}                 & \multicolumn{3}{c}{Proposed GIGA} & \multicolumn{3}{c}{WangLei} & \multicolumn{3}{c}{SimulatedAnnealing}                                                                                                                               \\
+        \cmidrule(l){1-2} \cmidrule(l){3-5} \cmidrule(l){6-8} \cmidrule(l){9-11}
+         Name        & $L_{\text{OPT}}$ & $L_{\min}$                        & $L_{\text{avg}}$            & $t_{\text{avg}}$                       & $L_{\min}$              & $L_{\text{avg}}$ & $t_{\text{avg}}$ & $L_{\min}$            & $L_{\text{avg}}$ & $t_{\text{avg}}$ \\
         \midrule
-        a280     & 2579             & $\textbf{2584}^\dag$              & $\textbf{2593.30}^\dag$     & 312.50                                 & 2615                    & 2653.30          & 380.50           & 2792                  & 2890.40          & 43.76            \\
+        a280     & 2579             & $\textbf{2584}^\dag$              & 2593.30     & 312.50                                 & 2615                    & 2653.30          & 380.50           & 2792                  & 2890.40          & 43.76            \\
         berlin52 & 7542             & $\textbf{7542}^\star$             & 7542.00                     & 36.73                                  & $\textbf{7542}^\star$   & 7542.00          & 4.79             & $\textbf{7542}^\star$ & 7759.30          & 8.06             \\
         bier127  & 118282           & 120843                            & 121648.60                   & 97.18                                  & $\textbf{118326}^\dag$  & 119221.50        & 51.17            & 121173                & 124320.50        & 19.63            \\
         ch130    & 6110             & 6189                              & 6198.00                     & 93.35                                  & $\textbf{6115}^\dag$    & 6131.90          & 43.74            & 6355                  & 6548.00          & 19.89            \\
@@ -612,6 +613,11 @@ a280.txt文件开头有一段说明文字，然后是280（表示点的个数）
         u724 \\
         \bottomrule
     \end{tabular}
+
+    \zihao{-5}
+        \begin{tablenotes}
+            \item [*]   $\dag$代表在当前评价指标上优于其他算法；$\star$代表在该测试用例上找到最优解。
+        \end{tablenotes}
 \end{table}
 
 \end{document}
